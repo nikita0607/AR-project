@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="27.0" toolVersion="10.22.5">
+<ModelTarget name="globus" targetId="d3fa80868df345c89966a8858926c0f4" version="14.0" toolVersion="10.22.5" bbox="-0.203023 -0.181022 -0.200822 0.199522 0.272922 0.201280" previewImage="d3fa80868df345c89966a8858926c0f4_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="globuss_assembly" assemblyId="9880a3f31c0c4eeb969d2108fd4561f0">
+<Part name="globus" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="GuideView_0000" translation="-0.00164846 0.0423169 0.71617" rotation="AD: 0.999918 -0.053324 0.253708 203" image="globus_GuideView_0000.png" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0001" translation="-0.00101291 0.0417764 0.717441" rotation="AD: 0.997419 -0.142262 0.604786 202.582" image="globus_GuideView_0001.png" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0002" translation="-0.0016466 0.0418052 0.717334" rotation="AD: 0.999996 0.0252784 -0.120271 203.567" image="globus_GuideView_0002.png" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0003" translation="-0.000704262 0.0427908 0.715073" rotation="AD: 0.998893 0.0968783 -0.565514 196.899" image="globus_GuideView_0003.png" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0004" translation="0.00142585 0.0436128 0.712757" rotation="AD: -0.945352 -0.355134 2.36243 173.668" image="globus_GuideView_0004.png" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0005" translation="0.0016412 0.0418205 0.717301" rotation="AD: 0.497189 -0.8961 3.99226 183.102" image="globus_GuideView_0005.png" trained="no">
+
+</EntryPoint>
+<EntryPoint name="GuideView_0006" translation="0.00029866 0.0416454 0.717747" rotation="AD: 0.968468 -0.318485 1.3137 196.073" image="globus_GuideView_0006.png" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>
