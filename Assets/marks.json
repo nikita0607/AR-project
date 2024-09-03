@@ -1,15 +1,39 @@
 {
     "marks": [
         {
-            "name": "TestMark",
+            "name": "Ecuator",
             "longitude": 0,
-            "latitude": 0
+            "latitude": 0,
+            "info": "Место, которое находится на нулевых кордах"
         },
 
         {
             "name": "TestMark2",
             "longitude": 20,
-            "latitude": 20
+            "latitude": 20,
+            "info": "Другое место:3"
+        },
+
+        {
+            "name": "Ust-Ilim",
+            "longitude": -102,
+            "latitude": 58,
+            "info": "Лучший город на свете"
+        },
+
+        {
+            "name": "90",
+            "longitude": -90,
+            "latitude": 0,
+            "info": "90 градусов"
+        },
+
+
+        {
+            "name": "90",
+            "longitude": 90,
+            "latitude": 0,
+            "info": "Другие 90 градусов"
         }
     ]
 }

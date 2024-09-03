@@ -9,6 +9,9 @@ public class MarkGenerat : MonoBehaviour
     private GameObject targeModel;
 
     [SerializeField]
+    private GameObject markParrent;
+
+    [SerializeField]
     private GameObject mark;
 
     [SerializeField]
@@ -28,13 +31,21 @@ public class MarkGenerat : MonoBehaviour
         for (int i = 0; i < marksFromJson.marks.Length; i++)
         {
             MarkSer markInfo = marksFromJson.marks[i];
+
             GameObject newMark = Instantiate(mark);
-            newMark.name = marksFromJson.marks[i].name;
-            newMark.GetComponent<Mark>().SetPosition(markInfo.longitude, markInfo.latitude);
-            newMark.transform.SetParent(targeModel.transform);
+            Mark newMarkComponent = newMark.GetComponent<Mark>();
+
+            newMark.transform.SetParent(markParrent.transform);
+            newMark.transform.localScale = mark.transform.localScale;
+            newMark.transform.rotation = mark.transform.rotation;
+
+            newMarkComponent.Name = marksFromJson.marks[i].name;
+            newMarkComponent.Info = marksFromJson.marks[i].info;
+            newMarkComponent.SetPosition(markInfo.longitude, markInfo.latitude);
+
             Debug.Log(newMark.name);
         }
 
-        Destroy(mark);
+       // Destroy(mark);
     }
 }
