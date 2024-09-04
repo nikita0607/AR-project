@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<QCARInfo>
+    <TargetSet version="36.0" toolVersion="v7.0.4">
+        <ModelTarget name="juice_model" targetId="be616b6b9085453a8926976f0ebe163f" version="14.0" toolVersion="v7.0.4" bbox="-0.799031 -0.617971 -0.734740 0.799031 0.618206 0.734633" trackingMode="car" upVector="0.0 1.0 0.0" optimizeTrackingFor="default" realisticTextures="no" />
+    </TargetSet>
+    <Assembly name="juice_model" assemblyId="e46de2a0baba437baf04b2a7f80d0e4d">
+        <Part name="juice_model" translation="0 0 0" rotation="AD: 0 0 1 0" />
+        <EntryPoint name="(none)" trained="yes" />
+    </Assembly>
+</QCARInfo>
