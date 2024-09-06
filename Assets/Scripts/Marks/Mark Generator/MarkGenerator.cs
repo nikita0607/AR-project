@@ -1,22 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MarkGenerat : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject targeModel;
 
-    [SerializeField]
-    private GameObject markParrent;
+    [SerializeField] private float earthUnitRadius;
+    [SerializeField] private GameObject markParrent;
 
-    [SerializeField]
-    private GameObject mark;
+    [SerializeField] private GameObject mark;
 
-    [SerializeField]
-    public TextAsset jsonFile;
-    // Start is called before the first frame update
+    [SerializeField] public TextAsset jsonFile;
+
+
 
     private MarksSer marksFromJson;
 
@@ -41,7 +35,7 @@ public class MarkGenerat : MonoBehaviour
 
             newMarkComponent.Name = marksFromJson.marks[i].name;
             newMarkComponent.Info = marksFromJson.marks[i].info;
-            newMarkComponent.SetPosition(markInfo.longitude, markInfo.latitude);
+            newMarkComponent.SetPosition(EciPositionable.FromLongLat(markInfo.longitude, markInfo.latitude, earthUnitRadius));
 
             // Debug.Log(newMark.name);
         }

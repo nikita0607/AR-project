@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="img_1173" size="1.000000 0.840000" />
+    <ImageTarget name="hse_logo" size="0.200000 0.200000" />
   </Tracking>
 </QCARConfig>
