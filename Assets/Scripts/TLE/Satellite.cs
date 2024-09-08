@@ -3,19 +3,26 @@ using UnityEngine;
 using System;
 
 using One_Sgp4;
+using UnityEngine.UI;
 
 public class Satellite : MonoBehaviour
 {
     [SerializeField] public String Name;
-
+    [SerializeField] private Slider sl;
+    private Slider slider;
     public Tle TLE { get; set; }
+
     private float timeToUpdate = 5.0f;
     private float timeSinceLastUpdate = 0.0f;
+    private EpochTime time;
 
     private void Start()
     {
+        time = new EpochTime(DateTime.UtcNow);
         transform.rotation = Quaternion.identity;
         gameObject.name = TLE.getName();
+        slider = GameObject.Find("Slider").GetComponent<Slider>();
+        slider.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
 
     private void Update()
@@ -32,7 +39,6 @@ public class Satellite : MonoBehaviour
 
     public void SetPosition()
     {
-        EpochTime time = new EpochTime(DateTime.UtcNow);
         Sgp4Data satellitePos = SatFunctions.getSatPositionAtTime(TLE, time, Sgp4.wgsConstant.WGS_84);
         Point3d pos = satellitePos.getPositionData();
 
@@ -44,5 +50,11 @@ public class Satellite : MonoBehaviour
                                         (float)pos.x / radiusEarth * radiusModel);
 
         transform.localPosition = newPos;
+    }
+
+    public void ValueChangeCheck()
+    {
+        time = new EpochTime(DateTime.UtcNow.AddHours(slider.value));
+        SetPosition();
     }
 }
