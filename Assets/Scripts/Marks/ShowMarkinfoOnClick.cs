@@ -5,7 +5,6 @@ using TMPro;
 
 public class ShowMarkinfoOnClick : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private TMP_Text _textField;
     [SerializeField] private GameObject _infoPanel;
 
@@ -21,7 +20,6 @@ public class ShowMarkinfoOnClick : MonoBehaviour
             {
                 if(hit.collider.tag == "mark")
                 {
-                    // Debug.Log(hit.collider.gameObject.GetComponent<Mark>().Info);
                     _infoPanel.SetActive(true);
                     _textField.text = hit.collider.gameObject.GetComponent<Mark>().Info;
                     return;
