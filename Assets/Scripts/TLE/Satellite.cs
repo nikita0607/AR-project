@@ -3,7 +3,7 @@ using System;
 
 using One_Sgp4;
 
-public class Satellite : MonoBehaviour
+public class Satellite : EciPositionable
 {
     [SerializeField] public String Name;
     [SerializeField] public GameObject sl;
@@ -28,27 +28,31 @@ public class Satellite : MonoBehaviour
         if (TLE == null) Destroy(gameObject);
 
         timeForSatellite = timeManager.GetTime();
-        SetPosition();
+        UpdatePosition();
     }
 
-    public void SetPosition()
+    public void UpdatePosition()
     {
         Sgp4Data satellitePos = SatFunctions.getSatPositionAtTime(TLE, timeForSatellite, Sgp4.wgsConstant.WGS_84);
         Point3d pos = satellitePos.getPositionData();
         Coordinate cords = SatFunctions.calcSatSubPoint(timeForSatellite, satellitePos, Sgp4.wgsConstant.WGS_84);
 
-        if (TLE.getName() == "ISS (ZARYA)")
-            Debug.Log(cords.getLatitude() + " " + cords.getLongitude() + " " + cords.getHeight());
+        Vector3 newPos = FromLongLat(-(float)cords.getLongitude(), (float)cords.getLatitude(), 2.1f);
+
+        SetPosition(newPos);
+
+        // if (TLE.getName() == "ISS (ZARYA)")
+        //     Debug.Log(cords.getLatitude() + " " + cords.getLongitude() + " " + cords.getHeight());
 
 
-        float radiusEarth = 6371f;
-        float radiusModel = 2.2f;
+        // float radiusEarth = 6371f;
+        // float radiusModel = 2.2f;
 
-        Vector3 newPos = new Vector3(-(float)pos.y / radiusEarth * radiusModel,
-                                        (float)pos.z / radiusEarth * radiusModel,
-                                        (float)pos.x / radiusEarth * radiusModel);
+        // Vector3 newPos = new Vector3(-(float)pos.y / radiusEarth * radiusModel,
+        //                                 (float)pos.z / radiusEarth * radiusModel,
+        //                                 (float)pos.x / radiusEarth * radiusModel);
 
-        transform.localPosition = newPos;
+        // transform.localPosition = newPos;
     }
 
     // public void ValueChangeCheck()
