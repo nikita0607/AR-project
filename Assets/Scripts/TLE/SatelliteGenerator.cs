@@ -11,19 +11,19 @@ public class test_tle : MonoBehaviour
     [SerializeField] private GameObject _defaultSatellite;
 
     [SerializeField] private GameObject satelliteParrent;
+    [SerializeField] private GameObject[] _satellitePrefabList;
     void Start()
     {
         List<Tle> tleList = ParserTLE.ParseFile("Assets/Resources/TLE_data/data.txt");
-        List<GameObject> prefabList = Resources.FindObjectsOfTypeAll(typeof(GameObject)).Cast<GameObject>().Where(g=>g.tag=="satellite").ToList();
 
         foreach (Tle tle in tleList)
         {
 
             GameObject prefab = _defaultSatellite;
 
-            foreach (GameObject pref in prefabList)
+            foreach (GameObject pref in _satellitePrefabList)
             {
-                Debug.Log(pref.GetComponent<Satellite>().Name +" "+tle.getName());
+                Debug.Log(pref.GetComponent<Satellite>().Name + " " + tle.getName());
                 if (pref.GetComponent<Satellite>().Name == tle.getName())
                 {
                     prefab = pref;
