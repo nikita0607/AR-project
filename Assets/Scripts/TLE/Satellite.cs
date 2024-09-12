@@ -31,12 +31,30 @@ public class Satellite : EciPositionable
         UpdatePosition();
     }
 
+    public Coordinate GetPosition() {
+        try
+        {
+            Sgp4Data satellitePos = SatFunctions.getSatPositionAtTime(TLE, timeForSatellite, Sgp4.wgsConstant.WGS_84);
+            return SatFunctions.calcSatSubPoint(timeForSatellite, satellitePos, Sgp4.wgsConstant.WGS_84);
+        }
+        catch (ArgumentException)
+        {
+            Debug.Log("Satellite " + name + " has problems" );
+            return new Coordinate(0, 0);
+        }
+    }
+
+    public void OnHide(SatelliteHideFilter filter) {
+        if (filter.ShouldShowSatellite(this)) {
+            gameObject.SetActive(true);
+        } else {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void UpdatePosition()
     {
-        Sgp4Data satellitePos = SatFunctions.getSatPositionAtTime(TLE, timeForSatellite, Sgp4.wgsConstant.WGS_84);
-        Point3d pos = satellitePos.getPositionData();
-        Coordinate cords = SatFunctions.calcSatSubPoint(timeForSatellite, satellitePos, Sgp4.wgsConstant.WGS_84);
-
+        Coordinate cords = GetPosition();
         Vector3 newPos = FromLongLat(-(float)cords.getLongitude(), (float)cords.getLatitude(), 2.1f);
 
         SetPosition(newPos);

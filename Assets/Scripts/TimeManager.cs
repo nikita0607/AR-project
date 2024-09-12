@@ -10,6 +10,17 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private TMP_Text text;
     private EpochTime time;
 
+    public static TimeManager _instance;
+    public static TimeManager Instance {
+        get {
+            if(_instance == null)
+            {
+                _instance = FindObjectOfType<TimeManager>();
+            }
+            return _instance;
+        }
+    }
+
     private void Start()
     {
         timeVelocity = 1;
@@ -33,7 +44,7 @@ public class TimeManager : MonoBehaviour
         timeVelocity = newVelocity;
     }
 
-    private void ChangeVelocity(float valueToChange)
+    public void ChangeVelocity(float valueToChange)
     {
         timeVelocity += valueToChange;
     }

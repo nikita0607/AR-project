@@ -6,12 +6,19 @@ using System;
 using One_Sgp4;
 using System.Linq;
 
-public class test_tle : MonoBehaviour
+public class SatelliteGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject _defaultSatellite;
 
     [SerializeField] private GameObject satelliteParrent;
     [SerializeField] private GameObject[] _satellitePrefabList;
+    
+    private SatelliteInfoController _infoConroller;
+
+    private void Awake() {
+        _infoConroller = GetComponent<SatelliteInfoController>();
+    }
+
     void Start()
     {
         List<Tle> tleList = ParserTLE.ParseFile("Assets/Resources/TLE_data/data.txt");
@@ -38,6 +45,8 @@ public class test_tle : MonoBehaviour
             newSatelliteComponent.TLE = tle;
             newSatellite.transform.SetParent(satelliteParrent.transform);
             newSatellite.transform.localScale = prefab.transform.localScale;
+
+            _infoConroller.HideSatellites += newSatellite.GetComponent<Satellite>().OnHide;
         }
     }
 }
