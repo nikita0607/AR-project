@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
-
+using System.Collections;
+using System.Collections.Generic;
 using One_Sgp4;
 
 public class Satellite : EciPositionable
@@ -8,7 +9,7 @@ public class Satellite : EciPositionable
     [SerializeField] public String Name;
     [SerializeField] public GameObject sl;
     public Tle TLE { get; set; }
-    private EpochTime timeForSatellite;
+    public EpochTime timeForSatellite {get; set; }
     private TimeManager timeManager;
 
     private void Start()
@@ -31,11 +32,13 @@ public class Satellite : EciPositionable
         UpdatePosition();
     }
 
-    public Coordinate GetPosition() {
+    public Coordinate GetPosition(EpochTime time = null) {
+        if (time is null) time = timeForSatellite;
+
         try
         {
-            Sgp4Data satellitePos = SatFunctions.getSatPositionAtTime(TLE, timeForSatellite, Sgp4.wgsConstant.WGS_84);
-            return SatFunctions.calcSatSubPoint(timeForSatellite, satellitePos, Sgp4.wgsConstant.WGS_84);
+            Sgp4Data satellitePos = SatFunctions.getSatPositionAtTime(TLE, time, Sgp4.wgsConstant.WGS_84);
+            return SatFunctions.calcSatSubPoint(time, satellitePos, Sgp4.wgsConstant.WGS_84);
         }
         catch (ArgumentException)
         {
@@ -50,6 +53,15 @@ public class Satellite : EciPositionable
         } else {
             gameObject.SetActive(false);
         }
+    }
+
+    public int GetMinutesForNextPass() {
+        EpochTime time = timeForSatellite;
+        time.addMinutes(5);
+
+        List<Pass> passes = SatFunctions.CalculatePasses(GetPosition(), TLE, time);
+        Pass p = passes[1];
+        return (int)(p.getStartEpoch().toDateTime()-timeForSatellite.toDateTime()).TotalMinutes;
     }
 
     public void UpdatePosition()
