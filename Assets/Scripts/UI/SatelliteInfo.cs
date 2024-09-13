@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using One_Sgp4;
 using TMPro;
 using UnityEngine;
@@ -20,6 +21,9 @@ public class SatelliteInfo : MonoBehaviour
         String text = $"Название: {satellite.TLE.getName()}\n" +
                       $"NORAD-ID: {satellite.TLE.getNoradID()}\n" +
                       $"Координаты:\n\tширота: {cords.getLatitude():f2}\n\tдолгота: {cords.getLongitude():f2}\n";
+
+        if (SatellitesSer.GetSatellitesSer().ContainsKey(satellite.name))
+            text += $"{SatellitesSer.GetSatellitesSer()[satellite.name].info}\n";
 
         _textField.text = text;
 
