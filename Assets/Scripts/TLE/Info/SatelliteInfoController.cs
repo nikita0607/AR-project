@@ -13,6 +13,10 @@ public class SatelliteInfoController : MonoBehaviour
 
     void Update()
     {
+
+        var fil = new SatelliteCompositeHideFilter();
+        fil &= new SatelliteHideFilter(nameFilter: "HUI");
+        fil -= new SatelliteHideFilter(nameFilter: "HUI");
         
         if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
@@ -24,7 +28,7 @@ public class SatelliteInfoController : MonoBehaviour
                 if(hit.collider.tag == "satellite")
                 {
                     Satellite satellite = hit.collider.gameObject.GetComponent<Satellite>();
-                    SatelliteHideFilter filter = new SatelliteHideFilter(name: satellite.name);
+                    SatelliteHideFilter filter = new SatelliteHideFilter(nameFilter: satellite.name);
                     HideSatellites(filter);
                     _satelliteInfo.SetInfo(satellite);
                     _satelliteInfo.Show();
