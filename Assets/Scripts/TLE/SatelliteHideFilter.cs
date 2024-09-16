@@ -26,11 +26,8 @@ public class SatelliteHideFilter : Filter {
 
     public override bool Equals(object obj)
     {
-        
         if (obj == null || GetType() != obj.GetType())
-        {
             return false;
-        }
         
         return GetHashCode() == obj.GetHashCode();
     }

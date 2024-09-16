@@ -35,12 +35,8 @@ public class SatelliteCompositeHideFilter : Filter
 
     public static SatelliteCompositeHideFilter operator- (SatelliteCompositeHideFilter a, SatelliteHideFilter b) {
         SatelliteCompositeHideFilter filter = new SatelliteCompositeHideFilter(a._andFilters);
-        for (int i=0; i<filter._andFilters.Count; i++) {
-            if (filter._andFilters[i].Equals(b)) {
-                filter._andFilters.RemoveAt(i);
-                return filter;
-            }
-        }
+        filter._andFilters.RemoveAll(x => x.Equals(b));
+        
         return filter;
     }
 
