@@ -18,7 +18,7 @@ public class SatelliteInfo : MonoBehaviour
     public void SetInfo(Satellite satellite) {
         Coordinate cords = satellite.GetPosition();
         
-        String text = $"Название: {satellite.TLE.getName()}\n" +
+        string text = $"Название: {satellite.TLE.getName()}\n" +
                       $"NORAD-ID: {satellite.TLE.getNoradID()}\n" +
                       $"Координаты:\n\tширота: {cords.getLatitude():f2}\n\tдолгота: {cords.getLongitude():f2}\n";
 

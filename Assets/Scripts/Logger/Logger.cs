@@ -16,7 +16,7 @@ public class Logger {
 
     public static void Log<T>(List<T> list) {
         string msg = "";
-        list.ForEach(x => msg += x.ToString());
+        list.ForEach(x => Debug.Log(x));
         Log(msg);
     }
 

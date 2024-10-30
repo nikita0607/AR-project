@@ -1,10 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 using One_Sgp4;
+using UnityEditor;
 using System.Linq;
+using System;
 
 public class SatelliteGenerator : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class SatelliteGenerator : MonoBehaviour
 
     [SerializeField] private GameObject satelliteParrent;
     [SerializeField] private GameObject[] _satellitePrefabList;
+    [SerializeField] private TextAsset tleFile;
     
     private SatelliteInfoController _infoConroller;
 
@@ -21,7 +22,11 @@ public class SatelliteGenerator : MonoBehaviour
 
     void Start()
     {
-        List<Tle> tleList = ParserTLE.ParseFile("Assets/Resources/TLE_data/data.txt");
+        List<string> tleStrings = tleFile.text.Split("\n").Select(x => x.Trim()).ToList();
+
+        List<Tle> tleList = Enumerable.Range(0, tleStrings.Count/3).Select(i => {
+            return ParserTLE.parseTle(tleStrings[i*3+1], tleStrings[i*3+2], tleStrings[i*3]);
+        }).ToList();
 
         foreach (Tle tle in tleList)
         {

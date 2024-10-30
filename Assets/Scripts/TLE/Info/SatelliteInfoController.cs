@@ -15,8 +15,8 @@ public class SatelliteInfoController : MonoBehaviour
     {
 
         var fil = new SatelliteCompositeHideFilter();
-        fil &= new SatelliteHideFilter(nameFilter: "HUI");
-        fil -= new SatelliteHideFilter(nameFilter: "HUI");
+        fil &= new SatelliteHideFilter(nameFilter: "Test");
+        fil -= new SatelliteHideFilter(nameFilter: "Test");
         
         if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {

@@ -70,24 +70,7 @@ public class Satellite : EciPositionable
         Vector3 newPos = FromLongLat(-(float)cords.getLongitude(), (float)cords.getLatitude(), 2.1f);
 
         SetPosition(newPos);
-
-        // if (TLE.getName() == "ISS (ZARYA)")
-        //     Debug.Log(cords.getLatitude() + " " + cords.getLongitude() + " " + cords.getHeight());
-
-
-        // float radiusEarth = 6371f;
-        // float radiusModel = 2.2f;
-
-        // Vector3 newPos = new Vector3(-(float)pos.y / radiusEarth * radiusModel,
-        //                                 (float)pos.z / radiusEarth * radiusModel,
-        //                                 (float)pos.x / radiusEarth * radiusModel);
-
-        // transform.localPosition = newPos;
     }
 
-    // public void ValueChangeCheck()
-    // {
-    //     time = new EpochTime(DateTime.UtcNow.AddHours(slider.value));
-    //     SetPosition();
-    // }
+  
 }
