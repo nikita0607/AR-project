@@ -3,20 +3,29 @@ using UnityEngine;
 
 public class SatelliteInfoController : MonoBehaviour
 {
-    [SerializeField] private SatelliteInfo _satelliteInfo;
+    [SerializeField] private SatelliteInfo satelliteInfo;
+    
     public Action<SatelliteHideFilter> HideSatellites;
-
+    public static SatelliteInfoController Singleton;
     
     public void ShowAllSatellites() {
         HideSatellites(new SatelliteHideFilter());   
     }
 
+    private void Start()
+    {
+        if (Singleton)
+            Debug.LogWarning("More than one SatelliteInfoController found!");
+        else
+            Singleton = this;
+    }
+
     void Update()
     {
-
         var fil = new SatelliteCompositeHideFilter();
         fil &= new SatelliteHideFilter(nameFilter: "Test");
         fil -= new SatelliteHideFilter(nameFilter: "Test");
+        Debug.Log(fil);
         
         if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
@@ -30,8 +39,8 @@ public class SatelliteInfoController : MonoBehaviour
                     Satellite satellite = hit.collider.gameObject.GetComponent<Satellite>();
                     SatelliteHideFilter filter = new SatelliteHideFilter(nameFilter: satellite.name);
                     HideSatellites(filter);
-                    _satelliteInfo.SetInfo(satellite);
-                    _satelliteInfo.Show();
+                    satelliteInfo.SetInfo(satellite);
+                    satelliteInfo.Show();
                     return;
                 }
             }

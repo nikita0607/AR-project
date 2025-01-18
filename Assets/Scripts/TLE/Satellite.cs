@@ -7,7 +7,7 @@ using One_Sgp4;
 public class Satellite : EciPositionable
 {
     [SerializeField] public String Name;
-    [SerializeField] public GameObject sl;
+    // [SerializeField] public GameObject sl;
     public Tle TLE { get; set; }
     public EpochTime timeForSatellite {get; set; }
     private TimeManager timeManager;

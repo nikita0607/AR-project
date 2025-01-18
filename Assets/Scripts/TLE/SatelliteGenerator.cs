@@ -5,19 +5,20 @@ using One_Sgp4;
 using UnityEditor;
 using System.Linq;
 using System;
+using UnityEngine.Serialization;
 
 public class SatelliteGenerator : MonoBehaviour
 {
-    [SerializeField] private GameObject _defaultSatellite;
+    [SerializeField] private GameObject defaultSatellite;
 
     [SerializeField] private GameObject satelliteParrent;
-    [SerializeField] private GameObject[] _satellitePrefabList;
+    [SerializeField] private GameObject[] satellitePrefabList;
     [SerializeField] private TextAsset tleFile;
     
-    private SatelliteInfoController _infoConroller;
+    private SatelliteInfoController _infoController;
 
     private void Awake() {
-        _infoConroller = GetComponent<SatelliteInfoController>();
+        _infoController = GetComponent<SatelliteInfoController>();
     }
 
     void Start()
@@ -31,9 +32,9 @@ public class SatelliteGenerator : MonoBehaviour
         foreach (Tle tle in tleList)
         {
 
-            GameObject prefab = _defaultSatellite;
+            GameObject prefab = defaultSatellite;
 
-            foreach (GameObject pref in _satellitePrefabList)
+            foreach (GameObject pref in satellitePrefabList)
             {
                 Debug.Log(pref.GetComponent<Satellite>().Name + " " + tle.getName());
                 if (pref.GetComponent<Satellite>().Name == tle.getName())
@@ -43,15 +44,17 @@ public class SatelliteGenerator : MonoBehaviour
                 }
             }
 
-            GameObject newSatellite = Instantiate(prefab);
-            newSatellite.SetActive(true);
+            GameObject newSatellite = Instantiate(prefab, parent: satelliteParrent.transform);
             Satellite newSatelliteComponent = newSatellite.GetComponent<Satellite>();
+            
+            newSatellite.SetActive(true);
 
             newSatelliteComponent.TLE = tle;
-            newSatellite.transform.SetParent(satelliteParrent.transform);
+            newSatelliteComponent.Name = tle.getName();
+            
             newSatellite.transform.localScale = prefab.transform.localScale;
 
-            _infoConroller.HideSatellites += newSatellite.GetComponent<Satellite>().OnHide;
+            _infoController.HideSatellites += newSatellite.GetComponent<Satellite>().OnHide;
         }
     }
 }
