@@ -9,6 +9,7 @@ public class SatelliteInfo : MonoBehaviour
     [SerializeField] private TMP_Text _textField;
     [SerializeField] private GameObject _lineRedererParrent;
     [SerializeField] private GameObject _trailPrefab;
+    [SerializeField] private TextAsset _satteliteJson;
 
     private Action _onHide;
 
@@ -22,8 +23,8 @@ public class SatelliteInfo : MonoBehaviour
                       $"NORAD-ID: {satellite.TLE.getNoradID()}\n" +
                       $"Координаты:\n\tширота: {cords.getLatitude():f2}\n\tдолгота: {cords.getLongitude():f2}\n";
 
-        if (SatellitesSer.GetSatellitesSer().ContainsKey(satellite.name))
-            text += $"{SatellitesSer.GetSatellitesSer()[satellite.name].info}\n";
+        if (SatellitesSer.GetSatellitesSer(_satteliteJson).ContainsKey(satellite.name))
+            text += $"{SatellitesSer.GetSatellitesSer(_satteliteJson)[satellite.name].info}\n";
 
         _textField.text = text;
 
