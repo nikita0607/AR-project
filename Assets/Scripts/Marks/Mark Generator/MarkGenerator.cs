@@ -26,16 +26,17 @@ public class MarkGenerat : MonoBehaviour
         {
             MarkSer markInfo = marksFromJson.marks[i];
 
-            GameObject newMark = Instantiate(mark);
+            GameObject newMark = Instantiate(mark, markParrent.transform);
             Mark newMarkComponent = newMark.GetComponent<Mark>();
 
-            newMark.transform.SetParent(markParrent.transform);
             newMark.transform.localScale = mark.transform.localScale;
-            newMark.transform.rotation = mark.transform.rotation;
 
             newMarkComponent.Name = marksFromJson.marks[i].name;
             newMarkComponent.Info = marksFromJson.marks[i].info;
-            newMarkComponent.SetPosition(EciPositionable.FromLongLat(markInfo.longitude, markInfo.latitude, earthUnitRadius));
+            newMarkComponent.SetPosition(EciPositionable.FromLongLat(markInfo.longitude, markInfo.latitude,
+                earthUnitRadius));
+            
+            newMark.transform.rotation = Quaternion.LookRotation(markParrent.transform.position - newMark.transform.position);
 
             // Debug.Log(newMark.name);
         }
