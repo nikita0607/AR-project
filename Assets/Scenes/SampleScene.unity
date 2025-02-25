@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18018529, g: 0.22559598, b: 0.3067763, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3258,10 +3258,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1306eeccd594778b54270e7c75a96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSatellite: {fileID: 1891457022669765274, guid: 50e66cad3bfcad24b8d4abee727c619a, type: 3}
+  defaultSatellite: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
   satelliteParrent: {fileID: 1253954949}
   satellitePrefabList:
   - {fileID: 1819253705468613351, guid: 73f8b9616837a854f91cea8a0a02386f, type: 3}
+  - {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
   tleFile: {fileID: 4900000, guid: aad71f50e2edf41e2817687e98a4d406, type: 3}
 --- !u!114 &1253954956
 MonoBehaviour:
@@ -4784,6 +4785,7 @@ MonoBehaviour:
   mBBoxMin: {x: -0.203023, y: -0.181022, z: -0.200822}
   mBBoxMax: {x: 0.199522, y: 0.272922, z: 0.20128}
   mPreviewImage: {fileID: 0}
+  mEnhanceRuntimeDetection: 0
   m3DGuideViewModel: {fileID: 0}
   m2DGuideViewImage: {fileID: 0}
   mGuideViewDisplayMode: 0
@@ -4802,6 +4804,7 @@ MonoBehaviour:
   mHasRealisticTextures: 1
   mPreview: {fileID: 1650949328}
   mAutoValidationDataSetName: 
+  mGuideViewDisplayModeNeedsUpgrade: 1
 --- !u!4 &1650949327
 Transform:
   m_ObjectHideFlags: 0
