@@ -21,8 +21,11 @@ public class ShowMarkinfoOnClick : MonoBehaviour
                 if(hit.collider.tag == "mark")
                 {
                     _infoPanel.SetActive(true);
-                    _textField.text = hit.collider.gameObject.GetComponent<Mark>().Info;
-                    return;
+                    Mark mark = hit.collider.gameObject.GetComponent<Mark>();
+
+                    string text = mark.Name;
+                    text += "\n" + mark.Info;
+                    _textField.text = text;
                 }
             }
         }
