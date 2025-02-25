@@ -3,11 +3,13 @@ using System;
 
 using One_Sgp4;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] private float timeVelocity;
-    [SerializeField] private TMP_Text text;
+    [SerializeField] private TMP_Text timeText;
+    [SerializeField] private TMP_Text timeSpeedText;
     private EpochTime time;
 
     public static TimeManager _instance;
@@ -24,14 +26,15 @@ public class TimeManager : MonoBehaviour
     private void Start()
     {
         timeVelocity = 1;
-        time = new EpochTime(DateTime.UtcNow);
+        time = new EpochTime(DateTime.UtcNow.AddHours(3));
     }
 
 
     private void Update()
     {
         time.addTick(timeVelocity * Time.deltaTime);
-        text.text = time.ToString();
+        timeText.text = $"{time.getDateToString()}\n{time.getTimeToString()}";
+        timeSpeedText.text = $"Управление временем. Текущая скорость = {timeVelocity}.";
     }
 
     public EpochTime GetTime()

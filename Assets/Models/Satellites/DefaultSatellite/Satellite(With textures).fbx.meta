@@ -3,7 +3,32 @@ guid: 44c995e1314d99044aad9093a8ab4303
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Antenna
+    second: {fileID: -5861157128129968386, guid: f5bac18dad8d78a47b617643dcc2edb4, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Couro
+    second: {fileID: 2259041591202926219, guid: f5bac18dad8d78a47b617643dcc2edb4, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pinos
+    second: {fileID: 3901885161692277520, guid: f5bac18dad8d78a47b617643dcc2edb4, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Placas
+    second: {fileID: 7803287541141750854, guid: f5bac18dad8d78a47b617643dcc2edb4, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Sat\xE9lite"
+    second: {fileID: -4633978843778459456, guid: f5bac18dad8d78a47b617643dcc2edb4, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
