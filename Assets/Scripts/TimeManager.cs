@@ -26,7 +26,7 @@ public class TimeManager : MonoBehaviour
     private void Start()
     {
         timeVelocity = 1;
-        time = new EpochTime(DateTime.UtcNow.AddHours(3));
+        ResetTime();
     }
 
 
@@ -54,7 +54,7 @@ public class TimeManager : MonoBehaviour
 
     public void ResetTime()
     {
-        time = new EpochTime(DateTime.UtcNow);
+        time = new EpochTime(DateTime.UtcNow.AddHours(3));
         SetNewVelocity(1);
     }
 }
