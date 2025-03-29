@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028301, g: 0.22571309, b: 0.30692127, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -210,7 +210,7 @@ Camera:
     height: 1
   near clip plane: 0.05
   far clip plane: 2000
-  field of view: 60
+  field of view: 26.991467
   orthographic: 0
   orthographic size: 5
   m_Depth: 1
@@ -2877,17 +2877,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.035851724
-      outSlope: 0.035851724
+      inSlope: 0.0038600867
+      outSlope: 0.0038600867
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.0150757
-      value: 0.036392212
-      inSlope: 0.035851724
-      outSlope: 0.035851724
+      time: 1.027771
+      value: 0.003967285
+      inSlope: 0.0038600867
+      outSlope: 0.0038600867
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -4543,10 +4543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Size: {x: 4, y: 3, z: 4}
-  m_Center: {x: 0, y: 1, z: 0}
-  m_Area: 0
-  m_AffectedAgents: ffffffff
 --- !u!4 &1569799974
 Transform:
   m_ObjectHideFlags: 0
@@ -4571,6 +4567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1607505852}
+  - component: {fileID: 1607505853}
   m_Layer: 0
   m_Name: Place
   m_TagString: Untagged
@@ -4598,6 +4595,20 @@ Transform:
   - {fileID: 784713552}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607505853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607505851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e619fa89e942eead2f03440b9d0345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeDelta: 0.01
+  changeCamDelta: 0.01
 --- !u!1 &1649931415
 GameObject:
   m_ObjectHideFlags: 0

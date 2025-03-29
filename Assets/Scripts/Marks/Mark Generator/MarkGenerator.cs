@@ -20,7 +20,6 @@ public class MarkGenerat : MonoBehaviour
         CreateMark();
     }
 
-    // Update is called once per frame
     void CreateMark() {
         for (int i = 0; i < marksFromJson.marks.Length; i++)
         {
