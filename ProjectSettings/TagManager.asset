@@ -6,6 +6,7 @@ TagManager:
   tags:
   - mark
   - satellite
+  - TimeManager
   layers:
   - Default
   - TransparentFX

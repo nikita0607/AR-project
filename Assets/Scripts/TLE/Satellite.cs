@@ -17,7 +17,7 @@ public class Satellite : EciPositionable
         transform.rotation = Quaternion.identity;
         gameObject.name = TLE.getName();
 
-        timeManager = transform.parent.GetComponent<TimeManager>();
+        timeManager = GameObject.FindWithTag("TimeManager").GetComponent<TimeManager>();
         timeForSatellite = timeManager.GetTime();
 
         // slider = GameObject.Find("Slider").GetComponent<Slider>();
