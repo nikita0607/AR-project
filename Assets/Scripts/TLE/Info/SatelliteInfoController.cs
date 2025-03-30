@@ -5,11 +5,14 @@ public class SatelliteInfoController : MonoBehaviour
 {
     [SerializeField] private SatelliteInfo satelliteInfo;
     
-    public Action<SatelliteHideFilter> HideSatellites;
-    public static SatelliteInfoController Singleton;
+    public Action<Filter> HideSatellites;
     
-    public void ShowAllSatellites() {
-        HideSatellites(new SatelliteHideFilter());   
+    public static SatelliteInfoController Singleton;
+    public SatelliteCompositeHideFilter SatelliteHideFilters;
+    
+    
+    public void DisableSingleSatelliteFilter() {
+        HideSatellites(SatelliteHideFilters);
     }
 
     private void Start()
@@ -18,15 +21,12 @@ public class SatelliteInfoController : MonoBehaviour
             Debug.LogWarning("More than one SatelliteInfoController found!");
         else
             Singleton = this;
+        
+        SatelliteHideFilters = new SatelliteCompositeHideFilter();
     }
 
     void Update()
     {
-        var fil = new SatelliteCompositeHideFilter();
-        fil &= new SatelliteHideFilter(nameFilter: "Test");
-        fil -= new SatelliteHideFilter(nameFilter: "Test");
-        Debug.Log(fil);
-        
         if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
@@ -34,7 +34,7 @@ public class SatelliteInfoController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                if(hit.collider.tag == "satellite")
+                if(hit.collider.CompareTag("satellite"))
                 {
                     Satellite satellite = hit.collider.gameObject.GetComponent<Satellite>();
                     SatelliteHideFilter filter = new SatelliteHideFilter(nameFilter: satellite.name);
@@ -45,5 +45,7 @@ public class SatelliteInfoController : MonoBehaviour
                 }
             }
         }
+        
+        
     }
 }

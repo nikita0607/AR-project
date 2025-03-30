@@ -41,7 +41,7 @@ namespace Utilities
             var newPosition = _parentTransform.position - _relativePositionInParent;
             if (Mathf.Abs((transform.position - newPosition).magnitude) > changeDelta)
             {
-                Debug.Log("Rrrrr");
+                // Debug.Log("Rrrrr");
                 _prevPosition = newPosition;
             }
             transform.position = _prevPosition;

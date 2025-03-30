@@ -47,7 +47,7 @@ public class Satellite : EciPositionable
         }
     }
 
-    public void OnHide(SatelliteHideFilter filter) {
+    public void OnHide(Filter filter) {
         if (filter.ShouldShowSatellite(this)) {
             gameObject.SetActive(true);
         } else {

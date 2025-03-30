@@ -17,6 +17,11 @@ public class SatelliteCompositeHideFilter : Filter
         return true;
     }
 
+    public void ClearAllFilters()
+    {
+        _andFilters.Clear();
+    }
+
     public static SatelliteCompositeHideFilter operator& (SatelliteCompositeHideFilter a, SatelliteHideFilter b) {
         SatelliteCompositeHideFilter filter = new SatelliteCompositeHideFilter(a._andFilters);
         filter._andFilters.Add(b);    
