@@ -17,7 +17,7 @@ namespace Utilities
 
             ClearCalibration();
             _xValue = value;
-            _zValue = -value;
+            // _zValue = -value;
             UpdateCalibration();
         }
         
