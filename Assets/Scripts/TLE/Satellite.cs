@@ -42,7 +42,7 @@ public class Satellite : EciPositionable
         }
         catch (ArgumentException)
         {
-            Debug.Log("Satellite " + name + " has problems" );
+            // Debug.Log("Satellite " + name + " has problems" );
             return new Coordinate(0, 0);
         }
     }
