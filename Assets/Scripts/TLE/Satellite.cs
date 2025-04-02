@@ -71,7 +71,7 @@ public class Satellite : EciPositionable
     public void UpdatePosition()
     {
         Coordinate cords = GetPosition();
-        Vector3 newPos = FromLongLat(-(float)cords.getLongitude(), (float)cords.getLatitude(), EarthParametrs.RealEarthRadius+GetHeight());
+        Vector3 newPos = FromLongLat(-(float)cords.getLongitude(), (float)cords.getLatitude(), EarthParametrs.VirtualEarthRadius+GetHeight());
 
         SetPosition(newPos);
     }

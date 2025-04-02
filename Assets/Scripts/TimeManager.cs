@@ -12,7 +12,11 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private TMP_Text timeSpeedText;
     private EpochTime time;
 
+    private int _lastMinunte;
+    
     public static TimeManager _instance;
+    public Action OnMinuteChanged;
+    
     public static TimeManager Instance {
         get {
             if(_instance == null)
@@ -27,6 +31,8 @@ public class TimeManager : MonoBehaviour
     {
         timeVelocity = 1;
         ResetTime();
+        
+        _lastMinunte = time.getMin();
     }
 
 
@@ -35,6 +41,12 @@ public class TimeManager : MonoBehaviour
         time.addTick(timeVelocity * Time.deltaTime);
         timeText.text = $"{time.getDateToString()}\n{time.getTimeToString()}";
         timeSpeedText.text = $"Управление временем. Текущая скорость = {timeVelocity}.";
+
+        if (time.getMin() != _lastMinunte)
+        {
+            OnMinuteChanged?.Invoke();
+            _lastMinunte = time.getMin();
+        }
     }
 
     public EpochTime GetTime()
