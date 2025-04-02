@@ -1,18 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using UnityEngine;
 using UnityEngine.Networking;
 
 namespace TLE
 {
     public class WebParser 
     {
-        public IEnumerator DownloadAndParseTle(System.Action<List<Tle>> onSuccess, System.Action<string> onError)
+        public IEnumerator DownloadAndParseTle(string url, Action<List<Tle>> onSuccess, Action<string> onError)
         {
-            string url = "http://r4uab.ru/satonline.txt";
-
+        //     string url = "http://r4uab.ru/satonline.txt";
+        
             using (UnityWebRequest request = new UnityWebRequest(url)
             {
                 downloadHandler = new DownloadHandlerBuffer(),

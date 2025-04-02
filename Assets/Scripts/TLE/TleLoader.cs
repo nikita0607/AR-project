@@ -14,31 +14,53 @@ namespace TLE
         
         private static readonly string _tleFilePath = Path.Combine(Application.persistentDataPath, "TLE.txt");
         
-        public static IEnumerator GetTle(System.Action<List<Tle>> onLoadSuccess)
+        // public static IEnumerator GetTle(System.Action<List<Tle>> onLoadSuccess)
+        // {
+        //      yield return _webParser.DownloadAndParseTle(
+        //                 tleList =>
+        //                 {
+        //                     _loadedTles = tleList;
+        //                 },
+        //                 error => {
+        //                     Debug.LogError(error);
+        //                     LoadFromLocalFile();
+        //                 }
+        //             );
+        //      
+        //      onLoadSuccess?.Invoke(_loadedTles);
+        //      SaveToLocalFile();
+        // }
+        
+        public static IEnumerator GetTle(string url, Action<List<Tle>> onLoadSuccess, Action<string> onError)
         {
-             yield return _webParser.DownloadAndParseTle(
-                        tleList =>
-                        {
-                            _loadedTles = tleList;
-                        },
-                        error => {
-                            Debug.LogError(error);
-                            LoadFromLocalFile();
-                        }
-                    );
-             
-             onLoadSuccess?.Invoke(_loadedTles);
-             SaveToLocalFile();
+            yield return _webParser.DownloadAndParseTle(
+                url,
+                tleList => {
+                    _loadedTles = tleList;
+                },
+                error =>
+                {
+                    Debug.LogError(error);
+                    LoadFromLocalFile(url);
+                }
+            );
+            
+            onLoadSuccess?.Invoke(_loadedTles);
+            SaveToLocalFile(url);
         }
 
-        private static void SaveToLocalFile()
+        private static void SaveToLocalFile(string url)
         {
             string allData = String.Join("\n", _loadedTles.Select(tle => tle.ToString()));
+            string tleFilePath = Path.Combine(Application.persistentDataPath, $"{url.Replace('/', '_')}.txt");
             
             try
             {
-                File.WriteAllText(_tleFilePath, allData);
-                Debug.Log($"Данные сохранены в: {_tleFilePath}");
+                File.WriteAllText(tleFilePath, allData);
+                Debug.Log($"Данные сохранены в: {tleFilePath}");
+                
+                // File.WriteAllText(_tleFilePath, allData);
+                // Debug.Log($"Данные сохранены в: {_tleFilePath}");
             }
             catch (System.Exception e)
             {
@@ -46,10 +68,11 @@ namespace TLE
             }
         }
         
-        private static void LoadFromLocalFile()
+        private static void LoadFromLocalFile(string url)
           {
+              string tleFilePath = Path.Combine(Application.persistentDataPath, $"{url.Replace('/', '_')}.txt");
               
-              if(!File.Exists(_tleFilePath))
+              if(!File.Exists(tleFilePath))
               {
                   Debug.LogError("Локальный файл данных не найден");
                   return;
@@ -57,7 +80,7 @@ namespace TLE
       
               try
               {
-                  string rawData = File.ReadAllText(_tleFilePath);
+                  string rawData = File.ReadAllText(tleFilePath);
                   
                   List<string> lines = new List<string>(rawData.Split('\n'))
                       .Select(line => line.Trim())
