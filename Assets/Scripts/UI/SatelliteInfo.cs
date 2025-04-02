@@ -3,6 +3,7 @@ using System.Linq;
 using One_Sgp4;
 using TMPro;
 using UnityEngine;
+using Utilities;
 
 public class SatelliteInfo : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class SatelliteInfo : MonoBehaviour
 
             GameObject trail = Instantiate(_trailPrefab, Vector3.zero, Quaternion.identity, _lineRedererParrent.transform);
             
-            trail.transform.localPosition = EciPositionable.FromLongLat(-(float)satCords.getLongitude(), (float)satCords.getLatitude(), 2.2f);
+            trail.transform.localPosition = EciPositionable.FromLongLat(-(float)satCords.getLongitude(), (float)satCords.getLatitude(), EarthParametrs.RealEarthRadius+satellite.GetHeight());
 
             satellite.timeForSatellite.addMinutes(1);
             satellite.UpdatePosition();

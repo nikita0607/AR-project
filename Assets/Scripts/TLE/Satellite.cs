@@ -1,8 +1,8 @@
 using UnityEngine;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using One_Sgp4;
+using Utilities;
 
 public class Satellite : EciPositionable
 {
@@ -64,10 +64,12 @@ public class Satellite : EciPositionable
         return (int)(p.getStartEpoch().toDateTime()-timeForSatellite.toDateTime()).TotalMinutes;
     }
 
+    public float GetHeight() => EarthParametrs.RealToVirtualDistance((float)GetPosition().getHeight());
+
     public void UpdatePosition()
     {
         Coordinate cords = GetPosition();
-        Vector3 newPos = FromLongLat(-(float)cords.getLongitude(), (float)cords.getLatitude(), 2.1f);
+        Vector3 newPos = FromLongLat(-(float)cords.getLongitude(), (float)cords.getLatitude(), EarthParametrs.RealEarthRadius+GetHeight());
 
         SetPosition(newPos);
     }

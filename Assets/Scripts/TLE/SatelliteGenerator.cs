@@ -13,7 +13,7 @@ public class SatelliteGenerator : MonoBehaviour
 
     [SerializeField] private GameObject satelliteParrent;
     [SerializeField] private GameObject[] satellitePrefabList;
-    [SerializeField] private TextAsset tleFile;
+    // [SerializeField] private TextAsset tleFile;
     
     private SatelliteInfoController _infoController;
     
