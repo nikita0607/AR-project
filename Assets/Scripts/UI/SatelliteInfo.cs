@@ -28,7 +28,8 @@ public class SatelliteInfo : MonoBehaviour
 
         _textField.text = text;
 
-        satellite.timeForSatellite = new EpochTime(DateTime.UtcNow);
+        // satellite.timeForSatellite = new EpochTime(DateTime.UtcNow);
+        satellite.timeForSatellite = TimeManager.Instance.GetTime();
 
         for (int i=0; i<94; i++) {
             Coordinate satCords = satellite.GetPosition();
@@ -45,6 +46,7 @@ public class SatelliteInfo : MonoBehaviour
             };
         };
 
+        TimeManager.Instance.ResetTime();
         satellite.timeForSatellite = TimeManager.Instance.GetTime();
     }
 
