@@ -66,7 +66,7 @@ public class SatelliteGenerator : MonoBehaviour
             
             GameObject newSatellite = Instantiate(newPrefab, parent: satelliteParrent.transform);
             Satellite newSatelliteComponent = newSatellite.GetComponent<Satellite>();
-            newSatellite.SetActive(true);
+            newSatellite.SetActive(false);
             
             newSatelliteComponent.Name = parsedTle.getName();
             newSatelliteComponent.TLE = parsedTle;

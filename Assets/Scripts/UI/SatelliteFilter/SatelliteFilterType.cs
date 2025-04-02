@@ -25,7 +25,6 @@ namespace UI.SatelliteFilter
                 
                 button.onClick.AddListener(() => ApplySearch((SatelliteType)typeIndex));
             }
-
         }
 
         private void ApplySearch(SatelliteType satelliteType)
