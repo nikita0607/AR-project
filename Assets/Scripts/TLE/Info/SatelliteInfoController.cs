@@ -9,10 +9,29 @@ public class SatelliteInfoController : MonoBehaviour
     
     public static SatelliteInfoController Singleton;
     public SatelliteCompositeHideFilter SatelliteHideFilters;
-    
-    
-    public void DisableSingleSatelliteFilter() {
+
+    private bool _canApplyFilter = true;
+
+    private void OnEnable()
+    {
+        satelliteInfo.OnHide += ApplySatelliteFilter;
+    }
+
+    private void OnDisable()
+    {
+        satelliteInfo.OnHide -= ApplySatelliteFilter;
+    }
+
+    private void ApplySatelliteFilter()
+    {
         HideSatellites(SatelliteHideFilters);
+        _canApplyFilter = true;
+    }
+
+    public bool TryApplySatelliteFilter()
+    {
+        if (_canApplyFilter) ApplySatelliteFilter();
+        return _canApplyFilter;
     }
 
     private void Start()
@@ -41,11 +60,10 @@ public class SatelliteInfoController : MonoBehaviour
                     HideSatellites(filter);
                     satelliteInfo.SetInfo(satellite);
                     satelliteInfo.Show();
-                    return;
+                    
+                    _canApplyFilter = false;
                 }
             }
         }
-        
-        
     }
 }

@@ -1,23 +1,35 @@
 using System;
-using System.Linq;
 using One_Sgp4;
 using TMPro;
 using UnityEngine;
 using Utilities;
 
 public class SatelliteInfo : MonoBehaviour
+
 {
+    public Action OnHide;
+    
     [SerializeField] private TMP_Text _textField;
     [SerializeField] private GameObject _lineRedererParrent;
     [SerializeField] private GameObject _trailPrefab;
     [SerializeField] private TextAsset _satteliteJson;
 
     private Action _onHide;
+    private Satellite _currentSatellite;
+    
+    private void OnEnable()
+    {
+        TimeManager.Instance.OnMinuteChanged += UpdateInfo;
+    }
 
-    private void Awake() {
+    private void OnDisable()
+    {
+        TimeManager.Instance.OnMinuteChanged -= UpdateInfo;
     }
 
     public void SetInfo(Satellite satellite) {
+        _currentSatellite = satellite;
+        
         Coordinate cords = satellite.GetPosition();
         
         string text = $"Название: {satellite.TLE.getName()}\n" +
@@ -46,9 +58,20 @@ public class SatelliteInfo : MonoBehaviour
                 Destroy(trail);
             };
         };
-
+        
         TimeManager.Instance.ResetTime();
         satellite.timeForSatellite = TimeManager.Instance.GetTime();
+
+    }
+
+    private void UpdateInfo()
+    {
+        if (!_currentSatellite) return;
+        
+        _onHide?.Invoke();
+        _onHide = null;
+        SetInfo(_currentSatellite);
+        Show();
     }
 
     public void Show() {
@@ -58,7 +81,10 @@ public class SatelliteInfo : MonoBehaviour
     public void Hide() {
         gameObject.SetActive(false);
 
+        _currentSatellite = null;
         _onHide();
         _onHide = null;
+        
+        OnHide?.Invoke();
     }
 }

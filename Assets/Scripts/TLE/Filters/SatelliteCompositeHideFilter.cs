@@ -9,7 +9,10 @@ public class SatelliteCompositeHideFilter : Filter
         andFilters?.ForEach(x => _andFilters.Add(x));
     }
 
-    public bool ShouldShowSatellite(Satellite satellite) {
+    public bool ShouldShowSatellite(Satellite satellite)
+    {
+        if (_andFilters.Count == 0) return false;
+        
         foreach (var filter in _andFilters) {
             if (!filter.ShouldShowSatellite(satellite)) return false;
         }

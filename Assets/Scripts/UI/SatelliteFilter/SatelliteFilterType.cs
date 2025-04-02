@@ -11,6 +11,8 @@ namespace UI.SatelliteFilter
         private SatelliteInfoController _satelliteInfoController;
         
         [SerializeField] private Button _button;
+        
+        private SatelliteHideFilter _satelliteFilter;
 
         private void Start()
         {
@@ -30,9 +32,13 @@ namespace UI.SatelliteFilter
         private void ApplySearch(SatelliteType satelliteType)
         {
             Debug.Log("ApplySearch " +  satelliteType);
-            _satelliteInfoController.SatelliteHideFilters.ClearAllFilters();
-            _satelliteInfoController.SatelliteHideFilters &= new SatelliteHideFilter(satelliteType: satelliteType);
-            _satelliteInfoController.DisableSingleSatelliteFilter();
+            if (_satelliteFilter != null)
+                _satelliteInfoController.SatelliteHideFilters -= _satelliteFilter;
+            
+            _satelliteFilter = new SatelliteHideFilter(satelliteType: satelliteType);
+            _satelliteInfoController.SatelliteHideFilters &= _satelliteFilter;
+            
+            _satelliteInfoController.TryApplySatelliteFilter();
         }
     }   
 }

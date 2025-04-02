@@ -9,6 +9,8 @@ namespace UI.SatelliteFilter
         [SerializeField] private TMP_InputField inputField;
 
         private SatelliteInfoController _satelliteInfoController;
+        
+        private SatelliteHideFilter _satelliteHideFilter;
 
         private void Start()
         {
@@ -17,9 +19,16 @@ namespace UI.SatelliteFilter
 
         public void ApplySearch()
         {
-            _satelliteInfoController.SatelliteHideFilters.ClearAllFilters();
-            _satelliteInfoController.SatelliteHideFilters &= new SatelliteHideFilter(nameFilter: inputField.text);
-            _satelliteInfoController.DisableSingleSatelliteFilter();
+            if (_satelliteHideFilter != null)
+                _satelliteInfoController.SatelliteHideFilters -= _satelliteHideFilter;
+
+            if (inputField.text.Length >= 3)
+            {
+                _satelliteHideFilter = new SatelliteHideFilter(nameFilter: inputField.text);
+                _satelliteInfoController.SatelliteHideFilters &= _satelliteHideFilter;
+            }
+            
+            _satelliteInfoController.TryApplySatelliteFilter();
         }
     }   
 }

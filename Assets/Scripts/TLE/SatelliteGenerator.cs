@@ -33,9 +33,10 @@ public class SatelliteGenerator : MonoBehaviour
     {
         foreach(var source in tleSources)
         {
-            Debug.Log(source.url);
+            Debug.Log(source.url + " " + source.satelliteType);
             yield return TleLoader.GetTle(
                 source.url,
+                source.satelliteType,
                 tleList => ProcessTleData(tleList, source),
                 error => Debug.LogError(error)
             );

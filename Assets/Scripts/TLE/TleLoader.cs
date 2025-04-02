@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using TLE.Filters;
 using UnityEngine;
 
 namespace TLE
@@ -31,7 +32,7 @@ namespace TLE
         //      SaveToLocalFile();
         // }
         
-        public static IEnumerator GetTle(string url, Action<List<Tle>> onLoadSuccess, Action<string> onError)
+        public static IEnumerator GetTle(string url, SatelliteType satelliteType, Action<List<Tle>> onLoadSuccess, Action<string> onError)
         {
             yield return _webParser.DownloadAndParseTle(
                 url,
@@ -46,13 +47,13 @@ namespace TLE
             );
             
             onLoadSuccess?.Invoke(_loadedTles);
-            SaveToLocalFile(url);
+            SaveToLocalFile(satelliteType);
         }
 
-        private static void SaveToLocalFile(string url)
+        private static void SaveToLocalFile(SatelliteType satelliteType)
         {
             string allData = String.Join("\n", _loadedTles.Select(tle => tle.ToString()));
-            string tleFilePath = Path.Combine(Application.persistentDataPath, $"{url.Replace('/', '_')}.txt");
+            string tleFilePath = Path.Combine(Application.persistentDataPath, $"{satelliteType+"_TLE"}.txt");
             
             try
             {
