@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using One_Sgp4;
 using Utilities;
+using TLE.Filters;
 
 public class Satellite : EciPositionable
 {
@@ -10,6 +11,7 @@ public class Satellite : EciPositionable
     // [SerializeField] public GameObject sl;
     public Tle TLE { get; set; }
     public EpochTime timeForSatellite {get; set; }
+    public SatelliteType  SatelliteType {get; set;}
     private TimeManager timeManager;
 
     private void Start()
