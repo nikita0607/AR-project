@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UI.Marks;
 
 public class ShowMarkinfoOnClick : MonoBehaviour
 {
     [SerializeField] private TMP_Text _textField;
     [SerializeField] private GameObject _infoPanel;
+    [SerializeField] private MarkImages markImage;
 
 
     void Update() {
@@ -22,7 +24,7 @@ public class ShowMarkinfoOnClick : MonoBehaviour
                 {
                     _infoPanel.SetActive(true);
                     Mark mark = hit.collider.gameObject.GetComponent<Mark>();
-
+                    markImage.SetMarkImage(mark.Name);
                     string text = mark.Name;
                     text += "\n" + mark.Info;
                     _textField.text = text;
