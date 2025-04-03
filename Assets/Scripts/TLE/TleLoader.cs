@@ -42,7 +42,7 @@ namespace TLE
                 error =>
                 {
                     Debug.LogError(error);
-                    LoadFromLocalFile(url);
+                    LoadFromLocalFile(satelliteType);
                 }
             );
             
@@ -69,9 +69,9 @@ namespace TLE
             }
         }
         
-        private static void LoadFromLocalFile(string url)
+        private static void LoadFromLocalFile(SatelliteType satelliteType)
           {
-              string tleFilePath = Path.Combine(Application.persistentDataPath, $"{url.Replace('/', '_')}.txt");
+              string tleFilePath = Path.Combine(Application.persistentDataPath, $"{satelliteType+"_TLE"}.txt");
               
               if(!File.Exists(tleFilePath))
               {
