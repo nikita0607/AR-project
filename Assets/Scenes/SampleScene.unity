@@ -3210,7 +3210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSatellite: {fileID: 0}
   satelliteParrent: {fileID: 1253954949}
-  satellitePrefabList: []
+  SpecificSatellitePrefabList: []
   tleSources: []
 --- !u!1 &733038195
 GameObject:
@@ -4864,8 +4864,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSatellite: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
   satelliteParrent: {fileID: 1253954949}
-  satellitePrefabList:
-  - {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+  SpecificSatellitePrefabList:
+  - {fileID: 5632131304998391534, guid: 7806729cb04a24234beb51530992a2b1, type: 3}
   tleSources:
   - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=cubesat&FORMAT=tle
     prefab: {fileID: 5632131304998391534, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
@@ -4885,6 +4885,9 @@ MonoBehaviour:
   - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=geo&FORMAT=tle
     prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
     satelliteType: 6
+  - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle
+    prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+    satelliteType: 7
 --- !u!114 &1253954956
 MonoBehaviour:
   m_ObjectHideFlags: 0

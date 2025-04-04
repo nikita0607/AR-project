@@ -30,6 +30,7 @@ public class MarkGenerat : MonoBehaviour
 
             newMark.transform.localScale = mark.transform.localScale;
 
+            newMark.name = marksFromJson.marks[i].name;
             newMarkComponent.Name = marksFromJson.marks[i].name;
             newMarkComponent.Info = marksFromJson.marks[i].info;
             newMarkComponent.SetPosition(EciPositionable.FromLongLat(markInfo.longitude, markInfo.latitude,

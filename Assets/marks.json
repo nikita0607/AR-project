@@ -2,15 +2,15 @@
     "marks": [
         {
             "name": "Ecuator",
-            "longitude": 0,
             "latitude": 0,
+            "longitude": 0,
             "info": "Место, которое находится на нулевых кординатах"
         },
 
         {
             "name": "Ust-Ilim",
-            "longitude": -102,
             "latitude": 55,
+            "longitude": -102,
             "info": ""
         },
 
@@ -33,6 +33,251 @@
             "latitude": 49.873110,
             "longitude": -8.643985,
             "info": "TODO"
+        },
+
+        {
+            "name": "Kennedy Space Center/Cape Canaveral, USA",
+            "latitude": 28.533321,
+            "longitude": 80.574763,
+            "info": "Kennedy Space Center and Cape Canaveral are important aviation and space centers in the United States. They are located on the coast of Florida, north of the city of Cocoa Beach. Kennedy Space Center is a space center where NASA conducts space research and launches space missions. The center consists of many buildings, including hangars for storing and preparing rockets, research laboratories, and astronaut training centers. The center is also open to tourists, who can visit museums, see exhibitions, and watch rocket launches. Cape Canaveral is a military and space base located near Kennedy Space Center that is used to test rockets and satellites. It is also the place where private space companies, such as SpaceX, conduct their operations. Kennedy Space Center and Cape Canaveral play an important role in the history of American space exploration. Many important space missions, such as the Apollo 11 mission that led to the first human landing on the moon, were launched from these centers."
+        },
+
+        {
+            "name": "Vandenberg Air Force Base, USA",
+            "latitude": 34.669331,
+            "longitude": 120.610158,
+            "info": "Vandenberg Air Force Base is a United States Air Force Base located in the central coast region of California. It is situated northwest of the city of Santa Barbara, and is the third largest Air Force base in California. Vandenberg Air Force Base is a strategic location for launching military and civilian spacecraft. The base is used for testing and launching intercontinental ballistic missiles (ICBMs), satellites, and other space-based systems. It is also home to the 30th Space Wing, which is responsible for managing all space and missile launch operations from the base. The base covers over 99,000 acres of land and is divided into several areas, including the main base area, the launch complex area, and the housing area. The main base area includes administrative buildings, housing for military personnel, and recreational facilities. The launch complex area includes launch pads, control centers, and other facilities used for launching rockets and missiles. Vandenberg Air Force Base is a critical component of the United States' national security infrastructure and plays a vital role in military and civilian space operations. The base is also open to the public for guided tours and features a museum showcasing the history of missile testing and space launches from the base."
+        },
+
+        {
+            "name": "Spaceport Gran Canaria, Spain",
+            "latitude": 27.932009,
+            "longitude": 15.385444,
+            "info": "Spaceport Gran Canaria is a modern spaceport currently under construction in the Canary Islands, Spain. The spaceport will be used for launching rockets and satellites, as well as conducting scientific research in space. Spaceport Gran Canaria has many features that make it a good choice for rocket launches. It is located on an island with a low population density, which means that rocket launches will not have a negative impact on people and infrastructure around the port. Additionally, due to its location on the southern edge of the Canary Islands, the port has many clear days, which is beneficial for rocket launches. The construction of Spaceport Gran Canaria is underway, with a planned completion date of 2023. The spaceport will be used by various space companies and government agencies from around the world. Spaceport Gran Canaria has the potential to become an important hub for the space industry and scientific research in Europe and around the world. Along with the construction of the spaceport, plans are also underway to develop infrastructure around the port, such as hotels and conference centers, to facilitate easier access for scientists and space entrepreneurs and make the most of its capabilities." 
+        },
+
+        {
+            "name": "Dombarovsky Air Base, Russia",
+            "latitude": 51.07970739656233,
+            "longitude": -59.74822144016974,
+            "info": ""
+        },
+        
+        {
+            "name": "Wallops Flight Facility, USA",
+            "latitude": 37.8,
+            "longitude": 75.5,
+            "info": ""
+        },
+
+        {
+            "name": "Guiana Space Centre, French Guiana",
+            "latitude": 5.235406,
+            "longitude": 52.771990,
+            "info": ""
+        },
+
+        {
+            "name": "Hammaguir Launch Site, Algeria",
+            "latitude": 30.825,
+            "longitude": 3.065,
+            "info": ""
+        },
+
+        {
+            "name": "Jiuquan Satellite Launch Center, China",
+            "latitude": 41.133366,
+            "longitude": -100.303856,
+            "info": ""
+        },
+
+        {
+            "name": "Kodiak Launch Complex, Alaska, USA",
+            "latitude": 57.435251,
+            "longitude": 152.339382,
+            "info": ""
+        },
+
+        {
+            "name": "Uchinoura Space Center, Japan",
+            "latitude": 31.251455,
+            "longitude": -131.080648,
+            "info": ""
+        },
+
+        {
+            "name": "Omelek Island, Kwajalein Atoll",
+            "latitude": 8.720211,
+            "longitude": -167.731627,
+            "info": ""
+        },
+
+        {
+            "name": "Kapustin Yar Missile and Space Complex, Russia",
+            "latitude": 48.648037,
+            "longitude": -46.017101,
+            "info": ""
+        },
+
+        {
+            "name": "Naro Space Center, South Korea",
+            "latitude": 34.431805,
+            "longitude": -127.536267,
+            "info": ""
+        },
+
+        {
+            "name": "Plesetsk Missile and Space Complex, Russia",
+            "latitude": 62.921579,
+            "longitude": -40.660991,
+            "info": ""
+        },
+
+        {
+            "name": "Imam Khomeini Space Center, Iran",
+            "latitude": 35.231459,
+            "longitude": -53.924531,
+            "info": ""
+        },
+
+        {
+            "name": "Broglio Space Centre, Kenya",
+            "latitude": -2.940833,
+            "longitude": -40.213333,
+            "info": ""
+        },
+
+        {
+            "name": "Satish Dhawan Space Centre, India",
+            "latitude": 13.726598,
+            "longitude": -80.232470,
+            "info": ""
+        },
+
+        {
+            "name": "Svobodnyy Launch Complex, Russia",
+            "latitude":  51.87978346856201,
+            "longitude": -128.3739065623254,
+            "info": ""
+        },
+
+        {
+            "name": "Taiyuan Space Center, China",
+            "latitude":  38.842076,
+            "longitude": -111.607114,
+            "info": ""
+        },
+
+        {
+            "name": "Tanegashima Space Center, Japan",
+            "latitude":  30.400199,
+            "longitude": -130.973932,
+            "info": ""
+        },
+
+        {
+            "name": "Baikonur Cosmodrome, Kazakhstan",
+            "latitude":  45.996711,
+            "longitude": -63.300506,
+            "info": ""
+        },
+
+        {
+            "name": "Woomera Test Range, Australia",
+            "latitude":  -30.946802,
+            "longitude": -136.528145,
+            "info": ""
+        },
+
+        {
+            "name": "Xichang Launch Facility, China",
+            "latitude":   28.246341,
+            "longitude": -102.028146,
+            "info": ""
+        },
+
+        {
+            "name": "Yavne Launch Facility, Israel",
+            "latitude":  31.898079,
+            "longitude": -34.700994,
+            "info": ""
+        },
+
+        {
+            "name": "Sohae Satellite Launching Station, North Korea",
+            "latitude":  39.660075,
+            "longitude": -124.705294,
+            "info": ""
+        },
+
+        {
+            "name": "Rocket Lab Launch Base",
+            "latitude": -39.260993,
+            "longitude": -177.865677,
+            "info": ""
+        },
+
+        {
+            "name": "Shahrud Missile Test Site",
+            "latitude": 36.200646,
+            "longitude": -55.333933,
+            "info": ""
+        },
+
+        {
+            "name": "Vostochny Cosmodrome",
+            "latitude":  51.884318,
+            "longitude": -128.334832,
+            "info": ""
+        },
+
+        {
+            "name": "Wallops Island",
+            "latitude":  37.842817,
+            "longitude": 75.478671,
+            "info": ""
+        },
+
+        {
+            "name": "Wenchang Spacecraft Launch Site",
+            "latitude":  19.627265,
+            "longitude": -110.953479,
+            "info": ""
+        },
+
+        {
+            "name": "Jeju Island Space Launch Area",
+            "latitude":  33.099331,
+            "longitude": -126.604620,
+            "info": ""
+        },
+
+        {
+            "name": "South China Sea Launch Area",
+            "latitude": 21.402551,
+            "longitude": -111.806969,
+            "info": ""
+        },
+
+        {
+            "name": "Yellow Sea Launch Area",
+            "latitude": 36.594078,
+            "longitude": -121.266644,
+            "info": ""
+        },
+
+        {
+            "name": "Space Port Kii",
+            "latitude": 33.544257,
+            "longitude": -135.889488,
+            "info": ""
+        },
+
+        {
+            "name": "Andøya Spaceport",
+            "latitude": 69.108709,
+            "longitude": -15.588761,
+            "info": ""
         }
     ]
 }
