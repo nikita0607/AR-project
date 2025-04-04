@@ -66,7 +66,7 @@ public class Satellite : EciPositionable
         return (int)(p.getStartEpoch().toDateTime()-timeForSatellite.toDateTime()).TotalMinutes;
     }
 
-    public float GetHeight() => EarthParametrs.RealToVirtualDistance((float)GetPosition().getHeight());
+    public float GetHeight() => Mathf.Log(EarthParametrs.RealToVirtualDistance((float)GetPosition().getHeight()));
 
     public void UpdatePosition()
     {
