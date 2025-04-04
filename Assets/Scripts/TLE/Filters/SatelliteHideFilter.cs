@@ -5,18 +5,18 @@ public class SatelliteHideFilter : Filter {
     private readonly int? _minYearFilter;
     private readonly string _nameFilter;
     private readonly SatelliteType _satelliteType;
-    private readonly string _fullNameFilter;
+    private readonly string _noradID;
 
-    public SatelliteHideFilter(int? minYearFilter = null, string nameFilter = null, string fullNameFilter = null, SatelliteType satelliteType = SatelliteType.NULL) {
+    public SatelliteHideFilter(int? minYearFilter = null, string nameFilter = null, string noradID = null, SatelliteType satelliteType = SatelliteType.NULL) {
         _minYearFilter = minYearFilter;
         _nameFilter = nameFilter;
         _satelliteType = satelliteType;
-        _fullNameFilter = fullNameFilter;
+        _noradID = noradID;
     }
 
     public bool ShouldShowSatellite(Satellite satellite)
     {
-        if (_fullNameFilter != null && satellite.TLE.getName() != _fullNameFilter) return false;
+        if (_noradID != null && satellite.TLE.getNoradID() != _noradID) return false;
         if (_minYearFilter.HasValue && satellite.TLE.getStartYear() < _minYearFilter.Value) return false;
         if (_nameFilter != null && !satellite.TLE.getName().Contains(_nameFilter)) return false;
         if (_satelliteType != SatelliteType.NULL && satellite.SatelliteType != _satelliteType) return false;
