@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028301, g: 0.22571309, b: 0.30692127, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1670,7 +1670,6 @@ Transform:
   m_Children:
   - {fileID: 1376050950}
   - {fileID: 1521857870}
-  - {fileID: 733038196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &300405259
@@ -3238,13 +3237,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733038195}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1642639969}
-  m_Father: {fileID: 249910604}
+  m_Father: {fileID: 1521857870}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4120,6 +4119,45 @@ MonoBehaviour:
       \u0446\u0435\u043D\u0442\u0440 \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F
       \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u043C\u0438 \u043E\u0431\u044A\u0435\u043A\u0442\u0430\u043C\u0438"
     MarkImageSprite: {fileID: 21300000, guid: b69edd6ce815fd24e816c3be6ebbfc02, type: 3}
+  - MarkName: "\u0426\u0435\u043D\u0442\u0440 \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F
+      \u043F\u043E\u043B\u0435\u0442\u0430\u043C\u0438"
+    MarkImageSprite: {fileID: 21300000, guid: e4790d8d24f17b14a9dfe5cad4303b97, type: 3}
+  - MarkName: "\u041A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u0446\u0435\u043D\u0442\u0440 \u0438\u043C\u0435\u043D\u0438 \u041B\u0438\u043D\u0434\u043E\u043D\u0430
+      \u0414\u0436\u043E\u043D\u0441\u043E\u043D\u0430"
+    MarkImageSprite: {fileID: 21300000, guid: ee644a76b7c30874ab8be457d38f4259, type: 3}
+  - MarkName: "Kennedy Space Center/Cape Canaveral, \u0421\u0428\u0410"
+    MarkImageSprite: {fileID: 21300000, guid: 55ca38804c1eb1244bef90bc7603f63e, type: 3}
+  - MarkName: "Vandenberg Air Force Base, \u0421\u0428\u0410"
+    MarkImageSprite: {fileID: 21300000, guid: 382ab4db07613ff47a7c25dbe7779df6, type: 3}
+  - MarkName: "\u041A\u043E\u0441\u043C\u043E\u0434\u0440\u043E\u043C '\u042F\u0441\u043D\u044B\u0439',
+      \u0420\u043E\u0441\u0441\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: 28542d6bab83b4042933397cb2ccd673, type: 3}
+  - MarkName: "Wallops Flight Facility, \u0421\u0428\u0410"
+    MarkImageSprite: {fileID: 21300000, guid: ac8004f51a4c6ed48b821c835d68f69b, type: 3}
+  - MarkName: "Guiana Space Centre, \u0424\u0440\u0430\u043D\u0446\u0443\u0437\u0441\u043A\u0430\u044F
+      \u0413\u0432\u0438\u0430\u043D\u0430"
+    MarkImageSprite: {fileID: 21300000, guid: f97916a31216c8e4b8b479d6000ce026, type: 3}
+  - MarkName: "Hammaguir Launch Site, \u0410\u043B\u0436\u0438\u0440"
+    MarkImageSprite: {fileID: 21300000, guid: 0004084778ea7fc438682dde03e3b6d1, type: 3}
+  - MarkName: "Jiuquan Satellite Launch Center, \u041A\u0438\u0442\u0430\u0439"
+    MarkImageSprite: {fileID: 21300000, guid: 4e91fbd4a8b733544b9763dea0c3fdf0, type: 3}
+  - MarkName: "Kodiak Launch Complex, \u0410\u043B\u044F\u0441\u043A\u0430, \u0421\u0428\u0410"
+    MarkImageSprite: {fileID: 21300000, guid: 087a8d86055d5cb48ab5716a7000306d, type: 3}
+  - MarkName: "Uchinoura Space Center, \u042F\u043F\u043E\u043D\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: 68540bd18d6251c479cb33815a0cd039, type: 3}
+  - MarkName: "\u0420\u0430\u043A\u0435\u0442\u043D\u043E-\u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441 \"\u041A\u0430\u043F\u0443\u0441\u0442\u0438\u043D
+      \u042F\u0440\", \u0420\u043E\u0441\u0441\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: d99b0d03035e9ad40bf121cbbe156719, type: 3}
+  - MarkName: "Naro Space Center, \u042E\u0436\u043D\u0430\u044F \u041A\u043E\u0440\u0435\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: 13805d323cfdc104a8db97359d66cd63, type: 3}
+  - MarkName: "\u0420\u0430\u043A\u0435\u0442\u043D\u043E-\u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441 \"\u041F\u043B\u0435\u0441\u0435\u0446\u043A\",
+      \u0420\u043E\u0441\u0441\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: b87c3ec0dfdcec149b759ffb3fd6360e, type: 3}
+  - MarkName: "Imam Khomeini Space Center, \u0418\u0440\u0430\u043D"
+    MarkImageSprite: {fileID: 21300000, guid: 831a9075cc0217f42a9abd0cfd1c79b1, type: 3}
   defaultMarkImage: {fileID: 21300000, guid: 2117e521c55964d4eb49b4e0d0bd61b0, type: 3}
 --- !u!1 &1009598724
 GameObject:
@@ -6284,6 +6322,7 @@ RectTransform:
   - {fileID: 1520801090}
   - {fileID: 1034402368}
   - {fileID: 952233761}
+  - {fileID: 733038196}
   m_Father: {fileID: 249910604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
