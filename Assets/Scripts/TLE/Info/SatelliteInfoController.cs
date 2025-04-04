@@ -56,7 +56,7 @@ public class SatelliteInfoController : MonoBehaviour
                 if(hit.collider.CompareTag("satellite"))
                 {
                     Satellite satellite = hit.collider.gameObject.GetComponent<Satellite>();
-                    SatelliteHideFilter filter = new SatelliteHideFilter(nameFilter: satellite.name);
+                    SatelliteHideFilter filter = new SatelliteHideFilter(noradID: satellite.TLE.getNoradID());
                     HideSatellites(filter);
                     satelliteInfo.SetInfo(satellite);
                     satelliteInfo.Show();
