@@ -4440,14 +4440,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: hse_logo_scaled
+  mTrackableName: Scanned Documents-1
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.0034297
   mImageTargetType: 3
-  mWidth: 0.4
+  mWidth: 0.39863282
   mHeight: 0.4
-  mRuntimeTexture: {fileID: 2800000, guid: 2dfff411b4564f7083c77dc27b695af9, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 51713ebe49eb94a0383b352f42d1e9e5, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0

@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using UnityEngine;
 using One_Sgp4;
 using TLE;
 using TLE.Filters;
+using UnityEngine.Serialization;
 using Tle = One_Sgp4.Tle;
 
 public class SatelliteGenerator : MonoBehaviour
@@ -13,7 +15,7 @@ public class SatelliteGenerator : MonoBehaviour
     [SerializeField] private GameObject defaultSatellite;
 
     [SerializeField] private GameObject satelliteParrent;
-    [SerializeField] private GameObject[] satellitePrefabList;
+    [SerializeField] private GameObject[] SpecificSatellitePrefabList;
     // [SerializeField] private TextAsset tleFile;
     
     private SatelliteInfoController _infoController;
@@ -53,28 +55,47 @@ public class SatelliteGenerator : MonoBehaviour
     {
         try
         {
-            Tle parsedTle = ParserTLE.parseTle(tleData.Line1, tleData.Line2, tleData.Name);
-            
-            GameObject newPrefab = source.prefab;
-            foreach (GameObject pref in satellitePrefabList)
+            if (source.satelliteType != SatelliteType.SPECIFIC)
             {
-                if (pref.GetComponent<Satellite>().Name == parsedTle.getName())
+                Tle parsedTle = ParserTLE.parseTle(tleData.Line1, tleData.Line2, tleData.Name);
+            
+                GameObject newPrefab = source.prefab;
+            
+                GameObject newSatellite = Instantiate(newPrefab, parent: satelliteParrent.transform);
+                Satellite newSatelliteComponent = newSatellite.GetComponent<Satellite>();
+                newSatellite.SetActive(false);
+            
+                newSatelliteComponent.Name = parsedTle.getName();
+                newSatelliteComponent.TLE = parsedTle;
+                newSatelliteComponent.SatelliteType = source.satelliteType;
+                newSatellite.transform.localScale = newPrefab.transform.localScale;
+            
+                _infoController.HideSatellites += newSatelliteComponent.OnHide;
+            }
+            else
+            {
+                foreach (var specificSatellitePrefab in SpecificSatellitePrefabList)
                 {
-                    newPrefab = pref;
-                    break;
+                    if (specificSatellitePrefab.GetComponent<Satellite>().Name != tleData.Name) continue;
+
+                    Debug.Log(tleData.Name);
+                    
+                    Tle parsedTle = ParserTLE.parseTle(tleData.Line1, tleData.Line2, tleData.Name);
+            
+                    GameObject newPrefab = specificSatellitePrefab;
+            
+                    GameObject newSatellite = Instantiate(newPrefab, parent: satelliteParrent.transform);
+                    Satellite newSatelliteComponent = newSatellite.GetComponent<Satellite>();
+                    newSatellite.SetActive(false);
+            
+                    newSatelliteComponent.Name = parsedTle.getName();
+                    newSatelliteComponent.TLE = parsedTle;
+                    newSatelliteComponent.SatelliteType = source.satelliteType;
+                    newSatellite.transform.localScale = newPrefab.transform.localScale;
+            
+                    _infoController.HideSatellites += newSatelliteComponent.OnHide;
                 }
             }
-            
-            GameObject newSatellite = Instantiate(newPrefab, parent: satelliteParrent.transform);
-            Satellite newSatelliteComponent = newSatellite.GetComponent<Satellite>();
-            newSatellite.SetActive(false);
-            
-            newSatelliteComponent.Name = parsedTle.getName();
-            newSatelliteComponent.TLE = parsedTle;
-            newSatelliteComponent.SatelliteType = source.satelliteType;
-            newSatellite.transform.localScale = newPrefab.transform.localScale;
-            
-            _infoController.HideSatellites += newSatelliteComponent.OnHide;
         }
         catch (Exception e)
         {
@@ -88,5 +109,12 @@ public class SatelliteGenerator : MonoBehaviour
         public string url;
         public GameObject prefab;
         public SatelliteType satelliteType;
+
+        public TleSource(string url, GameObject prefab, SatelliteType satelliteType)
+        {
+            this.url = url;
+            this.prefab = prefab;
+            this.satelliteType = satelliteType;
+        }
     }
 }
