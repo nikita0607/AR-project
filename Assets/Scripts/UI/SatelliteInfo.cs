@@ -49,7 +49,7 @@ public class SatelliteInfo : MonoBehaviour
 
             GameObject trail = Instantiate(_trailPrefab, Vector3.zero, Quaternion.identity, _lineRedererParrent.transform);
             
-            trail.transform.localPosition = EciPositionable.FromLongLat(-(float)satCords.getLongitude(), (float)satCords.getLatitude(), EarthParametrs.RealEarthRadius+satellite.GetHeight());
+            trail.transform.localPosition = EciPositionable.FromLongLat(-(float)satCords.getLongitude(), (float)satCords.getLatitude(), EarthParametrs.VirtualEarthRadius+satellite.GetHeight());
 
             satellite.timeForSatellite.addMinutes(1);
             satellite.UpdatePosition();
