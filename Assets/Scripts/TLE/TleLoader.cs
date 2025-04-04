@@ -15,23 +15,6 @@ namespace TLE
         
         private static readonly string _tleFilePath = Path.Combine(Application.persistentDataPath, "TLE.txt");
         
-        // public static IEnumerator GetTle(System.Action<List<Tle>> onLoadSuccess)
-        // {
-        //      yield return _webParser.DownloadAndParseTle(
-        //                 tleList =>
-        //                 {
-        //                     _loadedTles = tleList;
-        //                 },
-        //                 error => {
-        //                     Debug.LogError(error);
-        //                     LoadFromLocalFile();
-        //                 }
-        //             );
-        //      
-        //      onLoadSuccess?.Invoke(_loadedTles);
-        //      SaveToLocalFile();
-        // }
-        
         public static IEnumerator GetTle(string url, SatelliteType satelliteType, Action<List<Tle>> onLoadSuccess, Action<string> onError)
         {
             yield return _webParser.DownloadAndParseTle(

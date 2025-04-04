@@ -1,13 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
 using UnityEngine;
 using One_Sgp4;
 using TLE;
 using TLE.Filters;
-using UnityEngine.Serialization;
+using UI;
 using Tle = One_Sgp4.Tle;
 
 public class SatelliteGenerator : MonoBehaviour
@@ -20,9 +18,12 @@ public class SatelliteGenerator : MonoBehaviour
     
     private SatelliteInfoController _infoController;
     
-    [SerializeField] private TleSource[] tleSources; // Новое поле для источников
+    [SerializeField] private TleSource[] tleSources;
+    
+    [SerializeField] private DownloadController uiController;
 
-    private void Awake() {
+    private void Awake() 
+    {
         _infoController = GetComponent<SatelliteInfoController>();
     }
 
@@ -36,6 +37,8 @@ public class SatelliteGenerator : MonoBehaviour
         foreach(var source in tleSources)
         {
             Debug.Log(source.url + " " + source.satelliteType);
+            uiController.ChangeText(source.satelliteType.ToString());
+            yield return null;
             yield return TleLoader.GetTle(
                 source.url,
                 source.satelliteType,
@@ -43,6 +46,9 @@ public class SatelliteGenerator : MonoBehaviour
                 error => Debug.LogError(error)
             );
         }
+        
+        yield return null;
+        uiController.OnStopDownload();
     }
 
     private void ProcessTleData(List<TLE.Tle> tleList, TleSource source)

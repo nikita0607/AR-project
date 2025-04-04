@@ -33,6 +33,13 @@ public class PlacementController : MonoBehaviour
         Place.SetActive(true);
     }
 
+    public void ExitMode()
+    {
+        ArCamera.SetActive(false);
+        QrTarget.SetActive(false);
+        GlobusTarget.SetActive(false);
+    }
+
     public void QrMode() {
         SelectMode();
         QrTarget.SetActive(true);
