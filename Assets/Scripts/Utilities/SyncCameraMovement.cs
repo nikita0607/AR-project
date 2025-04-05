@@ -12,19 +12,25 @@ namespace Utilities
         [SerializeField] private bool syncRotation = true;
         [SerializeField] private bool syncFOV = true;
         [SerializeField] private bool syncProjection = true;
+        
+        private MedianFilterVector3 _medianFilter = new();
+        
+        private Camera _camera;
 
         void Start()
         {
             _targetCamera = GetComponent<Camera>();
+            _camera = GetComponent<Camera>();
         }
 
         void LateUpdate()
         {
             if (sourceCamera == null) return;
+            _camera.enabled = sourceCamera.isActiveAndEnabled;
 
             // Синхронизация позиции и поворота
             if (syncPosition) 
-                transform.position = sourceCamera.transform.position;
+                transform.position = _medianFilter.Filter(sourceCamera.transform.position);
 
             if (syncRotation) 
                 transform.rotation = sourceCamera.transform.rotation;
