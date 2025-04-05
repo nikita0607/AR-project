@@ -7440,16 +7440,16 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: globus
+  mTrackableName: GlobeNew
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/globus.xml
-  mBaseSize: 0.402545
-  mAspectRatioXY: 1.1276852
-  mAspectRatioXZ: 0.99889946
+  mDataSetPath: Vuforia/GlobeNew.xml
+  mBaseSize: 0.40072
+  mAspectRatioXY: 1.0118388
+  mAspectRatioXZ: 1.0048913
   mShowBoundingBox: 0
   mOverrideSnappingPose: 0
-  mBBoxMin: {x: -0.203023, y: -0.181022, z: -0.200822}
-  mBBoxMax: {x: 0.199522, y: 0.272922, z: 0.20128}
+  mBBoxMin: {x: -0.20036, y: 0.396687, z: -0.20134}
+  mBBoxMax: {x: 0.20036, y: 0.802151, z: 0.20134}
   mPreviewImage: {fileID: 0}
   mEnhanceRuntimeDetection: 0
   m3DGuideViewModel: {fileID: 0}
@@ -7457,12 +7457,12 @@ MonoBehaviour:
   mGuideViewDisplayMode: 0
   m2DGuideViewMaterial: {fileID: 0}
   m3DGuideViewMaterial: {fileID: 0}
-  mLength: 0.402545
-  mWidth: 0.45394403
-  mHeight: 0.402102
+  mLength: 0.40072
+  mWidth: 0.40546405
+  mHeight: 0.40268004
   m2DGuideViewMaterials: []
   m3DGuideViewMaterials: []
-  mSelectedGuideView: GuideView_0000
+  mSelectedGuideView: 
   mMotionHint: 1
   mTrackingMode: 2
   mTrackingOptimization: 0
@@ -7480,7 +7480,7 @@ Transform:
   m_GameObject: {fileID: 1650949323}
   serializedVersion: 2
   m_LocalRotation: {x: 0.13745964, y: 0.021771474, z: -0.1549121, w: 0.9780763}
-  m_LocalPosition: {x: 0, y: -0.032000005, z: 0}
+  m_LocalPosition: {x: -0.189, y: -0.572, z: -0.155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7500,8 +7500,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1650949326}
   mHiddenRoot: {fileID: 0}
-  mTargetName: globus
-  mDatasetName: Vuforia/globus.xml
+  mTargetName: GlobeNew
+  mDatasetName: Vuforia/GlobeNew.xml
   mCastedBehaviour: {fileID: 1650949326}
   mModelTargetPreview: {fileID: 0}
 --- !u!1 &1736449849
