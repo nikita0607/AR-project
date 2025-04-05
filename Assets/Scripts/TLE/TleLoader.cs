@@ -17,20 +17,22 @@ namespace TLE
         
         public static IEnumerator GetTle(string url, SatelliteType satelliteType, Action<List<Tle>> onLoadSuccess, Action<string> onError)
         {
-            yield return _webParser.DownloadAndParseTle(
-                url,
-                tleList => {
-                    _loadedTles = tleList;
-                },
-                error =>
-                {
-                    Debug.LogError(error);
-                    LoadFromLocalFile(satelliteType);
-                }
-            );
+            // yield return _webParser.DownloadAndParseTle(
+            //     url,
+            //     tleList => {
+            //         _loadedTles = tleList;
+            //     },
+            //     error =>
+            //     {
+            //         Debug.LogError(error);
+            //         LoadFromLocalFile(satelliteType);
+            //     }
+            // );
             
+            LoadFromLocalFile(satelliteType);
             onLoadSuccess?.Invoke(_loadedTles);
             SaveToLocalFile(satelliteType);
+            yield return null;
         }
 
         private static void SaveToLocalFile(SatelliteType satelliteType)
