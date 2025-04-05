@@ -13,7 +13,7 @@ public class SatelliteGenerator : MonoBehaviour
     [SerializeField] private GameObject defaultSatellite;
 
     [SerializeField] private GameObject satelliteParrent;
-    [SerializeField] private GameObject[] SpecificSatellitePrefabList;
+    [SerializeField] private GameObject[] specificSatellitePrefabList;
     // [SerializeField] private TextAsset tleFile;
     
     private SatelliteInfoController _infoController;
@@ -80,7 +80,7 @@ public class SatelliteGenerator : MonoBehaviour
             }
             else
             {
-                foreach (var specificSatellitePrefab in SpecificSatellitePrefabList)
+                foreach (var specificSatellitePrefab in specificSatellitePrefabList)
                 {
                     if (specificSatellitePrefab.GetComponent<Satellite>().Name != tleData.Name) continue;
 
