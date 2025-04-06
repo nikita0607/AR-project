@@ -16,9 +16,9 @@ public class SatelliteHideFilter : Filter {
 
     public bool ShouldShowSatellite(Satellite satellite)
     {
-        if (_noradID != null && satellite.TLE.getNoradID() != _noradID) return false;
-        if (_minYearFilter.HasValue && satellite.TLE.getStartYear() < _minYearFilter.Value) return false;
-        if (_nameFilter != null && !satellite.TLE.getName().Contains(_nameFilter)) return false;
+        if (_noradID != null && satellite.Tle.getNoradID() != _noradID) return false;
+        if (_minYearFilter.HasValue && satellite.Tle.getStartYear() < _minYearFilter.Value) return false;
+        if (_nameFilter != null && !satellite.Tle.getName().Contains(_nameFilter)) return false;
         if (_satelliteType != SatelliteType.NULL && satellite.SatelliteType != _satelliteType) return false;
 
         return true;

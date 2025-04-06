@@ -14,6 +14,7 @@ public class SatelliteGenerator : MonoBehaviour
 
     [SerializeField] private GameObject satelliteParrent;
     [SerializeField] private GameObject[] specificSatellitePrefabList;
+    [SerializeField] private bool _useWebDownloading = true;
     // [SerializeField] private TextAsset tleFile;
     
     private SatelliteInfoController _infoController;
@@ -48,7 +49,7 @@ public class SatelliteGenerator : MonoBehaviour
                     isSomethingLoaded = true;
                     ProcessTleData(tleList, source);
                 },
-                error => Debug.LogError(error)
+                error => Debug.LogError(error), _useWebDownloading
             );
         }
         
@@ -81,7 +82,7 @@ public class SatelliteGenerator : MonoBehaviour
                 newSatellite.SetActive(false);
             
                 newSatelliteComponent.Name = parsedTle.getName();
-                newSatelliteComponent.TLE = parsedTle;
+                newSatelliteComponent.Tle = parsedTle;
                 newSatelliteComponent.SatelliteType = source.satelliteType;
                 newSatellite.transform.localScale = newPrefab.transform.localScale;
             
@@ -104,7 +105,7 @@ public class SatelliteGenerator : MonoBehaviour
                     newSatellite.SetActive(false);
             
                     newSatelliteComponent.Name = parsedTle.getName();
-                    newSatelliteComponent.TLE = parsedTle;
+                    newSatelliteComponent.Tle = parsedTle;
                     newSatelliteComponent.SatelliteType = source.satelliteType;
                     newSatellite.transform.localScale = newPrefab.transform.localScale;
             
