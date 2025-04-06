@@ -764,7 +764,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29461982}
-  m_Mesh: {fileID: 4300000, guid: 5bfe9ca7468c16740853b63a01a680db, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!23 &29461985
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8159,7 +8159,7 @@ MonoBehaviour:
   RuntimeCollider: 0
   mTrackableName: GlobeNew
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/GlobeNew.xml
+  mDataSetPath: Vuforia/GlobeNew-Reborn.xml
   mBaseSize: 0.40072
   mAspectRatioXY: 1.0118388
   mAspectRatioXZ: 1.0048913
@@ -8220,7 +8220,7 @@ MonoBehaviour:
   mObserverBehaviour: {fileID: 1650949326}
   mHiddenRoot: {fileID: 0}
   mTargetName: GlobeNew
-  mDatasetName: Vuforia/GlobeNew.xml
+  mDatasetName: Vuforia/GlobeNew-Reborn.xml
   mCastedBehaviour: {fileID: 1650949326}
   mModelTargetPreview: {fileID: 0}
 --- !u!1 &1726668061
