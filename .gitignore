@@ -60,7 +60,7 @@ crashlytics-build.properties
 # Documentation
 *.tex
 Assets/Documentation/latex/*
-Assets/Documentation/html/*.meta
+Assets/Documentation/html/**.meta
 !Assets/Documentation/latex/refman.pdf
 
 
