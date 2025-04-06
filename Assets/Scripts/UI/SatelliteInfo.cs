@@ -32,8 +32,8 @@ public class SatelliteInfo : MonoBehaviour
         
         Coordinate cords = satellite.GetPosition();
         
-        string text = $"Название: {satellite.TLE.getName()}\n" +
-                      $"NORAD-ID: {satellite.TLE.getNoradID()}\n" +
+        string text = $"Название: {satellite.Tle.getName()}\n" +
+                      $"NORAD-ID: {satellite.Tle.getNoradID()}\n" +
                       $"Координаты:\n\tширота: {cords.getLatitude():f2}\n\tдолгота: {cords.getLongitude():f2}\n";
 
         if (SatellitesSer.GetSatellitesSer(_satteliteJson).ContainsKey(satellite.name))
@@ -42,7 +42,7 @@ public class SatelliteInfo : MonoBehaviour
         _textField.text = text;
 
         // satellite.timeForSatellite = new EpochTime(DateTime.UtcNow);
-        satellite.timeForSatellite = new EpochTime(TimeManager.Instance.GetTime());
+        satellite.TimeForSatellite = new EpochTime(TimeManager.Instance.GetTime());
 
         for (int i=0; i<94; i++) {
             Coordinate satCords = satellite.GetPosition();
@@ -51,7 +51,7 @@ public class SatelliteInfo : MonoBehaviour
             
             trail.transform.localPosition = EciPositionable.FromLongLat(-(float)satCords.getLongitude(), (float)satCords.getLatitude(), EarthParametrs.VirtualEarthRadius+satellite.GetHeight());
 
-            satellite.timeForSatellite.addMinutes(1);
+            satellite.TimeForSatellite.addMinutes(1);
             satellite.UpdatePosition();
 
             _onHide += () => {
@@ -60,7 +60,7 @@ public class SatelliteInfo : MonoBehaviour
         };
         
         // TimeManager.Instance.ResetTime();
-        satellite.timeForSatellite = TimeManager.Instance.GetTime();
+        satellite.TimeForSatellite = TimeManager.Instance.GetTime();
 
     }
 
