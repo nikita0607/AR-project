@@ -15,23 +15,35 @@ namespace TLE
         
         private static readonly string _tleFilePath = Path.Combine(Application.persistentDataPath, "TLE.txt");
         
-        public static IEnumerator GetTle(string url, SatelliteType satelliteType, Action<List<Tle>> onLoadSuccess, Action<string> onError)
+        public static IEnumerator GetTle(string url, SatelliteType satelliteType, Action<List<Tle>> onLoadSuccess, Action<string> onError, bool useWeb=true)
         {
-            yield return _webParser.DownloadAndParseTle(
-                url,
-                tleList => {
-                    _loadedTles = tleList;
-                },
-                error =>
-                {
-                    Debug.LogError(error);
-                    LoadFromLocalFile(satelliteType);
-                }
-            );
+            bool isLoadSuccess = false;
             
-            LoadFromLocalFile(satelliteType);
-            onLoadSuccess?.Invoke(_loadedTles);
-            SaveToLocalFile(satelliteType);
+            if (useWeb)
+                yield return _webParser.DownloadAndParseTle(
+                    url,
+                    tleList => {
+                        _loadedTles = tleList;
+                        SaveToLocalFile(satelliteType);
+                        isLoadSuccess = true;
+                    },
+                    error =>
+                    {
+                        Debug.LogError(error);
+                        isLoadSuccess = LoadFromLocalFile(satelliteType);
+                    }
+                );
+
+            else
+            {
+                isLoadSuccess = LoadFromLocalFile(satelliteType);
+            }
+            
+            if (isLoadSuccess)
+                onLoadSuccess?.Invoke(_loadedTles);
+            else
+                onError?.Invoke(url+": не получилось");
+            
             yield return null;
         }
 
@@ -54,14 +66,14 @@ namespace TLE
             }
         }
         
-        private static void LoadFromLocalFile(SatelliteType satelliteType)
+        private static bool LoadFromLocalFile(SatelliteType satelliteType)
           {
               string tleFilePath = Path.Combine(Application.persistentDataPath, $"{satelliteType+"_TLE"}.txt");
               
               if(!File.Exists(tleFilePath))
               {
                   Debug.LogError("Локальный файл данных не найден");
-                  return;
+                  return false;
               }
       
               try
@@ -76,7 +88,7 @@ namespace TLE
                   if(lines.Count % 3 != 0)
                   {
                       Debug.LogError("Некорректный формат локального файла");
-                      return;
+                      return false;
                   }
           
                   _loadedTles = Enumerable
@@ -90,8 +102,13 @@ namespace TLE
               catch (System.Exception e)
               {
                   Debug.LogError($"Ошибка чтения файла: {e.Message}");
+
+                  return false;
               }
+              
+              return true;
           }
+        
     }
     public class Tle
     {

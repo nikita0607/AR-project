@@ -10,7 +10,7 @@ namespace Utilities
 
         private Vector3 _centerValue;
         
-        public Vector3 Filter(Vector3 value, int windowSize = 5)
+        public Vector3 Filter(Vector3 value, float maxDelta, int windowSize = 5)
         {
             _window.Enqueue(value);
             if (_window.Count > windowSize)
@@ -19,7 +19,8 @@ namespace Utilities
             }
             var sorted = _window.OrderBy(v => Vector3.Distance(_centerValue, v));
             _centerValue = sorted.ElementAt(_window.Count / 2);
-            return _centerValue;
+            
+            return Mathf.Abs(_centerValue.magnitude-value.magnitude) <= maxDelta ? _centerValue : value;
         }
     }
 }

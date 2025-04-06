@@ -12,6 +12,10 @@ namespace Utilities
         [SerializeField] private bool syncRotation = true;
         [SerializeField] private bool syncFOV = true;
         [SerializeField] private bool syncProjection = true;
+
+        [Header("Filter settings")] 
+        [SerializeField] private float filterDelta;
+        [SerializeField] private int windowSize = 5;
         
         private MedianFilterVector3 _medianFilter = new();
         
@@ -30,7 +34,7 @@ namespace Utilities
 
             // Синхронизация позиции и поворота
             if (syncPosition) 
-                transform.position = _medianFilter.Filter(sourceCamera.transform.position);
+                transform.position = _medianFilter.Filter(sourceCamera.transform.position, filterDelta, windowSize);
 
             if (syncRotation) 
                 transform.rotation = sourceCamera.transform.rotation;

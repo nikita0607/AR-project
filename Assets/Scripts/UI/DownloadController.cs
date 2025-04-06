@@ -14,6 +14,9 @@ namespace UI
         
         [SerializeField] private Button[] _buttons;
         
+        [Header("Errors")]
+        [SerializeField] private GameObject errorPanel;
+        
         private Image _image;
 
         private void Awake()
@@ -33,6 +36,11 @@ namespace UI
         {
             _text.text = "Подождите пока данные о спутниках загрузятся...";
             loadText.text =  $"Сейчас загружается база данных с типом спутников: {text}";
+        }
+
+        public void OnDownloadError()
+        {
+            errorPanel.SetActive(true);
         }
 
         public void OnStopDownload()

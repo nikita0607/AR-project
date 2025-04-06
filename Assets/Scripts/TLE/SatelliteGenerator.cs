@@ -19,7 +19,6 @@ public class SatelliteGenerator : MonoBehaviour
     private SatelliteInfoController _infoController;
     
     [SerializeField] private TleSource[] tleSources;
-    
     [SerializeField] private DownloadController uiController;
 
     private void Awake() 
@@ -34,21 +33,31 @@ public class SatelliteGenerator : MonoBehaviour
     
     private IEnumerator LoadAllTleData()
     {
+        bool isSomethingLoaded = false;
+        
         foreach(var source in tleSources)
         {
             Debug.Log(source.url + " " + source.satelliteType);
             uiController.ChangeText(source.satelliteType.ToString());
-            yield return null;
+            
             yield return TleLoader.GetTle(
                 source.url,
                 source.satelliteType,
-                tleList => ProcessTleData(tleList, source),
+                tleList =>
+                {
+                    isSomethingLoaded = true;
+                    ProcessTleData(tleList, source);
+                },
                 error => Debug.LogError(error)
             );
         }
         
         yield return null;
-        uiController.OnStopDownload();
+        
+        if (isSomethingLoaded)
+            uiController.OnStopDownload();
+        else
+            uiController.OnDownloadError();
     }
 
     private void ProcessTleData(List<TLE.Tle> tleList, TleSource source)
