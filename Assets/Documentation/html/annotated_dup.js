@@ -32,7 +32,7 @@ var annotated_dup =
     [ "MarkSer", "class_mark_ser.html", null ],
     [ "MarksSer", "class_marks_ser.html", null ],
     [ "PlacementController", "class_placement_controller.html", null ],
-    [ "Satellite", "class_satellite.html", null ],
+    [ "Satellite", "class_satellite.html", "class_satellite" ],
     [ "SatelliteCompositeHideFilter", "class_satellite_composite_hide_filter.html", null ],
     [ "SatelliteGenerator", "class_satellite_generator.html", "class_satellite_generator" ],
     [ "SatelliteHideFilter", "class_satellite_hide_filter.html", null ],
