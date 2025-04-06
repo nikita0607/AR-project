@@ -1,0 +1,116 @@
+\doxysection{Satellite Class Reference}
+\hypertarget{class_satellite}{}\label{class_satellite}\index{Satellite@{Satellite}}
+Inheritance diagram for Satellite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_satellite}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Coordinate \mbox{\hyperlink{class_satellite_a6729db6ddeea5542703d97cbf218c1c7}{Get\+Position}} (Epoch\+Time time=null)
+\item 
+void \mbox{\hyperlink{class_satellite_a8521261e36cb6d2f1a132ef6db3791a9}{On\+Hide}} (\mbox{\hyperlink{interface_filter}{Filter}} filter)
+\item 
+int \mbox{\hyperlink{class_satellite_a456fa2bbffdaecee4ca7e88286297f7d}{Get\+Minutes\+For\+Next\+Pass}} ()
+\item 
+float \mbox{\hyperlink{class_satellite_aa0bad26a281ace3715319fd75e7edeac}{Get\+Height}} ()
+\item 
+void \mbox{\hyperlink{class_satellite_a551168810e7882634358b6d2bcf5b7ff}{Update\+Position}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_eci_positionable}{Eci\+Positionable}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_eci_positionable_a1b54eb01da054d86892a42092e6d1cbb}{Set\+Position}} (float x, float y, float z)
+\item 
+void \mbox{\hyperlink{class_eci_positionable_af48936a8d0c127dc3680393b2ff6254a}{Set\+Position}} (Vector3 position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_satellite_a3b852aaf4e8d4a4be251545101a1a7ba}{Name}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_satellite_generator_8cs_af67b988b9e991df866418f4d05f88317}{Tle}} \mbox{\hyperlink{class_satellite_ae199b0fe5bb3ba9a9bc2ade92719c965}{TLE}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Epoch\+Time \mbox{\hyperlink{class_satellite_a7111b0d8a76aff51704d8671155b7009}{time\+For\+Satellite}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{namespace_t_l_e_1_1_filters_a0b29d91cfd083a4ec5b97996346c93a3}{Satellite\+Type}} \mbox{\hyperlink{class_satellite_ad4e835b738862493bd8ac0d66e824d26}{Satellite\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_eci_positionable}{Eci\+Positionable}}}
+\begin{DoxyCompactItemize}
+\item 
+static Vector3 \mbox{\hyperlink{class_eci_positionable_afecc369fb61e92317ede9d8b4cd2afc1}{From\+Long\+Lat}} (float longitude, float latitude, float radius)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_satellite_aa0bad26a281ace3715319fd75e7edeac}\index{Satellite@{Satellite}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily \label{class_satellite_aa0bad26a281ace3715319fd75e7edeac} 
+float Satellite.\+Get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_satellite_a456fa2bbffdaecee4ca7e88286297f7d}\index{Satellite@{Satellite}!GetMinutesForNextPass@{GetMinutesForNextPass}}
+\index{GetMinutesForNextPass@{GetMinutesForNextPass}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{GetMinutesForNextPass()}{GetMinutesForNextPass()}}
+{\footnotesize\ttfamily \label{class_satellite_a456fa2bbffdaecee4ca7e88286297f7d} 
+int Satellite.\+Get\+Minutes\+For\+Next\+Pass (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_satellite_a6729db6ddeea5542703d97cbf218c1c7}\index{Satellite@{Satellite}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \label{class_satellite_a6729db6ddeea5542703d97cbf218c1c7} 
+Coordinate Satellite.\+Get\+Position (\begin{DoxyParamCaption}\item[{Epoch\+Time}]{time}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_satellite_a8521261e36cb6d2f1a132ef6db3791a9}\index{Satellite@{Satellite}!OnHide@{OnHide}}
+\index{OnHide@{OnHide}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{OnHide()}{OnHide()}}
+{\footnotesize\ttfamily \label{class_satellite_a8521261e36cb6d2f1a132ef6db3791a9} 
+void Satellite.\+On\+Hide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_filter}{Filter}}}]{filter}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_satellite_a551168810e7882634358b6d2bcf5b7ff}\index{Satellite@{Satellite}!UpdatePosition@{UpdatePosition}}
+\index{UpdatePosition@{UpdatePosition}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{UpdatePosition()}{UpdatePosition()}}
+{\footnotesize\ttfamily \label{class_satellite_a551168810e7882634358b6d2bcf5b7ff} 
+void Satellite.\+Update\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_satellite_a3b852aaf4e8d4a4be251545101a1a7ba}\index{Satellite@{Satellite}!Name@{Name}}
+\index{Name@{Name}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{class_satellite_a3b852aaf4e8d4a4be251545101a1a7ba} 
+String Satellite.\+Name}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_satellite_ad4e835b738862493bd8ac0d66e824d26}\index{Satellite@{Satellite}!SatelliteType@{SatelliteType}}
+\index{SatelliteType@{SatelliteType}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{SatelliteType}{SatelliteType}}
+{\footnotesize\ttfamily \label{class_satellite_ad4e835b738862493bd8ac0d66e824d26} 
+\mbox{\hyperlink{namespace_t_l_e_1_1_filters_a0b29d91cfd083a4ec5b97996346c93a3}{Satellite\+Type}} Satellite.\+Satellite\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_satellite_a7111b0d8a76aff51704d8671155b7009}\index{Satellite@{Satellite}!timeForSatellite@{timeForSatellite}}
+\index{timeForSatellite@{timeForSatellite}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{timeForSatellite}{timeForSatellite}}
+{\footnotesize\ttfamily \label{class_satellite_a7111b0d8a76aff51704d8671155b7009} 
+Epoch\+Time Satellite.\+time\+For\+Satellite\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_satellite_ae199b0fe5bb3ba9a9bc2ade92719c965}\index{Satellite@{Satellite}!TLE@{TLE}}
+\index{TLE@{TLE}!Satellite@{Satellite}}
+\doxysubsubsection{\texorpdfstring{TLE}{TLE}}
+{\footnotesize\ttfamily \label{class_satellite_ae199b0fe5bb3ba9a9bc2ade92719c965} 
+\mbox{\hyperlink{_satellite_generator_8cs_af67b988b9e991df866418f4d05f88317}{Tle}} Satellite.\+TLE\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+TLE/\mbox{\hyperlink{_satellite_8cs}{Satellite.\+cs}}\end{DoxyCompactItemize}
