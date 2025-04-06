@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jsonfile_0',['jsonFile',['../class_mark_generat.html#a213a330bd4d91ed2eb677dade7e79399',1,'MarkGenerat']]]
+  ['placementcontroller_0',['PlacementController',['../class_placement_controller.html',1,'']]],
+  ['positionfixer_1',['PositionFixer',['../class_utilities_1_1_position_fixer.html',1,'Utilities']]]
 ];

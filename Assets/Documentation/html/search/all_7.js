@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['hide_0',['Hide',['../class_satellite_info.html#aa142bd848ab0d863bdedec49d803b289',1,'SatelliteInfo']]],
-  ['hidesatellites_1',['HideSatellites',['../class_satellite_info_controller.html#a353b0991a881dde8048f74ea5dc7757f',1,'SatelliteInfoController']]]
+  ['name_0',['Name',['../class_satellite.html#a3b852aaf4e8d4a4be251545101a1a7ba',1,'Satellite']]]
 ];

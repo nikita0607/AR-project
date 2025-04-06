@@ -57,6 +57,11 @@ sysinfo.txt
 crashlytics-build.properties
 .vscode/settings.json
 
+# Documentation
+*.tex
+Assets/Documentation/latex/*
+!Assets/Documentation/latex/refman.pdf
+
 
 # /Assets/Models
  Assets/Common/

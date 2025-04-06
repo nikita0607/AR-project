@@ -1,11 +1,17 @@
 var searchData=
 [
-  ['last30days_0',['LAST30DAYS',['../namespace_t_l_e_1_1_filters.html#a0b29d91cfd083a4ec5b97996346c93a3a4b31458fd4f196047fb45f32fe5fe6a3',1,'TLE::Filters']]],
-  ['latitude_1',['latitude',['../class_mark_ser.html#abac2a082cc1a92a319641dba8a8f5235',1,'MarkSer']]],
-  ['line1_2',['Line1',['../class_t_l_e_1_1_tle.html#af4cb4925b1f9cd89d15fdfe821156263',1,'TLE::Tle']]],
-  ['line2_3',['Line2',['../class_t_l_e_1_1_tle.html#ab1d03fb056e5f8218aa1923de15632ec',1,'TLE::Tle']]],
-  ['log_3c_20t_20_3e_4',['Log&lt; T &gt;',['../class_logger.html#ab604ad720c6917f35ca42ecc696ef8d6',1,'Logger.Log&lt; T &gt;(T message)'],['../class_logger.html#ac406ee69de7ac87b22cb807781e26a17',1,'Logger.Log&lt; T &gt;(List&lt; T &gt; list)']]],
-  ['logger_5',['Logger',['../class_logger.html',1,'']]],
-  ['logger_2ecs_6',['Logger.cs',['../_logger_8cs.html',1,'']]],
-  ['longitude_7',['longitude',['../class_mark_ser.html#abc2fb93c6e592e3058bf0b923d5f0596',1,'MarkSer']]]
+  ['satellite_0',['Satellite',['../class_satellite.html',1,'']]],
+  ['satellitecompositehidefilter_1',['SatelliteCompositeHideFilter',['../class_satellite_composite_hide_filter.html',1,'']]],
+  ['satellitefiltername_2',['SatelliteFilterName',['../class_u_i_1_1_satellite_filter_1_1_satellite_filter_name.html',1,'UI::SatelliteFilter']]],
+  ['satellitefiltertype_3',['SatelliteFilterType',['../class_u_i_1_1_satellite_filter_1_1_satellite_filter_type.html',1,'UI::SatelliteFilter']]],
+  ['satellitegenerator_4',['SatelliteGenerator',['../class_satellite_generator.html',1,'']]],
+  ['satellitehidefilter_5',['SatelliteHideFilter',['../class_satellite_hide_filter.html',1,'']]],
+  ['satelliteinfo_6',['SatelliteInfo',['../class_satellite_info.html',1,'']]],
+  ['satelliteinfocontroller_7',['SatelliteInfoController',['../class_satellite_info_controller.html',1,'']]],
+  ['satelliteser_8',['SatelliteSer',['../class_satellite_ser.html',1,'']]],
+  ['satelliteserarray_9',['SatelliteSerArray',['../class_satellite_ser_array.html',1,'']]],
+  ['satellitesser_10',['SatellitesSer',['../class_satellites_ser.html',1,'']]],
+  ['satellitetype_11',['SatelliteType',['../class_satellite.html#ad4e835b738862493bd8ac0d66e824d26',1,'Satellite']]],
+  ['showmarkinfoonclick_12',['ShowMarkinfoOnClick',['../class_show_markinfo_on_click.html',1,'']]],
+  ['synccameramovement_13',['SyncCameraMovement',['../class_utilities_1_1_sync_camera_movement.html',1,'Utilities']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['applysearch_0',['ApplySearch',['../class_u_i_1_1_satellite_filter_1_1_satellite_filter_name.html#a2c7adabd13de5c3e56de199e9d51b5b2',1,'UI::SatelliteFilter::SatelliteFilterName']]]
+  ['getheight_0',['GetHeight',['../class_satellite.html#aa0bad26a281ace3715319fd75e7edeac',1,'Satellite']]],
+  ['getposition_1',['GetPosition',['../class_satellite.html#a6729db6ddeea5542703d97cbf218c1c7',1,'Satellite']]]
 ];
