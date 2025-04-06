@@ -1,4 +1,10 @@
-public class MarksSer 
+namespace Marks.MarkGenerator
 {
-    public MarkSer[] marks;
+    /// <summary> Контейнер для массива меток. Используется для десериализации JSON данных. </summary>
+    [System.Serializable]
+    public class MarksSer
+    {
+        /// <summary> Массив объектов меток. </summary>
+        public MarkSer[] marks;
+    }
 }

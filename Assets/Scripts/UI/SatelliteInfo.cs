@@ -1,5 +1,7 @@
 using System;
 using One_Sgp4;
+using SatelliteData;
+using SatelliteData.Info;
 using TMPro;
 using UnityEngine;
 using Utilities;
@@ -36,8 +38,8 @@ public class SatelliteInfo : MonoBehaviour
                       $"NORAD-ID: {satellite.Tle.getNoradID()}\n" +
                       $"Координаты:\n\tширота: {cords.getLatitude():f2}\n\tдолгота: {cords.getLongitude():f2}\n";
 
-        if (SatellitesSer.GetSatellitesSer(_satteliteJson).ContainsKey(satellite.name))
-            text += $"{SatellitesSer.GetSatellitesSer(_satteliteJson)[satellite.name].info}\n";
+        if (SatellitesSerializer.GetSatellitesSer(_satteliteJson).ContainsKey(satellite.name))
+            text += $"{SatellitesSerializer.GetSatellitesSer(_satteliteJson)[satellite.name].Info}\n";
 
         _textField.text = text;
 
