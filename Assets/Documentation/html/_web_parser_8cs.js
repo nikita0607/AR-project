@@ -1,4 +1,4 @@
 var _web_parser_8cs =
 [
-    [ "SatelliteData.WebParser", "class_satellite_data_1_1_web_parser.html", "class_satellite_data_1_1_web_parser" ]
+    [ "TLE.WebParser", "class_t_l_e_1_1_web_parser.html", "class_t_l_e_1_1_web_parser" ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['Name',['../class_marks_1_1_mark.html#a375902fe27f63cf50ebebf0f23d65b4f',1,'Marks::Mark']]]
+  ['satellitetype_0',['SatelliteType',['../class_satellite.html#ad4e835b738862493bd8ac0d66e824d26',1,'Satellite']]]
 ];

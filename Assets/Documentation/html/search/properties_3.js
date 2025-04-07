@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['satellitetype_0',['SatelliteType',['../class_satellite_data_1_1_satellite.html#a01baee118478c5858fffd54bee52c5ff',1,'SatelliteData::Satellite']]]
+  ['timeforsatellite_0',['TimeForSatellite',['../class_satellite.html#a836efb59454194b6e5eca8165fb84fb2',1,'Satellite']]],
+  ['tle_1',['Tle',['../class_satellite.html#aeea67328451aca0fd095a827f05b6354',1,'Satellite']]]
 ];

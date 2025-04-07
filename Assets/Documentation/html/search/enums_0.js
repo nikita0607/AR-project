@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['satellitetype_0',['SatelliteType',['../namespace_satellite_data_1_1_filters.html#a682ae62b1f127d7f0d5133c997caff39',1,'SatelliteData::Filters']]]
+  ['satellitetype_0',['SatelliteType',['../namespace_t_l_e_1_1_filters.html#a0b29d91cfd083a4ec5b97996346c93a3',1,'TLE::Filters']]]
 ];

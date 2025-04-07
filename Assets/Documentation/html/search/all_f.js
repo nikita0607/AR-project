@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['realearthradius_0',['RealEarthRadius',['../class_utilities_1_1_earth_parametrs.html#a4e969a8cd69a707d0524a7c97c02453e',1,'Utilities::EarthParametrs']]],
-  ['realtovirtualdistance_1',['RealToVirtualDistance',['../class_utilities_1_1_earth_parametrs.html#adc0b4fb4cf6b338907e73e2a8bac9f7d',1,'Utilities::EarthParametrs']]],
-  ['resettime_2',['ResetTime',['../class_time_manager.html#ad3943ad47d0672c3c5cb9dbe3bd0df31',1,'TimeManager']]],
-  ['restoreposition_3',['RestorePosition',['../class_utilities_1_1_position_fixer.html#a71d80d429c96bfef681d2345dd9e1e15',1,'Utilities::PositionFixer']]]
+  ['qrmode_0',['QrMode',['../class_placement_controller.html#a9a65f6f5d6447a3e406396d6ee28f184',1,'PlacementController']]],
+  ['quit_1',['Quit',['../class_utilities_1_1_application_controller.html#a003d6fc173d8c2aeab77957bab20e590',1,'Utilities::ApplicationController']]]
 ];
