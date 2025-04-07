@@ -1,37 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UI.Marks;
 
-public class ShowMarkinfoOnClick : MonoBehaviour
+namespace Marks
 {
-    [SerializeField] private TMP_Text _textField;
-    [SerializeField] private GameObject _infoPanel;
-    [SerializeField] private MarkImages markImage;
+    /// <summary> Класс для отображения информации о метке при клике на нее. </summary>
+    public class ShowMarkinfoOnClick : MonoBehaviour
+    {
+        /// <summary> Текстовое поле для вывода информации о метке. </summary>
+        [SerializeField] private TMP_Text textField;
 
+        /// <summary> Панель с информацией о метке. </summary>
+        [SerializeField] private GameObject infoPanel;
 
-    void Update() {
+        /// <summary> Компонент для отображения изображения метки. </summary>
+        [SerializeField] private MarkImages markImage;
 
-        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        private Camera _camera;
+
+        /// <summary> Инициализирует главную камеру при старте. </summary>
+        private void Start()
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-            RaycastHit hit;
+            _camera = Camera.main;
+        }
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        /// <summary> Обрабатывает клики по меткам и отображает информацию. </summary>
+        /// <remarks> При клике на объект с тегом "mark" активирует панель информации и заполняет ее данными. </remarks>
+        void Update()
+        {
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                if(hit.collider.tag == "mark")
-                {
-                    _infoPanel.SetActive(true);
-                    Mark mark = hit.collider.gameObject.GetComponent<Mark>();
-                    markImage.SetMarkImage(mark.Name);
-                    string text = mark.Name;
-                    text += "\n" + mark.Info;
-                    _textField.text = text;
-                }
+                if (_camera == null) return;
+
+                Ray ray = _camera.ScreenPointToRay(Input.GetTouch(0).position);
+
+                if (Physics.Raycast(ray, out var hit, Mathf.Infinity))
+                    if (hit.collider.CompareTag("mark"))
+                    {
+                        infoPanel.SetActive(true);
+                        Mark mark = hit.collider.gameObject.GetComponent<Mark>();
+                        markImage.SetMarkImage(mark.Name);
+                        string text = mark.Name;
+                        text += "\n" + mark.Info;
+                        textField.text = text;
+                    }
             }
         }
     }
-
-
 }

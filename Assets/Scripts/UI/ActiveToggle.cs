@@ -1,9 +1,18 @@
 using UnityEngine;
 
-public class ActiveToggle : MonoBehaviour
+namespace UI
 {
-    public void ToggleActive()
+    /// <summary> Компонент для переключения активности GameObject. </summary>
+    public class ActiveToggle : MonoBehaviour
     {
-        gameObject.SetActive(!gameObject.activeSelf);
+        /// <summary> Переключает состояние активности текущего GameObject. </summary>
+        /// <remarks>
+        /// Если объект активен - деактивирует его, и наоборот.
+        /// Работает через стандартный gameObject.SetActive().
+        /// </remarks>
+        public void ToggleActive()
+        {
+            gameObject.SetActive(!gameObject.activeSelf);
+        }
     }
 }

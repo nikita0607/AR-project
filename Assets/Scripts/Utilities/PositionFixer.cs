@@ -2,58 +2,30 @@ using UnityEngine;
 
 namespace Utilities
 {
+    /// <summary> Компонент для сохранения и восстановления исходной позиции объекта. </summary>
     public class PositionFixer : MonoBehaviour
     {
-        [SerializeField] private float changeDelta;
-        [SerializeField] private float changeCamDelta;
+        /// <summary> Исходная позиция объекта. </summary>
+        private Vector3 _originalPosition;
+        private Quaternion _originalRotation;
 
-        private Vector3 _relativePositionInParent;
-        private bool _parentChanged;
-        private Transform _parentTransform;
-
-
-        private Vector3 _prevCamPosition;
-        private Vector3 _prevCamPositionBeforeChange;
-
-        private Vector3 _prevPosition;
-        
-        private Camera _cam;
-        
-        private void OnTransformParentChanged()
-        {
-            Debug.Log("Change Parent!");
-            if (_parentChanged) return;
-
-            _parentChanged = true;
-            _relativePositionInParent = transform.parent.position - transform.position;
-            
-            _parentTransform = transform.parent;
-            transform.parent = null;
-        }
-
+        /// <summary> Сохраняет начальную позицию объекта при старте. </summary>
         private void Start()
         {
-            _prevCamPosition = Camera.main.transform.position;
+            _originalPosition = transform.position;
+            _originalRotation = transform.rotation;
         }
 
-        private void Update()
+        /// <summary> Восстанавливает объект в исходную позицию. </summary>
+        /// <remarks>
+        /// Используется для сброса позиции после перемещений,
+        /// например при обработке столкновений или телепортации.
+        /// </remarks>
+        public void RestorePosition()
         {
-            var newPosition = _parentTransform.position - _relativePositionInParent;
-            if (Mathf.Abs((transform.position - newPosition).magnitude) > changeDelta)
-            {
-                // Debug.Log("Rrrrr");
-                _prevPosition = newPosition;
-            }
-            transform.position = _prevPosition;
-
-            if (Mathf.Abs((Camera.main.transform.position - _prevCamPosition).magnitude) < changeCamDelta)
-            {
-                transform.position -= _prevCamPosition - Camera.main.transform.position;
-            }
-            else
-            {
-                _prevCamPosition = Camera.main.transform.position;
-            }
+            transform.parent = null;
+            transform.rotation = _originalRotation;
+            transform.position = _originalPosition;
         }
     }
 }

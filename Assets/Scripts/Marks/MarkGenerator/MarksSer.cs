@@ -1,4 +1,12 @@
-public class MarksSer 
+using UnityEngine.Serialization;
+
+namespace Marks.MarkGenerator
 {
-    public MarkSer[] marks;
+    /// <summary> Контейнер для массива меток. Используется для десериализации JSON данных. </summary>
+    [System.Serializable]
+    public class MarksSer
+    {
+        /// <summary> Массив объектов меток. </summary>
+        public MarkSer[] marks;
+    }
 }

@@ -1,10 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
-public class Mark : EciPositionable
+namespace Marks
 {
-    public string Name { get; set; }
-    public string Info { get; set; }
+    /// <summary> Класс, представляющий метку с позицией в ECI-координатах. </summary>
+    public class Mark : EciPositionable
+    {
+        /// <summary> Название метки. </summary>
+        public string Name { get; set; }
+
+        /// <summary> Дополнительная информация о метке. </summary>
+        public string Info { get; set; }
+    }
 }
