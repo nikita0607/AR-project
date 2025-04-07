@@ -12,6 +12,7 @@ namespace UI.SatelliteFilter
         private SatelliteInfoController _satelliteInfoController;
         
         [SerializeField] private Button _button;
+        [SerializeField] private GameObject content;
         
         private SatelliteHideFilter _satelliteFilter;
 
@@ -20,7 +21,7 @@ namespace UI.SatelliteFilter
             _satelliteInfoController = SatelliteInfoController.Singleton;
             for (int i = 1; i < Enum.GetNames(typeof(SatelliteType)).Length; i++)
             {
-                var button = Instantiate(_button, parent: transform);
+                var button = Instantiate(_button, parent: content.transform);
                 int typeIndex = i;
                 
                 button.name = ((SatelliteType)typeIndex).ToString();
