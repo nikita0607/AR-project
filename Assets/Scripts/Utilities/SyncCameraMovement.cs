@@ -2,51 +2,95 @@ using UnityEngine;
 
 namespace Utilities
 {
+    /// <summary> Компонент для синхронизации параметров камеры с исходной камерой. </summary>
     public class SyncCameraMovement : MonoBehaviour
     {
-        public Camera sourceCamera; // Исходная камера, которую нужно копировать
-        private Camera _targetCamera;
+        /// <summary> Исходная камера для синхронизации параметров. </summary>
+        public Camera sourceCamera;
 
+        /// <summary> Флаг синхронизации позиции камеры. </summary>
         [Header("Настройки синхронизации")]
         [SerializeField] private bool syncPosition = true;
+        
+        /// <summary> Флаг синхронизации поворота камеры. </summary>
         [SerializeField] private bool syncRotation = true;
+        
+        /// <summary> Флаг синхронизации поля зрения камеры. </summary>
         [SerializeField] private bool syncFOV = true;
+        
+        /// <summary> Флаг синхронизации типа проекции камеры. </summary>
         [SerializeField] private bool syncProjection = true;
 
-        [Header("Filter settings")] 
-        [SerializeField] private float filterDelta;
+        /// <summary> Максимальное допустимое отклонение при фильтрации. </summary>
+        [Header("Настройки фильтрации")] 
+        [SerializeField] private float filterDelta = 0.1f;
+        
+        /// <summary> Размер окна для медианного фильтра. </summary>
         [SerializeField] private int windowSize = 5;
         
-        private MedianFilterVector3 _medianFilter = new();
+        /// <summary> Целевая камера для синхронизации. </summary>
+        private Camera _targetCamera;
         
-        private Camera _camera;
+        /// <summary> Фильтр для сглаживания позиции камеры. </summary>
+        private MedianFilterVector3 _medianFilter = new();
 
-        void Start()
+        /// <summary> Инициализирует компонент, проверяя наличие камеры. </summary>
+        private void Start()
         {
             _targetCamera = GetComponent<Camera>();
-            _camera = GetComponent<Camera>();
+            if (_targetCamera == null)
+            {
+                Debug.LogError("SyncCameraMovement требует компонент Camera на этом объекте");
+                enabled = false;
+            }
         }
 
-        void LateUpdate()
+        /// <summary> Позднее обновление для синхронизации параметров камеры. </summary>
+        private void LateUpdate()
         {
             if (sourceCamera == null) return;
-            _camera.enabled = sourceCamera.isActiveAndEnabled;
 
-            // Синхронизация позиции и поворота
-            if (syncPosition) 
-                transform.position = _medianFilter.Filter(sourceCamera.transform.position, filterDelta, windowSize);
+            // Синхронизация активности камеры
+            _targetCamera.enabled = sourceCamera.isActiveAndEnabled;
 
-            if (syncRotation) 
+            SyncTransform();
+            SyncCameraParameters();
+        }
+
+        /// <summary> Синхронизирует позицию и поворот камеры. </summary>
+        private void SyncTransform()
+        {
+            if (syncPosition)
+            {
+                Vector3 filteredPosition = _medianFilter.Filter(
+                    sourceCamera.transform.position, 
+                    filterDelta, 
+                    windowSize
+                );
+                transform.position = filteredPosition;
+            }
+
+            if (syncRotation)
+            {
                 transform.rotation = sourceCamera.transform.rotation;
+            }
+        }
 
-            // Синхронизация параметров камеры
-            if (syncFOV) 
+        /// <summary> Синхронизирует параметры камеры. </summary>
+        private void SyncCameraParameters()
+        {
+            if (syncFOV)
+            {
                 _targetCamera.fieldOfView = sourceCamera.fieldOfView;
+            }
 
             if (syncProjection)
             {
                 _targetCamera.orthographic = sourceCamera.orthographic;
-                _targetCamera.orthographicSize = sourceCamera.orthographicSize;
+                if (sourceCamera.orthographic)
+                {
+                    _targetCamera.orthographicSize = sourceCamera.orthographicSize;
+                }
                 _targetCamera.nearClipPlane = sourceCamera.nearClipPlane;
                 _targetCamera.farClipPlane = sourceCamera.farClipPlane;
             }
