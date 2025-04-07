@@ -7,11 +7,13 @@ namespace Utilities
     {
         /// <summary> Исходная позиция объекта. </summary>
         private Vector3 _originalPosition;
+        private Quaternion _originalRotation;
 
         /// <summary> Сохраняет начальную позицию объекта при старте. </summary>
         private void Start()
         {
             _originalPosition = transform.position;
+            _originalRotation = transform.rotation;
         }
 
         /// <summary> Восстанавливает объект в исходную позицию. </summary>
@@ -21,6 +23,8 @@ namespace Utilities
         /// </remarks>
         public void RestorePosition()
         {
+            transform.parent = null;
+            transform.rotation = _originalRotation;
             transform.position = _originalPosition;
         }
     }

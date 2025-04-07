@@ -5340,6 +5340,7 @@ GameObject:
   - component: {fileID: 1083949653}
   - component: {fileID: 1083949652}
   - component: {fileID: 1083949655}
+  - component: {fileID: 1083949656}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -5476,6 +5477,18 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1083949653}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1083949656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083949650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e619fa89e942eead2f03440b9d0345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084499898
 GameObject:
   m_ObjectHideFlags: 0
@@ -8654,6 +8667,7 @@ GameObject:
   - component: {fileID: 1650949327}
   - component: {fileID: 1650949326}
   - component: {fileID: 1650949325}
+  - component: {fileID: 1650949329}
   - component: {fileID: 1650949328}
   m_Layer: 0
   m_Name: ModelTarget
@@ -8773,7 +8787,7 @@ MonoBehaviour:
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
   mHasRealisticTextures: 1
-  mPreview: {fileID: 1650949328}
+  mPreview: {fileID: 1650949329}
   mAutoValidationDataSetName: 
   mGuideViewDisplayModeNeedsUpgrade: 0
 --- !u!4 &1650949327
@@ -8794,6 +8808,18 @@ Transform:
   m_Father: {fileID: 1649931416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1650949328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650949323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e619fa89e942eead2f03440b9d0345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1650949329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10418,6 +10444,30 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1607505855}
+        m_TargetAssemblyTypeName: Utilities.PositionFixer, Assembly-CSharp
+        m_MethodName: RestorePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1083949656}
+        m_TargetAssemblyTypeName: Utilities.PositionFixer, Assembly-CSharp
+        m_MethodName: RestorePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1650949328}
         m_TargetAssemblyTypeName: Utilities.PositionFixer, Assembly-CSharp
         m_MethodName: RestorePosition
         m_Mode: 1
