@@ -4292,8 +4292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9666ad9387354b19a397c09a6b5546a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textField: {fileID: 0}
-  infoPanel: {fileID: 0}
+  textField: {fileID: 1496943180}
+  infoPanel: {fileID: 952233760}
   markImage: {fileID: 952233765}
 --- !u!4 &784713552
 Transform:
