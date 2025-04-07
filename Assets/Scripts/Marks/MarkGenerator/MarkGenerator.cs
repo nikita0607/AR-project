@@ -30,6 +30,8 @@ namespace Marks.MarkGenerator
         /// <remarks> Для каждой записи в JSON создается экземпляр метки, настраивается его позиция и поворот. </remarks>
         void CreateMark()
         {
+            Debug.Log("Creating mark");
+            Debug.Log(_marksFromJson.marks.Length);
             for (int i = 0; i < _marksFromJson.marks.Length; i++)
             {
                 MarkSer markInfo = _marksFromJson.marks[i];
@@ -39,10 +41,10 @@ namespace Marks.MarkGenerator
 
                 newMark.transform.localScale = mark.transform.localScale;
 
-                newMark.name = _marksFromJson.marks[i].Name;
-                newMarkComponent.Name = _marksFromJson.marks[i].Name;
-                newMarkComponent.Info = _marksFromJson.marks[i].Info;
-                newMarkComponent.SetPosition(EciPositionable.FromLongLat(markInfo.Longitude, markInfo.Latitude,
+                newMark.name = _marksFromJson.marks[i].name;
+                newMarkComponent.Name = _marksFromJson.marks[i].name;
+                newMarkComponent.Info = _marksFromJson.marks[i].info;
+                newMarkComponent.SetPosition(EciPositionable.FromLongLat(markInfo.longitude, markInfo.latitude,
                     earthUnitRadius));
 
                 newMark.transform.rotation =

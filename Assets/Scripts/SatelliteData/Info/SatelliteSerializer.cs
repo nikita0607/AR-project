@@ -7,7 +7,7 @@ namespace SatelliteData.Info
     public class SatellitesSerializer
     {
         /// <summary> Массив данных о спутниках (используется для десериализации). </summary>
-        public SatelliteSer[] Satellites;
+        public SatelliteSer[] satellites;
 
         /// <summary> Кэш данных о спутниках в виде словаря (ключ - название спутника). </summary>
         private static readonly Dictionary<string, SatelliteSer> _satellites = new();
@@ -20,10 +20,10 @@ namespace SatelliteData.Info
             if (_satellites.Count == 0)
             {
                 SatellitesSerializer satells = JsonUtility.FromJson<SatellitesSerializer>(textAsset.text);
-                foreach (var sat in satells.Satellites)
+                foreach (var sat in satells.satellites)
                 {
-                    Debug.Log(sat.Name + " " + sat.Info);
-                    _satellites.Add(sat.Name, sat);
+                    Debug.Log(sat.name + " " + sat.info);
+                    _satellites.Add(sat.name, sat);
                 }
             }
 

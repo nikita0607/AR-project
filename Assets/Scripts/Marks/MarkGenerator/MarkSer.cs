@@ -1,3 +1,5 @@
+using UnityEngine.Serialization;
+
 namespace Marks.MarkGenerator
 {
     /// <summary> Класс для хранения данных о метке. </summary>
@@ -5,15 +7,15 @@ namespace Marks.MarkGenerator
     public class MarkSer
     {
         /// <summary> Название метки. </summary>
-        public string Name;
+        public string name;
 
         /// <summary> Дополнительная информация о метке. </summary>
-        public string Info;
+        public string info;
 
         /// <summary> Географическая долгота в градусах. </summary>
-        public float Longitude;
+        public float longitude;
 
         /// <summary> Географическая широта в градусах. </summary>
-        public float Latitude;
+        public float latitude;
     }
 }

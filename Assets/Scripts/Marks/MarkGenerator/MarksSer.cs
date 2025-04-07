@@ -1,3 +1,5 @@
+using UnityEngine.Serialization;
+
 namespace Marks.MarkGenerator
 {
     /// <summary> Контейнер для массива меток. Используется для десериализации JSON данных. </summary>

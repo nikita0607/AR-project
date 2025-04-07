@@ -5,9 +5,9 @@ namespace SatelliteData.Info
     public class SatelliteSer
     {
         /// <summary> Наименование спутника. </summary>
-        public string Name;
+        public string name;
 
         /// <summary> Дополнительная информация о спутнике. </summary>
-        public string Info;
+        public string info;
     }
 }

@@ -55,8 +55,8 @@ namespace UI
                          $"NORAD-ID: {satellite.LoadedTle.getNoradID()}\n" +
                          $"Координаты:\n\tширота: {cords.getLatitude():f2}\n\tдолгота: {cords.getLongitude():f2}\n";
 
-            if (SatellitesSerializer.GetSatellitesSer(satteliteJson).ContainsKey(satellite.name))
-                text += $"{SatellitesSerializer.GetSatellitesSer(satteliteJson)[satellite.name].Info}\n";
+            if (SatellitesSerializer.GetSatellitesSer(satteliteJson).ContainsKey(satellite.Name))
+                text += $"{SatellitesSerializer.GetSatellitesSer(satteliteJson)[satellite.Name].info}\n";
 
             textField.text = text;
             BuildSatelliteTrail(satellite);
