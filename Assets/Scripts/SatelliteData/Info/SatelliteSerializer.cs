@@ -21,7 +21,10 @@ namespace SatelliteData.Info
             {
                 SatellitesSerializer satells = JsonUtility.FromJson<SatellitesSerializer>(textAsset.text);
                 foreach (var sat in satells.Satellites)
+                {
+                    Debug.Log(sat.Name + " " + sat.Info);
                     _satellites.Add(sat.Name, sat);
+                }
             }
 
             return _satellites;

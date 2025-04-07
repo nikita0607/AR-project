@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028301, g: 0.22571309, b: 0.30692127, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2297,7 +2297,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &325660435
 MonoBehaviour:
@@ -3925,7 +3925,7 @@ MonoBehaviour:
   defaultSatellite: {fileID: 0}
   satelliteParrent: {fileID: 1253954949}
   specificSatellitePrefabList: []
-  _useWebDownloading: 1
+  useWebDownloading: 1
   tleSources: []
   uiController: {fileID: 0}
 --- !u!1 &733038195
@@ -4292,8 +4292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9666ad9387354b19a397c09a6b5546a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textField: {fileID: 1496943180}
-  _infoPanel: {fileID: 952233760}
+  textField: {fileID: 0}
+  infoPanel: {fileID: 0}
   markImage: {fileID: 952233765}
 --- !u!4 &784713552
 Transform:
@@ -5258,10 +5258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c665d7cefa3cf4c44b426fe1af1afeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textField: {fileID: 750102489}
-  _lineRedererParrent: {fileID: 1253954949}
-  _trailPrefab: {fileID: 5701180427106876718, guid: aec92601856d647be99d5a8b7720ed53, type: 3}
-  _satteliteJson: {fileID: 4900000, guid: cf9b233c550ff4af285cd0897eb91fdc, type: 3}
+  textField: {fileID: 750102489}
+  lineRedererParrent: {fileID: 1952920838}
+  trailPrefab: {fileID: 5701180427106876718, guid: aec92601856d647be99d5a8b7720ed53, type: 3}
+  satteliteJson: {fileID: 4900000, guid: cf9b233c550ff4af285cd0897eb91fdc, type: 3}
 --- !u!224 &1034402368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6107,29 +6107,29 @@ MonoBehaviour:
   defaultSatellite: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
   satelliteParrent: {fileID: 1253954949}
   specificSatellitePrefabList: []
-  _useWebDownloading: 0
+  useWebDownloading: 1
   tleSources:
-  - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=cubesat&FORMAT=tle
-    prefab: {fileID: 5632131304998391534, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
-    satelliteType: 1
-  - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle
-    prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
-    satelliteType: 2
-  - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=starlink&FORMAT=tle
-    prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
-    satelliteType: 3
-  - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle
-    prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
-    satelliteType: 4
-  - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=weather&FORMAT=tle
-    prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
-    satelliteType: 5
-  - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=geo&FORMAT=tle
-    prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
-    satelliteType: 6
-  - url: https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle
-    prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
-    satelliteType: 7
+  - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=cubesat&FORMAT=tle
+    Prefab: {fileID: 5632131304998391534, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
+    SatelliteType: 1
+  - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle
+    Prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+    SatelliteType: 2
+  - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle
+    Prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+    SatelliteType: 4
+  - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=weather&FORMAT=tle
+    Prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+    SatelliteType: 5
+  - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=geo&FORMAT=tle
+    Prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+    SatelliteType: 6
+  - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=tle
+    Prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+    SatelliteType: 7
+  - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=noaa&FORMAT=tle
+    Prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+    SatelliteType: 3
   uiController: {fileID: 1376050955}
 --- !u!114 &1253954956
 MonoBehaviour:
@@ -6802,15 +6802,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197b120869eb4922a49ee3b0815c4262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 181995778}
-  _sprites:
+  sprite: {fileID: 181995778}
+  sprites:
   - {fileID: 21300000, guid: 4293e826a9a134da6aa4ef5dce818b31, type: 3}
   - {fileID: 21300000, guid: 179ef1e9312d6451e9668320f11a2483, type: 3}
-  _text: {fileID: 336722207}
+  text: {fileID: 336722207}
   loadText: {fileID: 2129346038}
-  _buttons:
-  - {fileID: 212708967}
-  - {fileID: 1005050896}
+  buttons: []
   errorPanel: {fileID: 1030128280}
 --- !u!1 &1380271152
 GameObject:
@@ -7669,7 +7667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1520801090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7713,7 +7711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1521857870
 RectTransform:
   m_ObjectHideFlags: 0

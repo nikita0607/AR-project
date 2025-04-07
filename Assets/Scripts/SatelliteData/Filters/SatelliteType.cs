@@ -13,7 +13,7 @@ namespace SatelliteData.Filters
         TOP100 = 2,
         
         /// <summary> Спутники системы Starlink. </summary>
-        STARLINK = 3,
+        NOAA = 3,
         
         /// <summary> Спутники, запущенные в последние 30 дней. </summary>
         LAST30DAYS = 4,
