@@ -27,12 +27,14 @@ namespace Utilities
         
         /// <summary> Размер окна для медианного фильтра. </summary>
         [SerializeField] private int windowSize = 5;
+        [SerializeField] private float lowpassK = 0.1f;
         
         /// <summary> Целевая камера для синхронизации. </summary>
         private Camera _targetCamera;
         
         /// <summary> Фильтр для сглаживания позиции камеры. </summary>
         private MedianFilterVector3 _medianFilter = new();
+        private LowpassFIlter _lowpassFilter = new();
 
         /// <summary> Инициализирует компонент, проверяя наличие камеры. </summary>
         private void Start()
@@ -62,10 +64,10 @@ namespace Utilities
         {
             if (syncPosition)
             {
-                Vector3 filteredPosition = _medianFilter.Filter(
-                    sourceCamera.transform.position, 
-                    filterDelta, 
-                    windowSize
+                Vector3 filteredPosition = _lowpassFilter.Filter(
+                    sourceCamera.transform.position,
+                    lowpassK,
+                    filterDelta
                 );
                 transform.position = filteredPosition;
             }

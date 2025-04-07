@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 1639739}
   - component: {fileID: 1639737}
   - component: {fileID: 1639736}
+  - component: {fileID: 1639741}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: MainCamera
@@ -234,6 +235,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1639741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c872f315e834335855f1885b160028e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceCamera: {fileID: 1639739}
+  syncPosition: 1
+  syncRotation: 1
+  syncFOV: 1
+  syncProjection: 1
+  filterDelta: 0.01
+  windowSize: 10
 --- !u!1 &6558123
 GameObject:
   m_ObjectHideFlags: 0
@@ -8667,8 +8687,8 @@ GameObject:
   - component: {fileID: 1650949327}
   - component: {fileID: 1650949326}
   - component: {fileID: 1650949325}
-  - component: {fileID: 1650949329}
   - component: {fileID: 1650949328}
+  - component: {fileID: 1650949329}
   m_Layer: 0
   m_Name: ModelTarget
   m_TagString: Untagged
