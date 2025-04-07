@@ -6118,18 +6118,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultSatellites:
-  - {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
-  - {fileID: 8907102411897425595, guid: cb3e0074b9eb749a3bc2469584ac0c5a, type: 3}
-  - {fileID: 953523205336570198, guid: 5c54ab9277c004395bf91a3c52dc6c7d, type: 3}
+  - {fileID: 629046755122187825, guid: cc6a98f03fb86415d99910a1152050c7, type: 3}
+  - {fileID: 4143963684340548283, guid: ffdeb34db28d54f3ab1c8fc4b75d8280, type: 3}
+  - {fileID: 5918808450395924533, guid: 75872f46b8b23419f8a1891811096dcf, type: 3}
   satelliteParrent: {fileID: 1253954949}
   specificSatellitePrefabList: []
-  useWebDownloading: 1
+  useWebDownloading: 0
   tleSources:
   - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=cubesat&FORMAT=tle
     Prefab: {fileID: 5632131304998391534, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
     SatelliteType: 1
   - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=visual&FORMAT=tle
-    Prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
+    Prefab: {fileID: 0}
     SatelliteType: 2
   - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=last-30-days&FORMAT=tle
     Prefab: {fileID: 1743851611900330157, guid: 0f7d63f8f33741b44a0e55356814933c, type: 3}
