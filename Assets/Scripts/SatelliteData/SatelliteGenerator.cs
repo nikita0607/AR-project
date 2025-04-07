@@ -6,6 +6,8 @@ using One_Sgp4;
 using SatelliteData.Filters;
 using SatelliteData.Info;
 using UI;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 namespace SatelliteData
 {
@@ -13,7 +15,7 @@ namespace SatelliteData
     public class SatelliteGenerator : MonoBehaviour
     {
         /// <summary> Префаб спутника по умолчанию. </summary>
-        [SerializeField] private GameObject defaultSatellite;
+        [SerializeField] private GameObject[] defaultSatellites;
         
         /// <summary> Родительский объект для всех создаваемых спутников. </summary>
         [SerializeField] private GameObject satelliteParrent;
@@ -105,11 +107,17 @@ namespace SatelliteData
         {
             Tle parsedLoadedTle = ParserTLE.parseTle(loadedTleData.Line1, loadedTleData.Line2, loadedTleData.Name);
 
-            GameObject newSatellite = Instantiate(source.Prefab, parent: satelliteParrent.transform);
+            GameObject prefab;
+            if (source.Prefab == null)
+                prefab = defaultSatellites[Random.Range(0, defaultSatellites.Length)];
+            else
+                prefab = source.Prefab;
+            
+            GameObject newSatellite = Instantiate(prefab, parent: satelliteParrent.transform);
             Satellite newSatelliteComponent = newSatellite.GetComponent<Satellite>();
             newSatellite.SetActive(false);
 
-            ConfigureSatellite(newSatellite, newSatelliteComponent, parsedLoadedTle, source.SatelliteType, source.Prefab);
+            ConfigureSatellite(newSatellite, newSatelliteComponent, parsedLoadedTle, source.SatelliteType, prefab);
         }
 
         /// <summary> Создает специальный спутник. </summary>
@@ -129,11 +137,13 @@ namespace SatelliteData
         }
 
         /// <summary> Настраивает параметры спутника. </summary>
-        private void ConfigureSatellite(GameObject satelliteObj, Satellite satelliteComponent, Tle tleData, SatelliteType type, GameObject prefab)
+        private void ConfigureSatellite(GameObject satelliteObj, Satellite satelliteComponent, Tle tleData, 
+            SatelliteType type, GameObject prefab)
         {
             satelliteComponent.Name = tleData.getName();
             satelliteComponent.LoadedTle = tleData;
             satelliteComponent.SatelliteType = type;
+            satelliteComponent.Parent = satelliteParrent;
             satelliteObj.transform.localScale = prefab.transform.localScale;
             _infoController.HideSatellites += satelliteComponent.OnHide;
         }

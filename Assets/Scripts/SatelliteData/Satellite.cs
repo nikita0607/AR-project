@@ -19,6 +19,8 @@ namespace SatelliteData
 
         /// <summary> Тип спутника. </summary>
         public SatelliteType SatelliteType { get; set; }
+        
+        public GameObject Parent { get; set; }
 
         /// <summary> Менеджер времени. </summary>
         private TimeManager timeManager;
@@ -74,6 +76,9 @@ namespace SatelliteData
             Coordinate cords = GetPosition();
             Vector3 newPos = FromLongLat(-(float)cords.getLongitude(), (float)cords.getLatitude(),
                 EarthParametrs.VirtualEarthRadius + GetHeight());
+            
+            gameObject.transform.rotation =
+                Quaternion.LookRotation(Parent.transform.position - gameObject.transform.position);
 
             SetPosition(newPos);
         }
