@@ -6265,7 +6265,7 @@ MonoBehaviour:
   - {fileID: 5918808450395924533, guid: 75872f46b8b23419f8a1891811096dcf, type: 3}
   satelliteParrent: {fileID: 1253954949}
   specificSatellitePrefabList: []
-  useWebDownloading: 1
+  useWebDownloading: 0
   tleSources:
   - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=cubesat&FORMAT=tle
     Prefab: {fileID: 5632131304998391534, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
