@@ -41,7 +41,7 @@ namespace Marks
                         Mark mark = hit.collider.gameObject.GetComponent<Mark>();
                         markImage.SetMarkImage(mark.Name);
                         string text = mark.Name;
-                        text += "\n" + mark.Info;
+                        text += "\n \n" + mark.Info;
                         textField.text = text;
                     }
             }
