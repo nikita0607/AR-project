@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<QCARInfo>
+    <TargetSet version="36.0" toolVersion="v7.2.2">
+        <ModelTarget name="GlobeTerra" targetId="e6e8a58656e1474694c4006eb2e759b8" version="14.0" toolVersion="v7.2.2" bbox="-0.689609 -0.464003 -0.630143 0.542483 0.728749 0.604674" trackingMode="scan" upVector="0.0 1.0 0.0" optimizeTrackingFor="default" realisticTextures="yes" />
+    </TargetSet>
+    <Assembly name="GlobeTerra" assemblyId="a9966e0722724dada83bf7b620c28bd6">
+        <Part name="GlobeTerra" translation="0 0 0" rotation="AD: 0 0 1 0" />
+        <EntryPoint name="(none)" trained="yes" />
+    </Assembly>
+</QCARInfo>
