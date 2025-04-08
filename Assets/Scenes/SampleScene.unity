@@ -4832,6 +4832,33 @@ MonoBehaviour:
     MarkImageSprite: {fileID: 21300000, guid: b87c3ec0dfdcec149b759ffb3fd6360e, type: 3}
   - MarkName: "Imam Khomeini Space Center, \u0418\u0440\u0430\u043D"
     MarkImageSprite: {fileID: 21300000, guid: 831a9075cc0217f42a9abd0cfd1c79b1, type: 3}
+  - MarkName: "Broglio Space Centre, \u041A\u0435\u043D\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: aa6a9ce62bc384caeb599b5a26e1bbba, type: 3}
+  - MarkName: "Satish Dhawan Space Centre, \u0418\u043D\u0434\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: 136b77b2ce0f04d5390e9d1f321a06ae, type: 3}
+  - MarkName: "Taiyuan Space Center, \u041A\u0438\u0442\u0430\u0439"
+    MarkImageSprite: {fileID: 21300000, guid: 5d1217d9411174799af49583cbe8780f, type: 3}
+  - MarkName: "Tanegashima Space Center, \u042F\u043F\u043E\u043D\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: a4985e8fde18c495ba697a84667a8272, type: 3}
+  - MarkName: "\u0411\u0430\u0439\u043A\u043E\u043D\u0443\u0440, \u041A\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043D"
+    MarkImageSprite: {fileID: 21300000, guid: 487975eb7a4fb4a50b864585901e40dd, type: 3}
+  - MarkName: "Woomera Range Complex, \u0410\u0432\u0441\u0442\u0440\u0430\u043B\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: 6c4fab8b428484ddea62cacf8e2bd9fc, type: 3}
+  - MarkName: "Xichang Launch Facility, \u041A\u0438\u0442\u0430\u0439"
+    MarkImageSprite: {fileID: 21300000, guid: adec36cdd54ce4bde994714715fb52be, type: 3}
+  - MarkName: "Sohae Satellite Launching Station, \u0421\u0435\u0432\u0435\u0440\u043D\u0430\u044F
+      \u041A\u043E\u0440\u0435\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: 006256f385bc9482dae1376c8e21b90e, type: 3}
+  - MarkName: "Rocket Lab Launch Base, \u041D\u043E\u0432\u0430\u044F \u0417\u0435\u043B\u0430\u043D\u0434\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: cd573cf774b6c4bc29f6a15c3829be63, type: 3}
+  - MarkName: "Shahrud Missile Test Site, \u0418\u0440\u0430\u043D"
+    MarkImageSprite: {fileID: 21300000, guid: 71081251a538f42949a1c189161c8c7c, type: 3}
+  - MarkName: "\u0412\u043E\u0441\u0442\u043E\u0447\u043D\u044B\u0439, \u0420\u043E\u0441\u0441\u0438\u044F"
+    MarkImageSprite: {fileID: 21300000, guid: d7f095d4e5c2f408cb3ab4362e1ad5b2, type: 3}
+  - MarkName: "Wallops Island, \u0421\u0428\u0410"
+    MarkImageSprite: {fileID: 21300000, guid: 84bdc152f7fdb498f962754dc8d11b17, type: 3}
+  - MarkName: "Wenchang Spacecraft Launch Site, \u041A\u0438\u0442\u0430\u0439"
+    MarkImageSprite: {fileID: 21300000, guid: 14380e3f2abfa4e959d2dd986cdcf02b, type: 3}
   defaultMarkImage: {fileID: 21300000, guid: 2117e521c55964d4eb49b4e0d0bd61b0, type: 3}
 --- !u!1 &957218766
 GameObject:
