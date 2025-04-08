@@ -6,6 +6,7 @@ using One_Sgp4;
 using SatelliteData.Filters;
 using SatelliteData.Info;
 using UI;
+using UI.SatelliteFilter;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
@@ -33,11 +34,14 @@ namespace SatelliteData
         [SerializeField] private DownloadController uiController;
         
         private SatelliteInfoController _infoController;
+        
+        private Camera _camera;
 
         /// <summary> Получает необходимые компоненты. </summary>
         private void Awake()
         {
             _infoController = GetComponent<SatelliteInfoController>();
+            _camera = Camera.main;
         }
 
         /// <summary> Запускает корутину. </summary>
@@ -146,6 +150,7 @@ namespace SatelliteData
             satelliteComponent.Parent = satelliteParrent;
             satelliteObj.transform.localScale = prefab.transform.localScale;
             _infoController.HideSatellites += satelliteComponent.OnHide;
+            SatelliteFilterName.OnNameFilterApply += satelliteComponent.OnNameFilterApplied;
         }
 
         /// <summary> Класс-контейнер для источника TLE-данных. </summary>

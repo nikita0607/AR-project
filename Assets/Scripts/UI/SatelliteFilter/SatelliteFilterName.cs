@@ -1,3 +1,4 @@
+using System;
 using SatelliteData.Filters;
 using SatelliteData.Info;
 using TMPro;
@@ -10,6 +11,8 @@ namespace UI.SatelliteFilter
     {
         /// <summary> Поле ввода для поиска по названию спутника. </summary>
         [SerializeField] private TMP_InputField inputField;
+
+        public static Action<string> OnNameFilterApply;
 
         /// <summary> Контроллер информации о спутниках (Singleton). </summary>
         private SatelliteInfoController _satelliteInfoController;
@@ -39,7 +42,7 @@ namespace UI.SatelliteFilter
                 _satelliteInfoController.SatelliteHideFilters &= _satelliteHideFilter;
             }
             
-            // Пытаемся применить фильтр
+            OnNameFilterApply?.Invoke(inputField.text);
             _satelliteInfoController.TryApplySatelliteFilter();
         }
     }   
