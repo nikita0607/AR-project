@@ -12,7 +12,7 @@ namespace SatelliteData.Filters
         /// <summary> Топ 100 наиболее значимых/известных спутников. </summary>
         TOP100 = 2,
         
-        /// <summary> Спутники системы Starlink. </summary>
+        /// <summary> Спутники NOAA. </summary>
         NOAA = 3,
         
         /// <summary> Спутники, запущенные в последние 30 дней. </summary>

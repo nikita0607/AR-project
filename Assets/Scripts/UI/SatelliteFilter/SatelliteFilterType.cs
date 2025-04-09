@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using SatelliteData.Filters;
 using SatelliteData.Info;
 using TMPro;
@@ -22,6 +23,17 @@ namespace UI.SatelliteFilter
         /// <summary> Текущий активный фильтр по типу спутника. </summary>
         private SatelliteHideFilter _satelliteFilter;
 
+        private static Dictionary<SatelliteType, string> dict = new()
+        {
+            {SatelliteType.CUBESAT, "Кубсаты"},
+            {SatelliteType.TOP100, "100 Ярчайших"},
+            {SatelliteType.NOAA, "NOAA"},
+            {SatelliteType.LAST30DAYS, "Запущенные в последние 30 дней"},
+            {SatelliteType.WEATHER, "Метеорологические"},
+            {SatelliteType.Geosynchronous, "Геостационарные"},
+            {SatelliteType.SPECIFIC, "хуйня"}
+        };
+
         /// <summary> Инициализирует контроллер и создает кнопки фильтров. </summary>
         /// <remarks>
         /// 1. Получает ссылку на SatelliteInfoController
@@ -39,7 +51,7 @@ namespace UI.SatelliteFilter
                 int typeIndex = i;
                 
                 button.name = ((SatelliteType)typeIndex).ToString();
-                button.GetComponentInChildren<TextMeshProUGUI>().text = ((SatelliteType)typeIndex).ToString();
+                button.GetComponentInChildren<TextMeshProUGUI>().text = dict[(SatelliteType)typeIndex];
                 
                 button.onClick.AddListener(() => ApplySearch((SatelliteType)typeIndex));
             }

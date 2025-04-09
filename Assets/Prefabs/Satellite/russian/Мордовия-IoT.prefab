@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 767543128979683999, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: Name
-      value: TUSUR GO (RS78S)
+      value: MORDOVIA-IOT (RS50S)
       objectReference: {fileID: 0}
     - target: {fileID: 4999709411967046740, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5632131304998391534, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: m_Name
-      value: TUSUR GO (RS78S)
+      value: "\u041C\u043E\u0440\u0434\u043E\u0432\u0438\u044F-IoT"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

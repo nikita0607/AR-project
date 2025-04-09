@@ -30,6 +30,8 @@ namespace SatelliteData
 
         private Vector3 _screenPos;
         
+        private Camera _camera;
+        
 
         /// <summary> Задание стартовых данных. </summary>
         private void Start()
@@ -39,6 +41,7 @@ namespace SatelliteData
 
             timeManager = GameObject.FindWithTag("TimeManager").GetComponent<TimeManager>();
             TimeForSatellite = timeManager.GetTime();
+            _camera = Camera.allCameras[1];
         }
 
         private void Update()
@@ -48,7 +51,7 @@ namespace SatelliteData
             TimeForSatellite = timeManager.GetTime();
             UpdatePosition();
             
-            _screenPos = Camera.allCameras[1].WorldToScreenPoint(transform.position);
+            _screenPos = _camera.WorldToScreenPoint(transform.position);
             Pointer.transform.position = _screenPos;
         }
 

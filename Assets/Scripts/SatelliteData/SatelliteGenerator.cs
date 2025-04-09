@@ -129,8 +129,11 @@ namespace SatelliteData
         {
             foreach (var specificSatellitePrefab in specificSatellitePrefabList)
             {
+                if (specificSatellitePrefab.GetComponent<Satellite>().Name == "ISS (ZARYA)")
+                    Debug.Log("123");
                 if (specificSatellitePrefab.GetComponent<Satellite>().Name != loadedTleData.Name) continue;
                 
+                Debug.Log(loadedTleData.Name);
                 Tle parsedLoadedTle = ParserTLE.parseTle(loadedTleData.Line1, loadedTleData.Line2, loadedTleData.Name);
                 GameObject newSatellite = Instantiate(specificSatellitePrefab, parent: satelliteParrent.transform);
                 Satellite newSatelliteComponent = newSatellite.GetComponent<Satellite>();

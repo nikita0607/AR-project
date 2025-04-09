@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5632131304998391534, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: m_Name
-      value: SITRO-AIS 11 (SHEFFER)
+      value: "\u0410\u0445\u043C\u0430\u0442-1"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
