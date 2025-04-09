@@ -33,6 +33,8 @@ public class TimeManager : MonoBehaviour
     
     /// <summary> Событие, вызываемое при каждом изменении минуты. </summary>
     public Action OnMinuteChanged;
+    
+    private EpochTime _correctedTime;
 
     /// <summary> Доступ к экземпляру TimeManager через Singleton pattern.
     /// При первом обращении автоматически ищет существующий экземпляр на сцене. </summary>
@@ -56,6 +58,9 @@ public class TimeManager : MonoBehaviour
         timeVelocity = 1;
         ResetTime();
         _lastMinunte = time.getMin();
+        
+        _correctedTime = new EpochTime(time);
+        _correctedTime.addHours(3);
     }
 
     /// <summary> Основной цикл обновления времени. Вызывается каждый кадр.
@@ -66,7 +71,8 @@ public class TimeManager : MonoBehaviour
         time.addTick(timeVelocity * Time.deltaTime);
         
         // Обновление UI
-        timeText.text = $"{time.getDateToString()}\n{time.getTimeToString()}";
+
+        timeText.text = $"{time.getDateToString()}\n{_correctedTime.getTimeToString()}";
         timeSpeedText.text = $"Управление временем. Текущая скорость = {timeVelocity}.";
 
         // Проверка изменения минуты
@@ -92,7 +98,8 @@ public class TimeManager : MonoBehaviour
     /// <summary> Сбрасывает время на текущее (UTC+3) и устанавливает стандартную скорость (1.0). </summary>
     public void ResetTime()
     {
-        time = new EpochTime(DateTime.UtcNow.AddHours(3));
+        time = new EpochTime(DateTime.UtcNow);
+        _correctedTime = new EpochTime(DateTime.UtcNow.AddHours(3));
         SetNewVelocity(1);
     }
 }
