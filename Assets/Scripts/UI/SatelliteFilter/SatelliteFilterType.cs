@@ -23,7 +23,8 @@ namespace UI.SatelliteFilter
         /// <summary> Текущий активный фильтр по типу спутника. </summary>
         private SatelliteHideFilter _satelliteFilter;
 
-        private static Dictionary<SatelliteType, string> dict = new()
+        /// <summary> Словарь для перевод из Enumerate в строку. </summary>
+        private static Dictionary<SatelliteType, string> convertEnumToString = new()
         {
             {SatelliteType.CUBESAT, "Кубсаты"},
             {SatelliteType.TOP100, "100 Ярчайших"},
@@ -31,7 +32,7 @@ namespace UI.SatelliteFilter
             {SatelliteType.LAST30DAYS, "Запущенные в последние 30 дней"},
             {SatelliteType.WEATHER, "Метеорологические"},
             {SatelliteType.Geosynchronous, "Геостационарные"},
-            {SatelliteType.SPECIFIC, "хуйня"}
+            {SatelliteType.SPECIFIC, "Школьные"}
         };
 
         /// <summary> Инициализирует контроллер и создает кнопки фильтров. </summary>
@@ -51,7 +52,7 @@ namespace UI.SatelliteFilter
                 int typeIndex = i;
                 
                 button.name = ((SatelliteType)typeIndex).ToString();
-                button.GetComponentInChildren<TextMeshProUGUI>().text = dict[(SatelliteType)typeIndex];
+                button.GetComponentInChildren<TextMeshProUGUI>().text = convertEnumToString[(SatelliteType)typeIndex];
                 
                 button.onClick.AddListener(() => ApplySearch((SatelliteType)typeIndex));
             }

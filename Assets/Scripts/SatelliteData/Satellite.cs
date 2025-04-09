@@ -23,13 +23,16 @@ namespace SatelliteData
         /// <summary> Тип спутника. </summary>
         public SatelliteType SatelliteType { get; set; }
         
+        /// <summary> Родительский объект. </summary>
         public GameObject Parent { get; set; }
 
         /// <summary> Менеджер времени. </summary>
         private TimeManager timeManager;
 
+        /// <summary> Позиция на экране. </summary>
         private Vector3 _screenPos;
         
+        /// <summary> Камера. </summary>
         private Camera _camera;
         
 
@@ -91,6 +94,8 @@ namespace SatelliteData
             gameObject.SetActive(filter.ShouldShowSatellite(this));
         }
 
+        /// <summary> При применении фильтра на имя. </summary>
+        /// <param name="lookingName"> Искомое имя. </param>
         public void OnNameFilterApplied(string lookingName)
         {
             if (lookingName.Length >= 3 && Name.Contains(lookingName))

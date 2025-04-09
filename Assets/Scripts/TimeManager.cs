@@ -34,6 +34,7 @@ public class TimeManager : MonoBehaviour
     /// <summary> Событие, вызываемое при каждом изменении минуты. </summary>
     public Action OnMinuteChanged;
     
+    /// <summary> Текущее время в формате UTC+3. </summary>
     private EpochTime _correctedTime;
 
     /// <summary> Доступ к экземпляру TimeManager через Singleton pattern.
@@ -55,7 +56,7 @@ public class TimeManager : MonoBehaviour
     /// <summary> Инициализация времени. Устанавливает начальное время (UTC+3) и базовую скорость. </summary>
     private void Start()
     {
-        timeVelocity = 1;
+        timeVelocity = 1f;
         ResetTime();
         _lastMinunte = time.getMin();
         
@@ -69,6 +70,7 @@ public class TimeManager : MonoBehaviour
     {
         // Обновление виртуального времени
         time.addTick(timeVelocity * Time.deltaTime);
+        _correctedTime.addTick(timeVelocity * Time.deltaTime);
         
         // Обновление UI
 
@@ -89,11 +91,15 @@ public class TimeManager : MonoBehaviour
 
     /// <summary> Устанавливает новую скорость течения времени. </summary>
     /// <param name="newVelocity"> Новая скорость (1.0 = реальное время). </param>
-    public void SetNewVelocity(float newVelocity) => timeVelocity = newVelocity;
+    private void SetNewVelocity(float newVelocity) => timeVelocity = newVelocity > 0f ? newVelocity : 1f;
 
     /// <summary> Изменяет текущую скорость течения времени на указанное значение. </summary>
     /// <param name="valueToChange"> Значение для изменения скорости (может быть отрицательным). </param>
-    public void ChangeVelocity(float valueToChange) => timeVelocity += valueToChange;
+    public void ChangeVelocity(float valueToChange)
+    {
+        float newVal = timeVelocity += valueToChange;
+        timeVelocity = newVal > 0f ? newVal : 0f;
+    }
 
     /// <summary> Сбрасывает время на текущее (UTC+3) и устанавливает стандартную скорость (1.0). </summary>
     public void ResetTime()

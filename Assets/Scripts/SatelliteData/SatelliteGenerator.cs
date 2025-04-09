@@ -33,15 +33,13 @@ namespace SatelliteData
         /// <summary> Контроллер UI для отображения процесса загрузки. </summary>
         [SerializeField] private DownloadController uiController;
         
+        /// <summary> Контроллер информационных объектов. </summary>
         private SatelliteInfoController _infoController;
-        
-        private Camera _camera;
 
         /// <summary> Получает необходимые компоненты. </summary>
         private void Awake()
         {
             _infoController = GetComponent<SatelliteInfoController>();
-            _camera = Camera.main;
         }
 
         /// <summary> Запускает корутину. </summary>
@@ -129,8 +127,6 @@ namespace SatelliteData
         {
             foreach (var specificSatellitePrefab in specificSatellitePrefabList)
             {
-                if (specificSatellitePrefab.GetComponent<Satellite>().Name == "ISS (ZARYA)")
-                    Debug.Log("123");
                 if (specificSatellitePrefab.GetComponent<Satellite>().Name != loadedTleData.Name) continue;
                 
                 Debug.Log(loadedTleData.Name);

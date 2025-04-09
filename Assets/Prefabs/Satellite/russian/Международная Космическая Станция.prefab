@@ -74,30 +74,6 @@ PrefabInstance:
       propertyPath: Name
       value: ISS (ZARYA)
       objectReference: {fileID: 0}
-    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
-      propertyPath: m_Size.x
-      value: 1.4222003
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
-      propertyPath: m_Size.y
-      value: 0.3677032
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
-      propertyPath: m_Size.z
-      value: 0.6733311
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
-      propertyPath: m_Center.x
-      value: -0.28890032
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
-      propertyPath: m_Center.y
-      value: -0.09946082
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
-      propertyPath: m_Center.z
-      value: -0.032349538
-      objectReference: {fileID: 0}
     - target: {fileID: 4999709411967046740, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3
@@ -149,10 +125,6 @@ PrefabInstance:
     - target: {fileID: 4999709411967046740, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4999709411967046740, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5632131304998391534, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: m_Name

@@ -26,6 +26,16 @@ namespace UI.SatelliteFilter
             _satelliteInfoController = SatelliteInfoController.Singleton;
         }
 
+        private void Update()
+        {
+            if (inputField.text.Length < 3 && _satelliteHideFilter != null)
+            {
+                _satelliteInfoController.SatelliteHideFilters -= _satelliteHideFilter;
+                _satelliteHideFilter = null;
+                _satelliteInfoController.TryApplySatelliteFilter();
+            }
+        }
+
         /// <summary> Применяет фильтрацию по введенному названию. </summary>
         /// <remarks>  Фильтр активируется только при вводе 3+ символов.
         /// Удаляет предыдущий фильтр перед установкой нового. </remarks>

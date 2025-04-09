@@ -61,19 +61,25 @@ namespace SatelliteData.Info
         {
             if (_camera && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                Ray ray = _camera.ScreenPointToRay(Input.GetTouch(0).position);
-
-                if (Physics.Raycast(ray, out var hit, Mathf.Infinity))
+                RaycastHit[] hits;
+                hits = Physics.RaycastAll(transform.position, transform.forward, 10000.0F);
+                
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    RaycastHit hit = hits[i];
+                    Debug.Log(hit.transform.name);
                     if (hit.collider.CompareTag("satellite"))
                     {
+                        Debug.Log(i);
                         Satellite satellite = hit.collider.gameObject.GetComponent<Satellite>();
                         SatelliteHideFilter filter = new SatelliteHideFilter(noradID: satellite.LoadedTle.getNoradID());
                         HideSatellites?.Invoke(filter);
                         satelliteInfo.SetInfo(satellite);
                         satelliteInfo.Show();
-
+                
                         _canApplyFilter = false;
                     }
+                }
             }
         }
     }
