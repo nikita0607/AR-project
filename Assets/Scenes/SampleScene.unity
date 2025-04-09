@@ -6185,7 +6185,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1253954953}
   - component: {fileID: 1253954950}
-  - component: {fileID: 1253954954}
   - component: {fileID: 1253954955}
   - component: {fileID: 1253954956}
   m_Layer: 0
@@ -6232,21 +6231,6 @@ Transform:
   - {fileID: 1815851118}
   m_Father: {fileID: 1199778174}
   m_LocalEulerAnglesHint: {x: 0, y: -37, z: 0}
---- !u!114 &1253954954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253954949}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 872d1198dbfc74305af5d075bcc2ddee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeVelocity: 1
-  timeText: {fileID: 0}
-  timeSpeedText: {fileID: 0}
 --- !u!114 &1253954955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6264,7 +6248,28 @@ MonoBehaviour:
   - {fileID: 4143963684340548283, guid: ffdeb34db28d54f3ab1c8fc4b75d8280, type: 3}
   - {fileID: 5918808450395924533, guid: 75872f46b8b23419f8a1891811096dcf, type: 3}
   satelliteParrent: {fileID: 1253954949}
-  specificSatellitePrefabList: []
+  specificSatellitePrefabList:
+  - {fileID: 2086560817019456019, guid: e089053127d92474bafe0f98142d93db, type: 3}
+  - {fileID: 2086560817019456019, guid: 6fa0276bc783c4b2eb45848675c081a2, type: 3}
+  - {fileID: 2086560817019456019, guid: eb809993edf394937a17c881440df5a6, type: 3}
+  - {fileID: 2086560817019456019, guid: 8c740f1bc40314fbd8c9021a7caae8bc, type: 3}
+  - {fileID: 2086560817019456019, guid: 86e25ac721b944a2cb7292ff4d9238d2, type: 3}
+  - {fileID: 2086560817019456019, guid: e8f4c2fdffa7b4f6a94efbbbd04ddfec, type: 3}
+  - {fileID: 2086560817019456019, guid: 263b72e9291794d64873bac1b94a3ad3, type: 3}
+  - {fileID: 2086560817019456019, guid: 690a0062a88084c21b85eb482f7c6b05, type: 3}
+  - {fileID: 2086560817019456019, guid: 73a178a5e782840668b80c38bea58a30, type: 3}
+  - {fileID: 2086560817019456019, guid: 7789c587283a74b9c8f078b66c9ee5ac, type: 3}
+  - {fileID: 2086560817019456019, guid: 81930b982fb844a33a2040424ab140e3, type: 3}
+  - {fileID: 2086560817019456019, guid: 9701b17efb8a84f95af1db0438ced855, type: 3}
+  - {fileID: 2086560817019456019, guid: beda2a909dc254ef58eaa6c07d6737c2, type: 3}
+  - {fileID: 2086560817019456019, guid: fa1032a3a6b8647dfaac2206be4eac0b, type: 3}
+  - {fileID: 2086560817019456019, guid: c96d402b57ef3464fb685509ddf7ae57, type: 3}
+  - {fileID: 2086560817019456019, guid: b559bfc1a1f6649c2b7f05b97300395b, type: 3}
+  - {fileID: 2086560817019456019, guid: 76f54fbac00ac4632859272ccf1bf10b, type: 3}
+  - {fileID: 2086560817019456019, guid: df739f99af8354289a95b9696bfa371c, type: 3}
+  - {fileID: 2086560817019456019, guid: 5b03c9a09157d43e6a96dd1326473240, type: 3}
+  - {fileID: 2086560817019456019, guid: 67b6e48b573854f00aaf4b30b5997e8e, type: 3}
+  - {fileID: 2086560817019456019, guid: 7a362080289d7414798226407351775e, type: 3}
   useWebDownloading: 0
   tleSources:
   - Url: https://celestrak.org/NORAD/elements/gp.php?GROUP=cubesat&FORMAT=tle
