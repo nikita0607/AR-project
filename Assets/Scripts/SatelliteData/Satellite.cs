@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using One_Sgp4;
 using SatelliteData.Filters;
+using SatelliteData.Info;
 using Utilities;
 
 namespace SatelliteData
@@ -10,6 +11,8 @@ namespace SatelliteData
     {
         /// <summary> Название спутника. </summary>
         [SerializeField] public String Name;
+        
+        [SerializeField] public GameObject Pointer;
 
         /// <summary> TLE-данные для спутника. </summary>
         public Tle LoadedTle { get; set; }
@@ -24,6 +27,9 @@ namespace SatelliteData
 
         /// <summary> Менеджер времени. </summary>
         private TimeManager timeManager;
+
+        private Vector3 _screenPos;
+        
 
         /// <summary> Задание стартовых данных. </summary>
         private void Start()
@@ -41,6 +47,19 @@ namespace SatelliteData
 
             TimeForSatellite = timeManager.GetTime();
             UpdatePosition();
+            
+            _screenPos = Camera.allCameras[1].WorldToScreenPoint(transform.position);
+            Pointer.transform.position = _screenPos;
+        }
+
+        private void OnEnable()
+        {
+            Pointer.SetActive(false);
+        }
+
+        private void OnDisable()
+        {
+            Pointer.SetActive(false);
         }
 
         /// <summary> Получить позицию. </summary>
@@ -64,7 +83,18 @@ namespace SatelliteData
 
         /// <summary> Действия при скрытии спутника. </summary>
         /// <param name="filter"> Фильтр для показа/скрытия спутника. </param>
-        public void OnHide(IFilter filter) => gameObject.SetActive(filter.ShouldShowSatellite(this));
+        public void OnHide(IFilter filter)
+        {
+            gameObject.SetActive(filter.ShouldShowSatellite(this));
+        }
+
+        public void OnNameFilterApplied(string lookingName)
+        {
+            if (lookingName.Length >= 3 && Name.Contains(lookingName))
+                Pointer.SetActive(true);
+            else
+                Pointer.SetActive(false);
+        }
 
         /// <summary> Поулчить высоту. </summary>
         /// <returns> Текущая высота спутника, относительно виртуальной модели Земли. </returns>
