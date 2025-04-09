@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using One_Sgp4;
 using SatelliteData.Filters;
+using SatelliteData.Info;
 using Utilities;
 
 namespace SatelliteData
