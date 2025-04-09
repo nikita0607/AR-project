@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Документация для разработчиков проекта 2025 «Разработка виртуальной библиотеки космических аппаратов с применением технологий AR»: Класс SatelliteData.Filters.SatelliteCompositeHideFilter</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Документация для разработчиков проекта 2025 «Разработка виртуальной библиотеки космических аппаратов с применением технологий AR»<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс SatelliteData.Filters.SatelliteCompositeHideFilter</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Составной фильтр для скрытия спутников, объединяющий несколько условий через логическое И.  
+ <a href="#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:SatelliteData.Filters.SatelliteCompositeHideFilter:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.png" usemap="#SatelliteData.Filters.SatelliteCompositeHideFilter_map" alt=""/>
+  <map id="SatelliteData.Filters.SatelliteCompositeHideFilter_map" name="SatelliteData.Filters.SatelliteCompositeHideFilter_map">
+<area href="interface_satellite_data_1_1_filters_1_1_i_filter.html" title="Интерфейс для фильтрации спутников." alt="SatelliteData.Filters.IFilter" shape="rect" coords="0,0,282,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a3957a3c8ccd8dc4c5f2b30d26ec6e21e" id="r_a3957a3c8ccd8dc4c5f2b30d26ec6e21e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3957a3c8ccd8dc4c5f2b30d26ec6e21e">SatelliteCompositeHideFilter</a> (List&lt; <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_hide_filter.html">SatelliteHideFilter</a> &gt; andFilters=null)</td></tr>
+<tr class="memdesc:a3957a3c8ccd8dc4c5f2b30d26ec6e21e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает новый составной фильтр с опциональным начальным набором фильтров.  <br /></td></tr>
+<tr class="separator:a3957a3c8ccd8dc4c5f2b30d26ec6e21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0ef7c0e184bc5b575ce6c64bebf8b9" id="r_ace0ef7c0e184bc5b575ce6c64bebf8b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace0ef7c0e184bc5b575ce6c64bebf8b9">ShouldShowSatellite</a> (<a class="el" href="class_satellite_data_1_1_satellite.html">Satellite</a> satellite)</td></tr>
+<tr class="memdesc:ace0ef7c0e184bc5b575ce6c64bebf8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, должен ли спутник отображаться согласно всем фильтрам.  <br /></td></tr>
+<tr class="separator:ace0ef7c0e184bc5b575ce6c64bebf8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1182ce15c8532bd71e8dce5d1be0faa9" id="r_a1182ce15c8532bd71e8dce5d1be0faa9"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1182ce15c8532bd71e8dce5d1be0faa9">ToString</a> ()</td></tr>
+<tr class="memdesc:a1182ce15c8532bd71e8dce5d1be0faa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает строковое представление фильтра.  <br /></td></tr>
+<tr class="separator:a1182ce15c8532bd71e8dce5d1be0faa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34dce973036980de90a12728ba539300" id="r_a34dce973036980de90a12728ba539300"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_hide_filter.html">SatelliteHideFilter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34dce973036980de90a12728ba539300">GetFilters</a> ()</td></tr>
+<tr class="memdesc:a34dce973036980de90a12728ba539300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список всех вложенных фильтров.  <br /></td></tr>
+<tr class="separator:a34dce973036980de90a12728ba539300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:ac3eef4318954c3a42db279974cf6cc47" id="r_ac3eef4318954c3a42db279974cf6cc47"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3eef4318954c3a42db279974cf6cc47">operator&amp;</a> (<a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a> a, <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_hide_filter.html">SatelliteHideFilter</a> b)</td></tr>
+<tr class="memdesc:ac3eef4318954c3a42db279974cf6cc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оператор объединения составного фильтра с одиночным фильтром.  <br /></td></tr>
+<tr class="separator:ac3eef4318954c3a42db279974cf6cc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b5fa3c4a78eeabd0b0a6b18f41c05c" id="r_a43b5fa3c4a78eeabd0b0a6b18f41c05c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43b5fa3c4a78eeabd0b0a6b18f41c05c">operator&amp;</a> (<a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a> a, <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a> b)</td></tr>
+<tr class="memdesc:a43b5fa3c4a78eeabd0b0a6b18f41c05c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оператор объединения двух составных фильтров.  <br /></td></tr>
+<tr class="separator:a43b5fa3c4a78eeabd0b0a6b18f41c05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb4935739c572b6cec983742b4b92b5" id="r_affb4935739c572b6cec983742b4b92b5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affb4935739c572b6cec983742b4b92b5">operator-</a> (<a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a> a, <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_hide_filter.html">SatelliteHideFilter</a> b)</td></tr>
+<tr class="memdesc:affb4935739c572b6cec983742b4b92b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оператор удаления фильтра из композиции.  <br /></td></tr>
+<tr class="separator:affb4935739c572b6cec983742b4b92b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_interface_satellite_data_1_1_filters_1_1_i_filter"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_interface_satellite_data_1_1_filters_1_1_i_filter')"><img src="closed.png" alt="-"/>&#160;Открытые статические члены унаследованные от <a class="el" href="interface_satellite_data_1_1_filters_1_1_i_filter.html">SatelliteData.Filters.IFilter</a></td></tr>
+<tr class="memitem:ac8a9e194a175ebe967716ab0a727b650 inherit pub_static_methods_interface_satellite_data_1_1_filters_1_1_i_filter" id="r_ac8a9e194a175ebe967716ab0a727b650"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="interface_satellite_data_1_1_filters_1_1_i_filter.html">IFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_satellite_data_1_1_filters_1_1_i_filter.html#ac8a9e194a175ebe967716ab0a727b650">operator&amp;</a> (<a class="el" href="interface_satellite_data_1_1_filters_1_1_i_filter.html">IFilter</a> a, <a class="el" href="interface_satellite_data_1_1_filters_1_1_i_filter.html">IFilter</a> b)</td></tr>
+<tr class="memdesc:ac8a9e194a175ebe967716ab0a727b650 inherit pub_static_methods_interface_satellite_data_1_1_filters_1_1_i_filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора &amp; для комбинации фильтров.  <br /></td></tr>
+<tr class="separator:ac8a9e194a175ebe967716ab0a727b650 inherit pub_static_methods_interface_satellite_data_1_1_filters_1_1_i_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Составной фильтр для скрытия спутников, объединяющий несколько условий через логическое И. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a3957a3c8ccd8dc4c5f2b30d26ec6e21e" name="a3957a3c8ccd8dc4c5f2b30d26ec6e21e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3957a3c8ccd8dc4c5f2b30d26ec6e21e">&#9670;&#160;</a></span>SatelliteCompositeHideFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SatelliteData.Filters.SatelliteCompositeHideFilter.SatelliteCompositeHideFilter </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_hide_filter.html">SatelliteHideFilter</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>andFilters</em></span><span class="paramdefsep"> = </span><span class="paramdefval">null</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создает новый составной фильтр с опциональным начальным набором фильтров. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">andFilters</td><td>Начальный список фильтров (может быть null). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a34dce973036980de90a12728ba539300" name="a34dce973036980de90a12728ba539300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34dce973036980de90a12728ba539300">&#9670;&#160;</a></span>GetFilters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_hide_filter.html">SatelliteHideFilter</a> &gt; SatelliteData.Filters.SatelliteCompositeHideFilter.GetFilters </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает список всех вложенных фильтров. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Копия списка фильтров. </dd></dl>
+
+</div>
+</div>
+<a id="a43b5fa3c4a78eeabd0b0a6b18f41c05c" name="a43b5fa3c4a78eeabd0b0a6b18f41c05c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b5fa3c4a78eeabd0b0a6b18f41c05c">&#9670;&#160;</a></span>operator&amp;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a> SatelliteData.Filters.SatelliteCompositeHideFilter.operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Оператор объединения двух составных фильтров. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый составной фильтр, содержащий все фильтры из a и b. </dd></dl>
+
+</div>
+</div>
+<a id="ac3eef4318954c3a42db279974cf6cc47" name="ac3eef4318954c3a42db279974cf6cc47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3eef4318954c3a42db279974cf6cc47">&#9670;&#160;</a></span>operator&amp;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a> SatelliteData.Filters.SatelliteCompositeHideFilter.operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_hide_filter.html">SatelliteHideFilter</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Оператор объединения составного фильтра с одиночным фильтром. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый составной фильтр, содержащий все фильтры из a плюс b. </dd></dl>
+
+</div>
+</div>
+<a id="affb4935739c572b6cec983742b4b92b5" name="affb4935739c572b6cec983742b4b92b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb4935739c572b6cec983742b4b92b5">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a> SatelliteData.Filters.SatelliteCompositeHideFilter.operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_hide_filter.html">SatelliteHideFilter</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Оператор удаления фильтра из композиции. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Новый составной фильтр без указанного фильтра b. </dd></dl>
+
+</div>
+</div>
+<a id="ace0ef7c0e184bc5b575ce6c64bebf8b9" name="ace0ef7c0e184bc5b575ce6c64bebf8b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0ef7c0e184bc5b575ce6c64bebf8b9">&#9670;&#160;</a></span>ShouldShowSatellite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SatelliteData.Filters.SatelliteCompositeHideFilter.ShouldShowSatellite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_satellite_data_1_1_satellite.html">Satellite</a></td>          <td class="paramname"><span class="paramname"><em>satellite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет, должен ли спутник отображаться согласно всем фильтрам. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">satellite</td><td>Проверяемый спутник. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>True если спутник проходит все фильтры, иначе False. </dd></dl>
+
+<p>Замещает <a class="el" href="interface_satellite_data_1_1_filters_1_1_i_filter.html#a9689a95367e25fdcd23b168369c9df8d">SatelliteData.Filters.IFilter</a>.</p>
+
+</div>
+</div>
+<a id="a1182ce15c8532bd71e8dce5d1be0faa9" name="a1182ce15c8532bd71e8dce5d1be0faa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1182ce15c8532bd71e8dce5d1be0faa9">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string SatelliteData.Filters.SatelliteCompositeHideFilter.ToString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает строковое представление фильтра. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с количеством вложенных фильтров. </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>/Users/nikitapyrlicanu/Desktop/HSE/ar-project/Assets/Scripts/SatelliteData/Filters/<a class="el" href="_satellite_composite_hide_filter_8cs.html">SatelliteCompositeHideFilter.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_satellite_data.html">SatelliteData</a></li><li class="navelem"><a class="el" href="namespace_satellite_data_1_1_filters.html">Filters</a></li><li class="navelem"><a class="el" href="class_satellite_data_1_1_filters_1_1_satellite_composite_hide_filter.html">SatelliteCompositeHideFilter</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
