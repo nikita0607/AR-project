@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028301, g: 0.22571309, b: 0.30692127, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4101,7 +4101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0443\u0441\u0442\u043E"
+  m_text: "\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\n\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u043C\n\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\n\n\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\n\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\n\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\u0441\u0442\u0422\u0435\u043A\n\u043C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4194,8 +4194,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.5946045, y: 0}
-  m_SizeDelta: {x: -64.0098, y: 40.22}
+  m_AnchoredPosition: {x: 109.70514, y: 0.0033698808}
+  m_SizeDelta: {x: 160.5897, y: 412.79}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &750102492
 MonoBehaviour:
@@ -4588,7 +4588,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -95.09299, y: -0.0008544922}
-  m_SizeDelta: {x: -190.23999, y: -569.7208}
+  m_SizeDelta: {x: -190.23999, y: -600}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &881912262
 MonoBehaviour:
@@ -5411,7 +5411,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034402366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0028886625, w: 0.9999958}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5420,11 +5420,11 @@ RectTransform:
   - {fileID: 881912261}
   - {fileID: 1278618750}
   m_Father: {fileID: 1521857870}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.331}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -72.97467, y: 234.86035}
-  m_SizeDelta: {x: 755.9493, y: 569.7208}
+  m_AnchoredPosition: {x: -200, y: 250}
+  m_SizeDelta: {x: 900, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034402369
 MonoBehaviour:
@@ -6354,10 +6354,10 @@ RectTransform:
   - {fileID: 96068529}
   m_Father: {fileID: 1034402368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 252.8818, y: 186.58063}
-  m_SizeDelta: {x: -625.7636, y: -447.4719}
+  m_AnchoredPosition: {x: -75, y: -75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1278618751
 MonoBehaviour:
@@ -8041,7 +8041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1521857870
 RectTransform:
   m_ObjectHideFlags: 0

@@ -122,7 +122,7 @@ public class AddVuforiaEnginePackage
     {
         if (EditorUtility.DisplayDialog("Add Vuforia Engine Package",
             $"Would you like to update your project to include the Vuforia Engine {VUFORIA_VERSION} package from the unitypackage?\n" +
-            $"If an older Vuforia Engine package is already present in your project it will be upgraded to version {VUFORIA_VERSION}\n\n",
+            $"If an older Vuforia Engine package is already present in your project it will be upgraded to version {VUFORIA_VERSION}\n\n        ",
             "Update", "Cancel"))
         {
             foreach (var package in packages)
@@ -137,7 +137,7 @@ public class AddVuforiaEnginePackage
     {
         if (EditorUtility.DisplayDialog("Add Sample Dependencies",
                                         "Would you like to update your project to include all of its dependencies?\n" +
-                                        "If a different version of the package is already present, it will be deleted.\n\n",
+                                        "If a different version of the package is already present, it will be deleted.\n\n    ",
                                         "Update", "Cancel"))
         {
             MoveDependencies(manifest, packages);
@@ -151,7 +151,7 @@ public class AddVuforiaEnginePackage
     {
         if (EditorUtility.DisplayDialog("Restart Unity Editor",
                                         "Due to a Unity lifecycle issue, this project needs to be closed and re-opened " +
-                                        "after importing this Vuforia Engine sample.\n\n",
+                                        "after importing this Vuforia Engine sample.\n\n    ",
                                         "Restart", "Cancel"))
         {
             RestartEditor();

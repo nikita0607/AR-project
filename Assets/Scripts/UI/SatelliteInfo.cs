@@ -51,9 +51,9 @@ namespace UI
             _currentSatellite = satellite;
 
             Coordinate cords = satellite.GetPosition();
-            string text = $"Название: {satellite.LoadedTle.getName()}\n" +
-                         $"NORAD-ID: {satellite.LoadedTle.getNoradID()}\n" +
-                         $"Координаты:\n\tширота: {cords.getLatitude():f2}\n\tдолгота: {cords.getLongitude():f2}\n \n";
+            string text = $"  Название: {satellite.LoadedTle.getName()}\n" +
+                         $"  NORAD-ID: {satellite.LoadedTle.getNoradID()}\n" +
+                         $"  Координаты:\n\tширота: {cords.getLatitude():f2}\n\tдолгота: {cords.getLongitude():f2}\n \n";
 
             if (SatellitesSerializer.GetSatellitesSer(satteliteJson).ContainsKey(satellite.Name))
                 text += $"{SatellitesSerializer.GetSatellitesSer(satteliteJson)[satellite.gameObject.name].info}\n";
