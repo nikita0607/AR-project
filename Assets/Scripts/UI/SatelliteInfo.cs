@@ -76,6 +76,7 @@ namespace UI
             }
 
             satellite.TimeForSatellite = TimeManager.Instance.GetTime();
+            satellite.UpdatePosition();
         }
 
         /// <summary> Создает точку траектории спутника. </summary>

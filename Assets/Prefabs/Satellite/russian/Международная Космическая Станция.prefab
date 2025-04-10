@@ -74,6 +74,30 @@ PrefabInstance:
       propertyPath: Name
       value: ISS (ZARYA)
       objectReference: {fileID: 0}
+    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4274813
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3798043
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
+      propertyPath: m_Size.z
+      value: 0.6268314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
+      propertyPath: m_Center.x
+      value: 0.020460436
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
+      propertyPath: m_Center.y
+      value: 0.034830272
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757601911273294129, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
+      propertyPath: m_Center.z
+      value: 0.018226678
+      objectReference: {fileID: 0}
     - target: {fileID: 4999709411967046740, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3

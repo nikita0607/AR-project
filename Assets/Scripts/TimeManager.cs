@@ -59,9 +59,6 @@ public class TimeManager : MonoBehaviour
         timeVelocity = 1f;
         ResetTime();
         _lastMinunte = time.getMin();
-        
-        _correctedTime = new EpochTime(time);
-        _correctedTime.addHours(3);
     }
 
     /// <summary> Основной цикл обновления времени. Вызывается каждый кадр.
