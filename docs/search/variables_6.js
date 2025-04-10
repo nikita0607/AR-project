@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['name_0',['Name',['../class_satellite.html#a3b852aaf4e8d4a4be251545101a1a7ba',1,'Satellite.Name'],['../class_t_l_e_1_1_tle.html#abbede00f0015d111525925248ef184fd',1,'TLE.Tle.Name']]],
-  ['name_1',['name',['../class_mark_ser.html#a33b914873d72c4f5b0b24f00c931bb92',1,'MarkSer.name'],['../class_satellite_ser.html#adceaffddea6bb70f438c6bbca952b4ac',1,'SatelliteSer.name']]]
+  ['onhide_0',['OnHide',['../class_u_i_1_1_satellite_info.html#a19e7cf1016de66f299e0aecf57be65d5',1,'UI::SatelliteInfo']]],
+  ['onminutechanged_1',['OnMinuteChanged',['../class_time_manager.html#a45a4a6a372253d8233cb0f237cd4a45a',1,'TimeManager']]],
+  ['onnamefilterapply_2',['OnNameFilterApply',['../class_u_i_1_1_satellite_filter_1_1_satellite_filter_name.html#a87050354cd43451045f86af2cea23785',1,'UI::SatelliteFilter::SatelliteFilterName']]]
 ];

@@ -1,4 +1,4 @@
 var _show_markinfo_on_click_8cs =
 [
-    [ "ShowMarkinfoOnClick", "class_show_markinfo_on_click.html", null ]
+    [ "Marks.ShowMarkinfoOnClick", "class_marks_1_1_show_markinfo_on_click.html", null ]
 ];

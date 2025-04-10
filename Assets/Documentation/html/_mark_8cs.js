@@ -1,4 +1,4 @@
 var _mark_8cs =
 [
-    [ "Mark", "class_mark.html", "class_mark" ]
+    [ "Marks.Mark", "class_marks_1_1_mark.html", "class_marks_1_1_mark" ]
 ];

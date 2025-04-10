@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Документация для разработчиков проекта 2025 «Разработка виртуальной библиотеки космических аппаратов с применением технологий AR»: Файл /Users/nikitapyrlicanu/Desktop/HSE/ar-project/Assets/Scripts/TLE/SatelliteGenerator.cs</title>
+<title>Документация для разработчиков проекта 2025 «Разработка виртуальной библиотеки космических аппаратов с применением технологий AR»: Файл /Users/ilya/Unity projects/globus/gitlab/Assets/Scripts/SatelliteData/SatelliteGenerator.cs</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,6 +24,7 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -104,6 +105,7 @@ $(function(){initNavTree('_satellite_generator_8cs.html',''); initResizable(true
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
 <a href="#typedef-members">Определения типов</a>  </div>
   <div class="headertitle"><div class="title">Файл SatelliteGenerator.cs</div></div>
 </div><!--header-->
@@ -111,25 +113,32 @@ $(function(){initNavTree('_satellite_generator_8cs.html',''); initResizable(true
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Классы</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_satellite_generator.html">SatelliteGenerator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_satellite_data_1_1_satellite_generator.html">SatelliteData.SatelliteGenerator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генератор спутников на основе TLE-данных.  <a href="class_satellite_data_1_1_satellite_generator.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_satellite_generator_1_1_tle_source.html">SatelliteGenerator.TleSource</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_satellite_data_1_1_satellite_generator_1_1_tle_source.html">SatelliteData.SatelliteGenerator.TleSource</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс-контейнер для источника TLE-данных.  <a href="class_satellite_data_1_1_satellite_generator_1_1_tle_source.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_satellite_data.html">SatelliteData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:af67b988b9e991df866418f4d05f88317" id="r_af67b988b9e991df866418f4d05f88317"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af67b988b9e991df866418f4d05f88317">Tle</a> = One_Sgp4.Tle</td></tr>
-<tr class="separator:af67b988b9e991df866418f4d05f88317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832e8f52fca5a678819ec96269dcb532" id="r_a832e8f52fca5a678819ec96269dcb532"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a832e8f52fca5a678819ec96269dcb532">Random</a> = UnityEngine.Random</td></tr>
+<tr class="separator:a832e8f52fca5a678819ec96269dcb532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
-<a id="af67b988b9e991df866418f4d05f88317" name="af67b988b9e991df866418f4d05f88317"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af67b988b9e991df866418f4d05f88317">&#9670;&#160;</a></span>Tle</h2>
+<a id="a832e8f52fca5a678819ec96269dcb532" name="a832e8f52fca5a678819ec96269dcb532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a832e8f52fca5a678819ec96269dcb532">&#9670;&#160;</a></span>Random</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_t_l_e_1_1_tle.html">Tle</a> = One_Sgp4.Tle</td>
+          <td class="memname">using <a class="el" href="#a832e8f52fca5a678819ec96269dcb532">Random</a> = UnityEngine.Random</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -141,7 +150,7 @@ $(function(){initNavTree('_satellite_generator_8cs.html',''); initResizable(true
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_4edcbb236dfd51dd81727243a38df6a0.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_657670cb1e37b0603e812bc734639111.html">TLE</a></li><li class="navelem"><a class="el" href="_satellite_generator_8cs.html">SatelliteGenerator.cs</a></li>
+    <li class="navelem"><a class="el" href="dir_4edcbb236dfd51dd81727243a38df6a0.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_bec0f4cfd9806a4d44fdade8cc17f207.html">SatelliteData</a></li><li class="navelem"><a class="el" href="_satellite_generator_8cs.html">SatelliteGenerator.cs</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

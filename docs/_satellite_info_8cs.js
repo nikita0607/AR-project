@@ -1,4 +1,4 @@
 var _satellite_info_8cs =
 [
-    [ "SatelliteInfo", "class_satellite_info.html", "class_satellite_info" ]
+    [ "UI.SatelliteInfo", "class_u_i_1_1_satellite_info.html", "class_u_i_1_1_satellite_info" ]
 ];

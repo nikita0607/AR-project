@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['latitude_0',['latitude',['../class_mark_ser.html#abac2a082cc1a92a319641dba8a8f5235',1,'MarkSer']]],
-  ['line1_1',['Line1',['../class_t_l_e_1_1_tle.html#af4cb4925b1f9cd89d15fdfe821156263',1,'TLE::Tle']]],
-  ['line2_2',['Line2',['../class_t_l_e_1_1_tle.html#ab1d03fb056e5f8218aa1923de15632ec',1,'TLE::Tle']]],
-  ['longitude_3',['longitude',['../class_mark_ser.html#abc2fb93c6e592e3058bf0b923d5f0596',1,'MarkSer']]]
+  ['markimagesprite_0',['MarkImageSprite',['../struct_u_i_1_1_marks_1_1_mark_images_1_1_mark_image.html#a5cd512f003b920e99aacd23c3fd10a03',1,'UI::Marks::MarkImages::MarkImage']]],
+  ['markname_1',['MarkName',['../struct_u_i_1_1_marks_1_1_mark_images_1_1_mark_image.html#a8d15e43e37fcd78db806a2356d4ecb48',1,'UI::Marks::MarkImages::MarkImage']]],
+  ['marks_2',['marks',['../class_marks_1_1_mark_generator_1_1_marks_ser.html#a7fda029626193ee9f728d9d1bbbbb8c4',1,'Marks::MarkGenerator::MarksSer']]]
 ];

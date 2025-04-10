@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['onhide_0',['OnHide',['../class_satellite_info.html#a35377793b3bb0f64ff330a8f42bd6dcb',1,'SatelliteInfo']]],
-  ['onminutechanged_1',['OnMinuteChanged',['../class_time_manager.html#a45a4a6a372253d8233cb0f237cd4a45a',1,'TimeManager']]]
+  ['pointer_0',['Pointer',['../class_satellite_data_1_1_satellite.html#af7654c445159ddea15e21553b062a463',1,'SatelliteData::Satellite']]],
+  ['prefab_1',['Prefab',['../class_satellite_data_1_1_satellite_generator_1_1_tle_source.html#a7fe6359e29639438d46a0ed4b898056c',1,'SatelliteData::SatelliteGenerator::TleSource']]]
 ];
