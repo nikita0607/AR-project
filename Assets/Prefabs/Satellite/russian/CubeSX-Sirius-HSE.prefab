@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: Name
       value: CUBESX-SIRIUS-HSE
       objectReference: {fileID: 0}
+    - target: {fileID: 941907151566080189, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4999709411967046740, guid: 64667320a17ca4b20b7c765b44a118c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

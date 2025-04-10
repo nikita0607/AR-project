@@ -32,6 +32,7 @@ namespace UI.SatelliteFilter
             {
                 _satelliteInfoController.SatelliteHideFilters -= _satelliteHideFilter;
                 _satelliteHideFilter = null;
+                OnNameFilterApply?.Invoke("");
                 _satelliteInfoController.TryApplySatelliteFilter();
             }
         }
