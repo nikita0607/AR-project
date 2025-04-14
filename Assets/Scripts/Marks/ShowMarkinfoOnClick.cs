@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UI.Marks;
+using UnityEngine.EventSystems;
 
 namespace Marks
 {
@@ -31,6 +32,8 @@ namespace Marks
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 if (_camera == null) return;
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
 
                 Ray ray = _camera.ScreenPointToRay(Input.GetTouch(0).position);
 

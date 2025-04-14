@@ -2,6 +2,7 @@ using System;
 using SatelliteData.Filters;
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace SatelliteData.Info
 {
@@ -61,6 +62,9 @@ namespace SatelliteData.Info
         {
             if (_camera && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
+                
                 Ray ray = _camera.ScreenPointToRay(Input.GetTouch(0).position);
 
                 if (Physics.Raycast(ray, out var hit, Mathf.Infinity))
