@@ -32,7 +32,7 @@ namespace Marks
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 if (_camera == null) return;
-                if (EventSystem.current.IsPointerOverGameObject())
+                if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
                     return;
 
                 Ray ray = _camera.ScreenPointToRay(Input.GetTouch(0).position);

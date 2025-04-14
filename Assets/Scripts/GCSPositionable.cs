@@ -1,7 +1,7 @@
 using UnityEngine;
 
-/// <summary> Класс для работы с ECI (Earth-Centered Inertial) координатами. </summary>
-public class EciPositionable : MonoBehaviour
+/// <summary> Класс для работы с GCS (Geographical Coordinate System) координатами. </summary>
+public class GCSPositionable : MonoBehaviour
 {
     /// <summary> Устанавливает позицию объекта в локальных координатах. </summary>
     /// <param name="x"> Координата X. </param>
@@ -13,11 +13,11 @@ public class EciPositionable : MonoBehaviour
     /// <param name="position"> Вектор позиции. </param>
     public void SetPosition(Vector3 position) => transform.localPosition = position;
 
-    /// <summary> Преобразует географические координаты в ECI координаты. </summary>
+    /// <summary> Преобразует географические координаты в GCS координаты. </summary>
     /// <param name="longitude"> Долгота в градусах. </param>
     /// <param name="latitude"> Широта в градусах. </param>
     /// <param name="radius"> Радиус от центра Земли. </param>
-    /// <returns> Вектор позиции в ECI системе координат. </returns>
+    /// <returns> Вектор позиции в GCS системе координат. </returns>
     /// <remarks>
     /// Формулы преобразования:
     /// omega = π/2 - latitude (в радианах)

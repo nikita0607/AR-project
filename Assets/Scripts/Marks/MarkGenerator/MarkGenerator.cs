@@ -44,7 +44,7 @@ namespace Marks.MarkGenerator
                 newMark.name = _marksFromJson.marks[i].name;
                 newMarkComponent.Name = _marksFromJson.marks[i].name;
                 newMarkComponent.Info = _marksFromJson.marks[i].info;
-                newMarkComponent.SetPosition(EciPositionable.FromLongLat(markInfo.longitude, markInfo.latitude,
+                newMarkComponent.SetPosition(GCSPositionable.FromLongLat(markInfo.longitude, markInfo.latitude,
                     earthUnitRadius));
 
                 newMark.transform.rotation =

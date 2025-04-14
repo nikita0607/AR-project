@@ -83,7 +83,7 @@ namespace UI
         private void CreateTrailPoint(Coordinate coords, Satellite satellite)
         {
             GameObject trail = Instantiate(trailPrefab, Vector3.zero, Quaternion.identity, lineRedererParrent.transform);
-            trail.transform.localPosition = EciPositionable.FromLongLat(
+            trail.transform.localPosition = GCSPositionable.FromLongLat(
                 -(float)coords.getLongitude(),
                 (float)coords.getLatitude(),
                 EarthParametrs.VirtualEarthRadius + satellite.GetHeight());

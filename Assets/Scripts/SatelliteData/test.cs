@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : EciPositionable
+public class test : GCSPositionable
 {
     [SerializeField] private float longat;
     [SerializeField] private float lat;

@@ -1,7 +1,7 @@
 namespace Marks
 {
     /// <summary> Класс, представляющий метку с позицией в ECI-координатах. </summary>
-    public class Mark : EciPositionable
+    public class Mark : GCSPositionable
     {
         /// <summary> Название метки. </summary>
         public string Name { get; set; }

@@ -7,7 +7,7 @@ using Utilities;
 
 namespace SatelliteData
 {
-    public class Satellite : EciPositionable
+    public class Satellite : GCSPositionable
     {
         /// <summary> Название спутника. </summary>
         [SerializeField] public String Name;
