@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_2ecs_0',['Logger.cs',['../_logger_8cs.html',1,'']]]
+  ['ifilter_2ecs_0',['IFilter.cs',['../_i_filter_8cs.html',1,'']]]
 ];

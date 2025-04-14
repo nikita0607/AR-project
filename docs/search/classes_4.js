@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['loadedtle_0',['LoadedTle',['../class_satellite_data_1_1_loaded_tle.html',1,'SatelliteData']]],
-  ['logger_1',['Logger',['../class_logger.html',1,'']]]
+  ['ifilter_0',['IFilter',['../interface_satellite_data_1_1_filters_1_1_i_filter.html',1,'SatelliteData::Filters']]]
 ];

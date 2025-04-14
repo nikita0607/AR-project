@@ -46,7 +46,7 @@ var annotated_dup =
       [ "PositionFixer", "class_utilities_1_1_position_fixer.html", "class_utilities_1_1_position_fixer" ],
       [ "SyncCameraMovement", "class_utilities_1_1_sync_camera_movement.html", "class_utilities_1_1_sync_camera_movement" ]
     ] ],
-    [ "EciPositionable", "class_eci_positionable.html", "class_eci_positionable" ],
+    [ "GCSPositionable", "class_g_c_s_positionable.html", "class_g_c_s_positionable" ],
     [ "Logger", "class_logger.html", null ],
     [ "PlacementController", "class_placement_controller.html", "class_placement_controller" ],
     [ "test", "classtest.html", null ],

@@ -12,7 +12,7 @@ var hierarchy =
     [ "Marks.MarkGenerator.MarksSer", "class_marks_1_1_mark_generator_1_1_marks_ser.html", null ],
     [ "Utilities.MedianFilterVector3", "class_utilities_1_1_median_filter_vector3.html", null ],
     [ "MonoBehaviour", null, [
-      [ "EciPositionable", "class_eci_positionable.html", [
+      [ "GCSPositionable", "class_g_c_s_positionable.html", [
         [ "Marks.Mark", "class_marks_1_1_mark.html", null ],
         [ "SatelliteData.Satellite", "class_satellite_data_1_1_satellite.html", null ],
         [ "test", "classtest.html", null ]
