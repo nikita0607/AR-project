@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 1639739}
   - component: {fileID: 1639737}
   - component: {fileID: 1639736}
+  - component: {fileID: 1639741}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: MainCamera
@@ -234,6 +235,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1639741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e619fa89e942eead2f03440b9d0345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6558123
 GameObject:
   m_ObjectHideFlags: 0
@@ -7110,7 +7123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79500c1ac59e74706a49ede731bd4031, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0100001
+      value: 1.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 79500c1ac59e74706a49ede731bd4031, type: 3}
       propertyPath: m_LocalScale.z
@@ -7155,6 +7168,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 79500c1ac59e74706a49ede731bd4031, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79500c1ac59e74706a49ede731bd4031, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7635826562936255635, guid: 79500c1ac59e74706a49ede731bd4031, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8185,6 +8202,7 @@ MonoBehaviour:
   - {fileID: 1649931415}
   - {fileID: 784713550}
   - {fileID: 1033941237}
+  - {fileID: 2056131614}
   _globusModeDisObjects:
   - {fileID: 705614976}
   _globusInfoText: 123
@@ -8698,7 +8716,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.003370288, y: -0.8669639, z: 0.0058634784, w: 0.49832505}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.95, z: 0.99999994}
+  m_LocalScale: {x: 1.0000001, y: 0.99, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1199778174}
@@ -10928,6 +10946,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1520801089}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1521857869}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -10989,6 +11019,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1650949328}
+        m_TargetAssemblyTypeName: Utilities.PositionFixer, Assembly-CSharp
+        m_MethodName: RestorePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1639741}
         m_TargetAssemblyTypeName: Utilities.PositionFixer, Assembly-CSharp
         m_MethodName: RestorePosition
         m_Mode: 1
@@ -11067,7 +11109,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.25, z: 0}
-  m_LocalScale: {x: 0.38999996, y: 0.39, z: 0.38999996}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1199778174}
